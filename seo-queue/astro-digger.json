@@ -1,0 +1,95 @@
+{
+  "slug": "astro-digger",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Astro Digger is a digging game where an astronaut tunnels down through brown soil toward blue gems on a small planet. These tips come from a short first session on Level 1 using the arrow keys and the on-screen arrows.",
+      "tips": [
+        "Read the hint card before Level 1 starts. It says to collect gold and minerals and to press the teleport button if you get stuck, which sums up the whole level.",
+        "Dig with the arrow keys. Each press of Down or Right cleared one block of soil and moved the astronaut one step, leaving an orange tunnel behind him.",
+        "Plan your tunnel before you dig. The three blue gems on Level 1 sit in a row just above a line of gray rocks, so dig down beside them and then turn sideways into them.",
+        "Count blocks as you go. Because every press moves exactly one block, three Down presses and four Right presses took the astronaut from the surface to right next to the first gem.",
+        "Remember the teleport button in the top right. It is the round icon with stacked rings, and the hint card says it is there for when you get stuck.",
+        "Do not worry about the timer at first. The Time counter at the top counts up from 0:00, and nothing went wrong when it passed one and a half minutes in testing."
+      ],
+      "conclusion": "Astro Digger is easy to pick up because every move is one block. Look at where the gems and rocks are before you dig, and keep the teleport button in mind for when a tunnel goes wrong.",
+      "extra_sections": [
+        {
+          "heading": "Reading the Level 1 layout",
+          "paragraphs": [
+            "Level 1 starts with the astronaut standing on the grass next to a glass pod, with machines and a lamp post behind him. Below the grass is a solid wall of brown soil blocks.",
+            "Near the bottom are three blue gems in a row, with gray rocks under and beside them. The gems are the clear target, so the shortest route is a straight tunnel down from the start and then a short sideways tunnel into the row of gems."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Astro Digger can be played with the keyboard arrow keys or by clicking the large arrow buttons drawn on the game screen.",
+      "desktop": "Press the Down arrow key to dig the block below the astronaut and the Right or Left arrow key to dig sideways. Each press moves one block. You can also hold the mouse button on the big faint left, right and down arrows on screen. Buttons on the left side open the menu, toggle music and sound, pause and restart.",
+      "tips": [
+        "Single key presses give the most control, since each one moves the astronaut exactly one block.",
+        "Holding the mouse on the on-screen down arrow also digs, which is handy if you prefer to play with the mouse.",
+        "The round button with stacked rings in the top right is the teleport button, meant for when you get stuck.",
+        "The restart button is the bottom button on the left side if you want to try a level again from the start."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "Starting Astro Digger for the first time? Here is what the menus look like and how the first level plays, from a short first session in the browser.",
+      "what_it_is": "Astro Digger is a block-by-block digging game. You control an astronaut who starts on the surface of a small planet and tunnels down through soil to reach gold and minerals. Level 1 shows three blue gems near the bottom of the screen with gray rocks around them. A Level counter and a Time counter sit at the top left, and icons with counters for the teleport, a red item and gems sit at the top right.",
+      "first_steps": [
+        "On the title screen, click the red PLAY button. There is also a purple LEVELS button for picking a level.",
+        "Read the Level 1 hint card, which says to collect gold and minerals and to use the teleport button if you get stuck.",
+        "Click the Play button on the right side of the card to start the level.",
+        "Press the Down arrow key a few times to tunnel straight down from the surface.",
+        "Turn with the Right arrow key once you are level with the row of blue gems, and dig across toward them."
+      ],
+      "who_its_for": "Astro Digger suits players who like calm, puzzle-like digging where every move is one block, and younger players who want simple arrow-key controls with a clear goal on screen.",
+      "extra_sections": [
+        {
+          "heading": "What the icons on screen are for",
+          "paragraphs": [
+            "The top left shows the level number and a Time counter that counts up. The top right has three round icons with numbers under them: the stacked rings for the teleport, a red item, and a blue gem counter that started at zero.",
+            "The left side has a column of buttons for the menu, music, sound, pause and restart. The large see-through arrows in the middle of the screen are clickable dig controls that work alongside the arrow keys."
+          ]
+        },
+        {
+          "heading": "A simple first route",
+          "paragraphs": [
+            "In testing, three presses of Down took the astronaut from the grass into the soil, and four presses of Right carried him across until he was right beside the first blue gem. Digging in short straight lines like this keeps the tunnel easy to follow and avoids wandering into the gray rocks."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Astro Digger is about tunneling through soil one block at a time to reach gems, with simple arrow-key controls and a clear layout you can plan around. If you like that steady dig-and-collect style, Pixelsprout has other mining and digging games worth a look, such as Cave Miner, The Stone Miner, Space Miner and Hole Digger in Russia."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "How do you dig in Astro Digger?",
+          "answer": "Press the arrow keys. Down digs the block below the astronaut and Right or Left digs sideways. Each press clears one block and moves him one step. Holding the mouse on the big on-screen arrows also digs."
+        },
+        {
+          "question": "What is the goal in Astro Digger?",
+          "answer": "The Level 1 hint card says to collect gold and minerals. On the first level the targets are three blue gems sitting in a row near the bottom of the screen."
+        },
+        {
+          "question": "What does the teleport button do?",
+          "answer": "The hint card says to press the teleport button if you get stuck. It is the round icon with stacked rings in the top right corner, with a counter under it."
+        },
+        {
+          "question": "Is there a time limit on the first level?",
+          "answer": "The Time counter at the top counts up from 0:00 rather than down. In a first session it passed one and a half minutes on Level 1 without the level ending."
+        },
+        {
+          "question": "Can you choose which level to play?",
+          "answer": "The title screen has a purple LEVELS button under the red PLAY button. PLAY starts at Level 1."
+        },
+        {
+          "question": "What are the buttons on the left side of the screen?",
+          "answer": "They open the menu, turn music and sound on or off, pause the game, and restart the level."
+        }
+      ]
+    }
+  }
+}
