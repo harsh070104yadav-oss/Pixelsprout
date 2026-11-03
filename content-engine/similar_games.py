@@ -62,6 +62,20 @@ CURATED_SIMILAR = {
         "color-tower-2-drop-the-boxes-3d",
         "buildtower",
     ],
+    # Eat-and-grow shark and fish games.
+    "angry-sharks": [
+        "big-shark",
+        "eat-a-smaller-fish",
+        "my-hungry-fish-game",
+        "fish-rescue-go-shark-attack",
+    ],
+    # Block-by-block digging and mining games.
+    "astro-digger": [
+        "cave-miner",
+        "the-stone-miner",
+        "space-miner",
+        "hole-digger-in-russia",
+    ],
 }
 
 
