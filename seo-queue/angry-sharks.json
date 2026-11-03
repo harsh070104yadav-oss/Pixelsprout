@@ -1,0 +1,100 @@
+{
+  "slug": "angry-sharks",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Angry Sharks is an underwater eat-and-grow game where your shark follows the mouse cursor. These tips come from a short first session on the opening level, watching the health bar and the growth bar while fish, pufferfish and barrels filled the screen.",
+      "tips": [
+        "Read the Instructions screen first. The small i button on the title screen explains the whole goal: eat fish that swim toward you to grow, avoid bigger fish and spiky fish, and grow to the target size to pass the level.",
+        "Keep an eye on the heart bar in the top left corner. It starts at 100, and after only a few careless sweeps across the screen it had dropped to 20, so slow down as soon as it starts to fall.",
+        "Watch the growth bar under the health bar. It shows two shark icons with a percentage between them, and that number is how close you are to the size you need to finish the level.",
+        "Stay away from the pufferfish. The instructions warn against spiky fish, and the round spiky pufferfish drift through the middle of the water where it is easy to swim into them.",
+        "Give the seabed a wide berth. The bottom of the first level is lined with yellow barrels marked with a radiation sign, and the instructions list barrels, mines and spears as dangers.",
+        "Move the cursor in short, steady steps. The shark turns to face wherever the pointer is, so big fast swings send it straight through whatever is in the way.",
+        "Pick out the small fish before you chase anything. Clownfish, blue tangs and striped silver fish all swim across the level, and the safest targets are the ones clearly smaller than your shark."
+      ],
+      "conclusion": "Angry Sharks rewards patience more than speed. Learn which fish are safe to eat, keep off the barrels at the bottom, and watch the heart bar so a level never ends by surprise.",
+      "extra_sections": [
+        {
+          "heading": "What the two bars at the top mean",
+          "paragraphs": [
+            "The top left corner holds everything you need to track. The first bar has a heart icon and a number that starts at 100. That is your shark's health, and it went down quickly when the shark brushed into hazards during testing.",
+            "The second bar has a small shark on each side and a percentage in the middle. It began at 0 percent. Eating fish is what fills it, and the level is passed when the shark grows to the size the game asks for."
+          ]
+        },
+        {
+          "heading": "Hazards seen on the first level",
+          "paragraphs": [
+            "The first level is a bright blue reef with rock arches and seaweed. Yellow barrels with radiation signs sit in piles along the bottom, and spiky pufferfish float through the open water. Green bubbles also drift around the level. Keeping the shark in the clear middle band of water, away from the barrel piles, made it much easier to stay alive."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Angry Sharks uses one control on desktop: the mouse cursor. There are no keys to learn, and the shark simply swims toward wherever you point.",
+      "desktop": "Move the mouse and the shark swims toward the cursor and turns to face it. Click the green OK, PLAY NOW! button to start, click a shark on the right side of the title screen, then click once on the MOVE hint screen to begin the level. The pause button sits in the bottom left corner.",
+      "tips": [
+        "Keep the cursor a little ahead of the shark instead of far across the screen, so it swims in smooth, short moves.",
+        "The title screen has sound and music buttons in the top right if you want to turn audio off.",
+        "If the level seems frozen on a dim screen with the word MOVE, click once inside the game to start it.",
+        "Use the pause button in the bottom left corner when you need a break, rather than moving the cursor off the game."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Angry Sharks? This guide walks through the menus and the first minute of the opening level, based on a short first session in the browser.",
+      "what_it_is": "Angry Sharks is an underwater action game made by Inlogic Games, shown as version 1.0.1 on its Instructions screen. You guide a shark around a reef with the mouse. Smaller fish swim toward you, and eating them makes your shark grow. Bigger fish, spiky fish, barrels, mines and spears are listed as dangers. A level ends in success when your shark reaches the size the game asks for, which is tracked by a growth bar at the top of the screen.",
+      "first_steps": [
+        "Click the green OK, PLAY NOW! button on the loading screen to reach the title screen.",
+        "Click the i button near the diving helmet to read the Instructions, then use the back arrow in the top left to return.",
+        "Pick the first shark in the list on the right. In this session it was the only one shown as a full picture, and the other four were faint outlines.",
+        "When the level opens with a dim screen and a MOVE hint, click once to start swimming.",
+        "Go after small fish like clownfish and blue tangs, and keep away from the pufferfish and the barrels on the seabed.",
+        "Check the heart bar and the growth percentage in the top left every few seconds."
+      ],
+      "who_its_for": "Angry Sharks suits players who like simple mouse-only games where you grow by eating smaller creatures, and anyone who wants a quick, colorful underwater game to play in short bursts.",
+      "extra_sections": [
+        {
+          "heading": "A note on the shark list",
+          "paragraphs": [
+            "The right side of the title screen shows five shark slots. In this first session only the top slot had a full shark picture, and the rest were dim outlines. Clicking the top one started the first level. What it takes to use the other sharks was not seen, so start with the first shark and focus on learning the level."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Angry Sharks is about steering a shark with the mouse, eating smaller fish to grow, and dodging bigger fish, pufferfish and seabed barrels while a health bar ticks down. If that eat-and-grow loop under the sea is what you enjoy, Pixelsprout has other fish and shark games worth a look, such as Big Shark, Eat a Smaller Fish, My Hungry Fish Game and Fish Rescue Go - Shark Attack."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "How do you control the shark in Angry Sharks?",
+          "answer": "On desktop you only use the mouse. The shark swims toward the cursor and turns to face it, so you steer by moving the pointer around the screen."
+        },
+        {
+          "question": "What is the goal of each level in Angry Sharks?",
+          "answer": "Eat fish to grow. The Instructions screen says you pass the level once your shark grows to the desired size, and a bar with a percentage in the top left shows how close you are."
+        },
+        {
+          "question": "What can hurt your shark?",
+          "answer": "The Instructions screen lists bigger fish, spiky fish, barrels, mines, spears and other obstacles. On the first level the main dangers seen were spiky pufferfish and piles of yellow radiation barrels on the seabed."
+        },
+        {
+          "question": "What does the heart bar in the top left mean?",
+          "answer": "It is your shark's health. It starts at 100 and drops when the shark gets hurt. In testing it fell to 20 within a short stretch of careless swimming, so it is worth watching closely."
+        },
+        {
+          "question": "Why is the screen dim with the word MOVE on it?",
+          "answer": "That is the start of the level. A mouse pointer hint and the word MOVE appear over a darkened screen, and one click inside the game starts the level."
+        },
+        {
+          "question": "Can you choose a different shark?",
+          "answer": "The title screen shows five shark slots on the right. In a first session only the top one had a full picture and the other four were faint outlines, so the first shark is the one to start with."
+        },
+        {
+          "question": "Who made Angry Sharks?",
+          "answer": "The Instructions screen shows the Inlogic Games logo and lists the game as version 1.0.1."
+        }
+      ]
+    }
+  }
+}
