@@ -323,6 +323,8 @@ GAME_SOCIAL_LINKS = {
         ("Reel on Instagram (30 Oct Short)", "https://www.instagram.com/playpixelsprout/reel/DfIo2wiPc8D/"),
         ("Reel on Instagram (Part 5)", "https://www.instagram.com/playpixelsprout/reel/DfLRN5Kv3OJ/"),
         ("Reel on Instagram (Part 6)", "https://www.instagram.com/playpixelsprout/reel/DfLVFPvvGY-/"),
+        ("YouTube Short (Part 7)", "https://youtube.com/shorts/h3iL_0RqJBI"),
+        ("YouTube Short (Part 8)", "https://youtube.com/shorts/Rh4kmgyUV8o"),
     ],
     "protect-my-dog": [
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/bBCWh7W_dyg"),
@@ -336,6 +338,7 @@ GAME_SOCIAL_LINKS = {
         ("Reel on Instagram (Part 4)", "https://www.instagram.com/playpixelsprout/reel/DfIoO5nPq3O/"),
         ("Reel on Instagram (30 Oct Short)", "https://www.instagram.com/playpixelsprout/reel/DfIpD7ev59z/"),
         ("Reel on Instagram (Level 2 beat me 10 times)", "https://www.instagram.com/reel/DfLTR-OvaNT/"),
+        ("YouTube Short (Part 5)", "https://youtube.com/shorts/QQOWoZFERlE"),
     ],
     "buba-jump": [
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/I9OXV5JlIc0"),
