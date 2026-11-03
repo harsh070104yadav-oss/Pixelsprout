@@ -18,14 +18,14 @@
         {
           "heading": "What the two bars at the top mean",
           "paragraphs": [
-            "The top left corner holds everything you need to track. The first bar has a heart icon and a number that starts at 100. That is your shark's health, and it went down quickly when the shark brushed into hazards during testing.",
+            "The top left corner holds everything you need to track. The first bar has a heart icon and a number that starts at 100. That is your shark's health, and it fell from 100 to 20 in a short session during testing.",
             "The second bar has a small shark on each side and a percentage in the middle. It began at 0 percent. Eating fish is what fills it, and the level is passed when the shark grows to the size the game asks for."
           ]
         },
         {
           "heading": "Hazards seen on the first level",
           "paragraphs": [
-            "The first level is a bright blue reef with rock arches and seaweed. Yellow barrels with radiation signs sit in piles along the bottom, and spiky pufferfish float through the open water. Green bubbles also drift around the level. Keeping the shark in the clear middle band of water, away from the barrel piles, made it much easier to stay alive."
+            "The first level is a bright blue reef with rock arches and seaweed. Yellow barrels with radiation signs sit in piles along the bottom, and spiky pufferfish float through the open water. Green bubbles also drift around the level."
           ]
         }
       ]
