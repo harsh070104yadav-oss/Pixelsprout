@@ -17,9 +17,67 @@
     "protect-my-dog.json": "e15c454e5311d8e8e269095732cdf69166e1a8e3c41b054e86032351e56afd04",
     "star-hop-endless-galaxy.json": "6f8121efb4c316bbabf8b6ff9e68e206239303a9178b10e47ee907550eedc4e3",
     "billiards.json": "96c279747b520d1eaae9ea35790fcc248072dd1f3f0e51daa63c1535c4633c19",
-    "spellwright.json": "b5d608a1ab82dbb3fbf91c467fd6b76f1b79fc62df88897d2355013c21970d37"
+    "spellwright.json": "b5d608a1ab82dbb3fbf91c467fd6b76f1b79fc62df88897d2355013c21970d37",
+    "angry-sharks.json": "e983a52ced8d89405d7fd80abee6057242d1a29f65ac818b49ad7c2216d3c945",
+    "astro-digger.json": "f406bb1d9384bc44ed531d4f851106845816b88eeda0de3e134cac54e986907e"
   },
   "runs": [
+    {
+      "ran_at": "2026-11-03T13:27:15Z",
+      "published": [
+        {
+          "file": "angry-sharks.json",
+          "slug": "angry-sharks",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/angry-sharks-beginner-guide/",
+            "https://playpixelsprout.com/guides/angry-sharks-controls/",
+            "https://playpixelsprout.com/guides/angry-sharks-faq/",
+            "https://playpixelsprout.com/guides/games-like-angry-sharks/",
+            "https://playpixelsprout.com/guides/angry-sharks-tips/"
+          ],
+          "noindex_held": [
+            "/guides/angry-sharks-beginner-guide/",
+            "/guides/angry-sharks-controls/",
+            "/guides/angry-sharks-faq/",
+            "/guides/angry-sharks-tips/",
+            "/guides/games-like-angry-sharks/"
+          ]
+        },
+        {
+          "file": "astro-digger.json",
+          "slug": "astro-digger",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/astro-digger-beginner-guide/",
+            "https://playpixelsprout.com/guides/astro-digger-controls/",
+            "https://playpixelsprout.com/guides/astro-digger-faq/",
+            "https://playpixelsprout.com/guides/games-like-astro-digger/",
+            "https://playpixelsprout.com/guides/astro-digger-tips/"
+          ],
+          "noindex_held": [
+            "/guides/astro-digger-beginner-guide/",
+            "/guides/astro-digger-controls/",
+            "/guides/astro-digger-faq/",
+            "/guides/astro-digger-tips/",
+            "/guides/games-like-astro-digger/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-31T11:33:31Z",
       "published": [

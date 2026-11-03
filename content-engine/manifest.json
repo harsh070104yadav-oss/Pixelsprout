@@ -11006,7 +11006,15 @@
       "beginner-guide": "/guides/astro-digger-beginner-guide/",
       "similar": "/guides/games-like-astro-digger/",
       "faq": "/guides/astro-digger-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-11-03T13:27:15Z"
   },
   "kaido": {
     "generated_at": "2026-10-16T10:33:27Z",
@@ -11248,7 +11256,15 @@
       "beginner-guide": "/guides/angry-sharks-beginner-guide/",
       "similar": "/guides/games-like-angry-sharks/",
       "faq": "/guides/angry-sharks-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-11-03T13:27:15Z"
   },
   "butterfly-dash": {
     "generated_at": "2026-10-17T10:00:31Z",
