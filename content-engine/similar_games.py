@@ -76,6 +76,30 @@ CURATED_SIMILAR = {
         "space-miner",
         "hole-digger-in-russia",
     ],
+    # Named in the Awesome Duck games-like body (Adventure filler was wrong).
+    "awesome-duck": [
+        "stickman-that-one-level",
+        "key-shield",
+        "key-shield-2",
+        "epic-duck",
+        "jumpy-noob",
+    ],
+    # Named in the Battalion Commander 2 games-like body (soldier runners).
+    "battalion-commander-2": [
+        "battalion-commander",
+        "battalion-commander-1917",
+        "runner-soldiers",
+        "soldier-run-evolution",
+        "bullet-army-run",
+    ],
+    # Named in the Stickman That One Level games-like body.
+    "stickman-that-one-level": [
+        "level-devil-3d",
+        "level-demon-2",
+        "jumpy-noob",
+        "carrot-climber",
+        "getting-over-it",
+    ],
 }
 
 
