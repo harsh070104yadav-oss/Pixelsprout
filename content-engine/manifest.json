@@ -8446,7 +8446,15 @@
       "beginner-guide": "/guides/stickman-that-one-level-beginner-guide/",
       "similar": "/guides/games-like-stickman-that-one-level/",
       "faq": "/guides/stickman-that-one-level-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-11-05T06:55:09Z"
   },
   "stickman-mega-boss-battles": {
     "generated_at": "2026-10-10T11:50:15Z",
@@ -10863,7 +10871,15 @@
       "beginner-guide": "/guides/awesome-duck-beginner-guide/",
       "similar": "/guides/games-like-awesome-duck/",
       "faq": "/guides/awesome-duck-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-11-05T06:55:09Z"
   },
   "find-the-pets": {
     "generated_at": "2026-10-16T10:30:31Z",
@@ -11036,7 +11052,15 @@
       "beginner-guide": "/guides/battalion-commander-2-beginner-guide/",
       "similar": "/guides/games-like-battalion-commander-2/",
       "faq": "/guides/battalion-commander-2-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-11-05T06:55:09Z"
   },
   "rabbit-samurai": {
     "generated_at": "2026-10-16T10:33:51Z",

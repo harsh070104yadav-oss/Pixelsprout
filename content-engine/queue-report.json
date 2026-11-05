@@ -19,9 +19,86 @@
     "billiards.json": "96c279747b520d1eaae9ea35790fcc248072dd1f3f0e51daa63c1535c4633c19",
     "spellwright.json": "b5d608a1ab82dbb3fbf91c467fd6b76f1b79fc62df88897d2355013c21970d37",
     "angry-sharks.json": "e983a52ced8d89405d7fd80abee6057242d1a29f65ac818b49ad7c2216d3c945",
-    "astro-digger.json": "f406bb1d9384bc44ed531d4f851106845816b88eeda0de3e134cac54e986907e"
+    "astro-digger.json": "f406bb1d9384bc44ed531d4f851106845816b88eeda0de3e134cac54e986907e",
+    "awesome-duck.json": "41e05839803231ccbd820daa258835fbc5bc00f3d29ac754464a1a15bc2d7991",
+    "battalion-commander-2.json": "74d5243c2fa5a2dd05adebb8f344c5e104f3ae6668868f81d5910215261ab03e",
+    "stickman-that-one-level.json": "dcfddcd392287442ab7c8f9912a22c1ecc1de5f9e96e4b616d6666a2e3c24104"
   },
   "runs": [
+    {
+      "ran_at": "2026-11-05T06:55:09Z",
+      "published": [
+        {
+          "file": "awesome-duck.json",
+          "slug": "awesome-duck",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/awesome-duck-beginner-guide/",
+            "https://playpixelsprout.com/guides/awesome-duck-controls/",
+            "https://playpixelsprout.com/guides/awesome-duck-faq/",
+            "https://playpixelsprout.com/guides/games-like-awesome-duck/",
+            "https://playpixelsprout.com/guides/awesome-duck-tips/"
+          ],
+          "noindex_held": [
+            "/guides/awesome-duck-beginner-guide/",
+            "/guides/awesome-duck-controls/",
+            "/guides/awesome-duck-faq/",
+            "/guides/awesome-duck-tips/",
+            "/guides/games-like-awesome-duck/"
+          ]
+        },
+        {
+          "file": "battalion-commander-2.json",
+          "slug": "battalion-commander-2",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/battalion-commander-2-beginner-guide/",
+            "https://playpixelsprout.com/guides/battalion-commander-2-controls/",
+            "https://playpixelsprout.com/guides/battalion-commander-2-faq/",
+            "https://playpixelsprout.com/guides/games-like-battalion-commander-2/",
+            "https://playpixelsprout.com/guides/battalion-commander-2-tips/"
+          ],
+          "noindex_held": [
+            "/guides/battalion-commander-2-beginner-guide/",
+            "/guides/battalion-commander-2-controls/",
+            "/guides/battalion-commander-2-faq/",
+            "/guides/battalion-commander-2-tips/",
+            "/guides/games-like-battalion-commander-2/"
+          ]
+        },
+        {
+          "file": "stickman-that-one-level.json",
+          "slug": "stickman-that-one-level",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/stickman-that-one-level-beginner-guide/",
+            "https://playpixelsprout.com/guides/stickman-that-one-level-controls/",
+            "https://playpixelsprout.com/guides/stickman-that-one-level-faq/",
+            "https://playpixelsprout.com/guides/games-like-stickman-that-one-level/",
+            "https://playpixelsprout.com/guides/stickman-that-one-level-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-11-03T13:27:15Z",
       "published": [
