@@ -1,0 +1,101 @@
+{
+  "slug": "stickman-that-one-level",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Stickman That One Level puts a small red character in a single dungeon room full of saw blades and asks you to grab keys and get out. These tips come from a short session that cleared stage 1 and reached stage 2, with a fair number of falls into the saw pit along the way.",
+      "tips": [
+        "Do not run straight right from the start. The floor steps down into a pit with two spinning saw blades, and holding right for under a second carried me into it more than once.",
+        "Jump from the edge of the starting steps, not from the pit floor. A jump to the right from the top of the steps landed me on the floating stone platform on the left side of the room.",
+        "Use the platforms as a staircase. In stage 1 the key sits on the top platform in the middle of the room, and the route that worked for me was the left floating platform first, then a second jump up and to the right.",
+        "Watch the ceiling. Saw blades are set into the ceiling and the side walls, including one right above the key, so short hops are safer than full jumps when you are already up high.",
+        "After you take the key, look at the right wall. The barred gate there slid away once the key was collected, and walking off the right side of the room is what moved me on to the next stage.",
+        "Read the caption at the start of each stage. The room stays the same, but the goal text changes, and stage 2 said there were now three keys to collect.",
+        "Expect to restart. Hitting a saw leaves a red splat and puts you back at the left side of the current stage, so a fall only costs a few seconds.",
+        "Give each jump a firm press. In my run, a very quick flick of the jump key did not always register, while a slightly longer press of Space worked every time."
+      ],
+      "conclusion": "Take the room one platform at a time, keep away from the saws in the pit and on the ceiling, and check the caption whenever a new stage starts.",
+      "extra_sections": [
+        {
+          "heading": "Stage 1 route that worked",
+          "paragraphs": [
+            "From the start on the left, walk to the edge of the steps and jump right to reach the left floating platform. From there, jump up and right onto the long platform at the top of the room where the key is waiting under a white arrow.",
+            "Walk into the key to take it, then jump right to the floating platform on the right side. The gate on the right wall opens once the key is yours, and walking off the right edge ends the stage."
+          ]
+        },
+        {
+          "heading": "What changes in stage 2",
+          "paragraphs": [
+            "Stage 2 uses the same room but puts out three keys: one on the wooden ledge in the upper left, one on the top platform and one floating just above the low platform in the middle. The on-screen hint for this stage says to tap jump twice for a double jump, which you need for the higher spots."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Stickman That One Level is played with the keyboard. The game prints the controls on screen in stage 1, and these are the keys I used.",
+      "desktop": "Move left and right with A and D or the left and right arrow keys. Jump with W or Space. From stage 2 the game tells you to tap jump twice for a double jump. There is a pause button in the top right corner of the screen.",
+      "tips": [
+        "Keep one hand on the arrow keys or A and D and the other on Space so you can move and jump at the same time.",
+        "Let go of the move key just before you land on a small platform, since the character keeps moving quickly while the key is held.",
+        "For the double jump, press jump a second time while still in the air, as the stage 2 hint describes.",
+        "Firm presses of Space were more reliable for me than very quick taps."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Stickman That One Level? This guide covers what the game is and how to get through your first two stages, based on a short run that cleared stage 1.",
+      "what_it_is": "Stickman That One Level is a single-room platformer. You play a small red character in a stone dungeon with barred windows, floating stone platforms, wooden ledges and saw blades on the ceiling, the walls and in a pit in the middle of the floor. Each stage shows a numbered caption with the goal. Stage 1 asks you to take the key and open the door, and stage 2 keeps the same room but adds more keys. Hitting a saw sends you back to the start of the stage.",
+      "first_steps": [
+        "Press OK, PLAY NOW on the loading screen, wait for the game to load, then press the large play button in the middle of the room.",
+        "Read the caption and the control hints painted on the wall: W or Space to jump, A, D or the arrow keys to move.",
+        "Walk to the edge of the starting steps and jump right onto the left floating platform instead of dropping into the saw pit.",
+        "Jump up to the top platform and walk into the key under the white arrow.",
+        "Head right after the gate on the right wall opens and walk off the edge to reach stage 2.",
+        "In stage 2, look for all three keys and try the double jump the hint mentions."
+      ],
+      "who_its_for": "Players who like short, precise jumping puzzles and do not mind retrying the same room many times until a route clicks.",
+      "extra_sections": [
+        {
+          "heading": "Why it is called That One Level",
+          "paragraphs": [
+            "Everything I played happened in one room. Instead of moving to a new map, the next stage reuses the same dungeon with a new caption and a new twist, such as three keys instead of one. Learning where the saws and platforms are in stage 1 pays off right away in stage 2."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Stickman That One Level is about careful jumps in a tight space, where one mistake drops you into saws and sends you back to the start. If that mix of short routes and quick retries is what you like, Pixelsprout has other tricky platformers to try, such as Level Devil 3D, Level Demon 2, Jumpy Noob, Carrot Climber and Getting Over It, a much slower climb that also punishes every slip."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "What is the goal in Stickman That One Level?",
+          "answer": "Each stage shows a caption with its goal. In stage 1 you take the key and open the door. Once you have the key, the gate on the right wall opens and walking off the right side starts the next stage."
+        },
+        {
+          "question": "What are the controls?",
+          "answer": "A and D or the left and right arrow keys move, and W or Space jumps. From stage 2 the game tells you to tap jump twice for a double jump. A pause button sits in the top right corner."
+        },
+        {
+          "question": "What happens when you hit a saw blade?",
+          "answer": "Your character leaves a red splat and you start again from the left side of the same stage. You do not lose the stages you have already cleared."
+        },
+        {
+          "question": "Where is the key in stage 1?",
+          "answer": "It sits on the long platform at the top middle of the room, under a white arrow. Jump to the left floating platform first, then up and right to reach it."
+        },
+        {
+          "question": "How many keys are there in stage 2?",
+          "answer": "Three. The caption says there are now three of them, and I saw one on the upper left wooden ledge, one on the top platform and one above the low platform in the middle of the room."
+        },
+        {
+          "question": "Is the whole game really one level?",
+          "answer": "The stages I played all used the same dungeon room. The caption and the number of keys changed from stage 1 to stage 2, but the layout of saws and platforms stayed the same."
+        },
+        {
+          "question": "Why do I keep falling into the saws at the start?",
+          "answer": "The floor slopes down into a pit with two saws just right of the start, and the character runs fast. Stop at the edge of the steps and jump from there instead of holding right."
+        }
+      ]
+    }
+  }
+}
