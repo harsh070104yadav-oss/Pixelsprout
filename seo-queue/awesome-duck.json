@@ -1,0 +1,93 @@
+{
+  "slug": "awesome-duck",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Awesome Duck is a small key-and-door platformer where a white duck hops between grassy ledges inside orange checkered walls. These tips come from a short session that cleared the first level and picked up the key in the second.",
+      "tips": [
+        "Find the key before anything else. In both levels I played, the pink door with a keyhole stays shut until the duck has picked up the yellow key somewhere else in the level.",
+        "Use the screen edges. When the duck walked off the left side of the first level, it came back in from the right side, which is a quick way to reach the far ledges.",
+        "Give the jump key a long press. Short taps of the Up arrow only lifted the duck a little, while a longer press followed by a second press carried it up two ledges in one go.",
+        "Do not worry about drops. Falling from a ledge in the first level just landed the duck on the floor below, so you can drop down freely to reach the door.",
+        "Look for the down arrow above the door. Once you bring the key back, the door opens into a dark doorway with a small down arrow over it, and pressing Down takes the duck through.",
+        "Plan the way back before you grab the key. In level 2 the key sits at the bottom of a narrow shaft while the door is up on the top ledge, and my single jumps only reached about halfway up the shaft."
+      ],
+      "conclusion": "Grab the key, use the wrap-around edges and long jumps to move between ledges, then head back to the door and press Down.",
+      "extra_sections": [
+        {
+          "heading": "How I cleared level 1",
+          "paragraphs": [
+            "The duck starts on the floor of the lower room next to the locked door, and the key sits on the top ledge in the upper right. I held Right to reach the right wall, then used a long press of Up and a second press to climb onto the middle ledge and then the top ledge.",
+            "After walking right into the key, I held Left. The duck walked off the left edge, reappeared on the right, dropped through the ledges to the floor and stopped at the door, which was now open. Pressing Down started level 2."
+          ]
+        },
+        {
+          "heading": "Level 2 layout",
+          "paragraphs": [
+            "Level 2 flips the setup. The duck starts on the upper left ledge, the door is on the upper right, and the key waits at the bottom of a blue shaft between them. Dropping into the shaft to get the key is easy, but climbing back out takes more than one ordinary jump."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Awesome Duck responds to the arrow keys. These are the keys that worked for me on a keyboard.",
+      "desktop": "Press the Left and Right arrow keys to walk. Press Up to jump; a longer press and a second press in the air took the duck higher than a quick tap. When the door is open and a down arrow shows above it, press Down to go through.",
+      "tips": [
+        "Hold Up a little longer when you need to reach a higher ledge.",
+        "Press Down only when you are standing in the open doorway, after the down arrow appears.",
+        "Walking off one side of the screen brings the duck in from the other side, so the Left and Right keys can be used as a shortcut."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "Just starting Awesome Duck? Here is what the game is and how the first level works, from a short run that finished level 1.",
+      "what_it_is": "Awesome Duck is a single-screen platformer with a bright pixel look: orange checkered walls, blue sky rooms and green grass ledges. Each level has a locked pink door and a yellow key. You walk and jump the white duck to the key, then bring it back to the door, which opens and lets you through to the next level. The screen wraps at the sides, so leaving one edge brings you back on the other.",
+      "first_steps": [
+        "Press PLAY on the title screen that says DUCK.",
+        "Spot the key in the level before you move. In level 1 it is on the top ledge in the upper right.",
+        "Walk with the Left and Right arrow keys and jump with Up, holding it longer for higher ledges.",
+        "Walk into the key to take it, then make your way back to the pink door.",
+        "When the door opens and a down arrow appears above it, press Down to move on."
+      ],
+      "who_its_for": "Players who want a quick, calm puzzle platformer with short levels and a simple find-the-key goal.",
+      "extra_sections": [
+        {
+          "heading": "Getting used to the wrap-around screen",
+          "paragraphs": [
+            "The most surprising thing in my session was the screen wrap. Walking off the left side of level 1 put the duck on a ledge on the right side, and from there it dropped straight down to the door. Treat both side edges as open paths when you plan a route."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Awesome Duck is about finding a key, getting back to a locked door and hopping between ledges in a single screen. If that short find-the-key loop suits you, Pixelsprout has more platformers built around keys, doors and careful jumps, such as Stickman That One Level, Key and Shield, Key and Shield 2, Epic Duck and Jumpy Noob."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "What is the goal in Awesome Duck?",
+          "answer": "Each level has a yellow key and a locked pink door. Take the key, return to the door and press Down when it opens to reach the next level."
+        },
+        {
+          "question": "How do you jump in Awesome Duck?",
+          "answer": "Press the Up arrow key. In my session a quick tap gave a small hop, while a longer press and a second press in the air carried the duck up two ledges."
+        },
+        {
+          "question": "How do you go through the door?",
+          "answer": "Bring the key to the door. It opens into a dark doorway with a small down arrow above it, and pressing the Down arrow key takes the duck through."
+        },
+        {
+          "question": "Can the duck go off the edge of the screen?",
+          "answer": "Yes. In level 1, walking off the left edge brought the duck back in from the right side of the screen."
+        },
+        {
+          "question": "Where is the key in level 1?",
+          "answer": "On the top grassy ledge in the upper right of the screen. The door is at the bottom left, so you climb up for the key and then drop back down."
+        },
+        {
+          "question": "Why is level 2 harder?",
+          "answer": "The key is at the bottom of a narrow shaft and the door is on a high ledge. Getting the key is easy, but one normal jump only reached about halfway back up the shaft for me."
+        }
+      ]
+    }
+  }
+}
