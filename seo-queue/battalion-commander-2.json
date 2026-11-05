@@ -1,0 +1,97 @@
+{
+  "slug": "battalion-commander-2",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Battalion Commander 2 is a top-down run where your soldier pushes up a snowy forest path while firing ahead. These tips come from two short runs that both ended around the 40 meter mark, plus a look at the missions and menu screens.",
+      "tips": [
+        "Steer with the mouse. Your soldier, the one in the green helmet with a star, moves toward the pointer, so keep the pointer just in front of him instead of sweeping it around.",
+        "You do not need a fire key. Your soldier shoots pairs of yellow bullets up the path on his own while you move him.",
+        "Watch for enemies coming up beside you, not just ahead. Both of my runs ended with Mission Failed near 40 meters with dark-uniformed enemy soldiers right next to my soldier.",
+        "Keep an eye on the helmet icon on the left. It has a small health bar under it, so check it as enemies close in.",
+        "Use the meter readout in the top right. It shows how far you have run and your best distance, which is handy for the Run 200 meters in one game mission.",
+        "Check the mission list between runs. Mine asked me to launch Adrenaline Injection 3 times, stab 15 enemy soldiers and run 200 meters in one game, each paying stars and gold.",
+        "Look out for the metal cages near the tree lines. The results screen counts allies freed and allies gathered, so the cages along the path are worth noticing."
+      ],
+      "conclusion": "Move steadily with the mouse, let your soldier do the shooting, and work through the three missions on the menu one run at a time.",
+      "extra_sections": [
+        {
+          "heading": "What I saw on the path",
+          "paragraphs": [
+            "The run takes place on a white snowy path with thick snow-covered pine trees on both sides. Grey rocks are scattered in the snow, and orange barrels, wooden crates and metal cages sit near the edges of the path. Enemy soldiers in dark uniforms appear ahead and along the sides."
+          ]
+        },
+        {
+          "heading": "Reading the results screen",
+          "paragraphs": [
+            "After a run ends, the results list gold collected, XP collected, run distance, enemies destroyed, allies freed and allies gathered. My first run reached 43 meters with no enemies destroyed and 1 ally gathered, which made it clear that staying alive longer and hitting more enemies are the first things to improve."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Battalion Commander 2 is played with the mouse. Here is what each part of the screen did in my runs.",
+      "desktop": "Move the mouse and your soldier follows the pointer up and across the path. Shooting happens on its own, so there is no fire button to hold. Click START on the title screen and PLAY on the menu to begin a run, and click the pause button in the top left corner to stop. Music and sound buttons sit in the top right of the title and menu screens.",
+      "tips": [
+        "Small, steady mouse movements keep your soldier easier to control than big sweeps.",
+        "Keep the pointer slightly ahead of your soldier so he keeps moving up the path.",
+        "The pause button in the top left is the quickest way to stop mid-run."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Battalion Commander 2? This guide explains the run, the menu and the first missions, based on two short runs.",
+      "what_it_is": "Battalion Commander 2 is a top-down military runner. Your soldier advances up a snowy forest path, firing ahead automatically while you steer him with the mouse. Enemy soldiers, barrels, crates and cages appear along the way, and a meter counter tracks how far you get. When the run ends you see a results screen and then a menu with three missions, your soldier card with rank, HP and team size, locked perk slots, an Upgrades button and the Play button.",
+      "first_steps": [
+        "Click START on the title screen to jump straight into your first run.",
+        "Move the mouse to steer your soldier and let him shoot on his own.",
+        "Watch the meter count in the top right and the health bar under the helmet icon on the left.",
+        "When the run ends, read the results to see your distance, enemies destroyed and allies gathered.",
+        "Click CONTINUE, read the three missions on the menu, then click PLAY to try again."
+      ],
+      "who_its_for": "Players who like short top-down action runs with simple mouse steering and a list of missions to chase between attempts.",
+      "extra_sections": [
+        {
+          "heading": "Your soldier card and the menu",
+          "paragraphs": [
+            "The menu shows your soldier as a Private with HP 10 and a team of 5, plus an XP bar that started at 0 out of 100. Next to the card are two item icons marked Click to switch, a row of four locked perk slots and an Upgrades button. An Endless Mode button was shown but greyed out in my session."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Battalion Commander 2 is about pushing a soldier forward through enemy lines while he shoots on his own and you focus on steering. If that mix of top-down action and quick restarts appeals to you, Pixelsprout also has the earlier Battalion Commander, Battalion Commander 1917, and other soldier runners such as Runner Soldiers, Soldier Run Evolution and Bullet Army Run."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "How do you control your soldier in Battalion Commander 2?",
+          "answer": "With the mouse. Your soldier follows the pointer, and he shoots on his own, so you only need to steer him."
+        },
+        {
+          "question": "Do you need to press a button to shoot?",
+          "answer": "No. In my runs the soldier fired pairs of yellow bullets up the path the whole time without any key or click."
+        },
+        {
+          "question": "What are the first missions?",
+          "answer": "My mission list showed Launch Adrenaline Injection 3 times, Stab 15 enemy soldiers and Run 200 meters in one game. Each one lists a reward in stars and gold, and the menu shows 48 missions in total."
+        },
+        {
+          "question": "What ends a run?",
+          "answer": "Both of my runs ended with a Mission Failed message at around 40 meters, with enemy soldiers close to mine. Then the results screen appears."
+        },
+        {
+          "question": "What does the results screen show?",
+          "answer": "Gold collected, XP collected, run distance, enemies destroyed, allies freed and allies gathered. Click CONTINUE to go to the menu."
+        },
+        {
+          "question": "Where does the game take place?",
+          "answer": "The runs I played were on a snowy path lined with snow-covered pine trees, with rocks, orange barrels, wooden crates and metal cages along the way."
+        },
+        {
+          "question": "Is Endless Mode available from the start?",
+          "answer": "In my session the Endless Mode button on the menu was greyed out, so I could only start regular runs with the Play button."
+        }
+      ]
+    }
+  }
+}
