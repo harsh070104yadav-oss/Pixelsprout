@@ -325,6 +325,9 @@ GAME_SOCIAL_LINKS = {
         ("Reel on Instagram (Part 6)", "https://www.instagram.com/playpixelsprout/reel/DfLVFPvvGY-/"),
         ("YouTube Short (Part 7)", "https://youtube.com/shorts/h3iL_0RqJBI"),
         ("YouTube Short (Part 8)", "https://youtube.com/shorts/Rh4kmgyUV8o"),
+        ("YouTube Short (Part 9)", "https://youtube.com/shorts/ih7EmQfzK9Y"),
+        ("Reel on Instagram (Part 9)", "https://www.instagram.com/reel/DfYObTKCADw/"),
+        ("Reel on Facebook (Part 9)", "https://www.facebook.com/reel/954153614150444/"),
     ],
     "protect-my-dog": [
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/bBCWh7W_dyg"),
