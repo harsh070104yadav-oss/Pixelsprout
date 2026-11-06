@@ -11000,7 +11000,15 @@
       "beginner-guide": "/guides/bear-adventure-online-game-beginner-guide/",
       "similar": "/guides/games-like-bear-adventure-online-game/",
       "faq": "/guides/bear-adventure-online-game-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-11-06T13:36:35Z"
   },
   "pixzombies": {
     "generated_at": "2026-10-16T10:33:03Z",
@@ -11030,7 +11038,7 @@
       "similar",
       "tips"
     ],
-    "bot_updated_at": "2026-11-03T13:27:15Z"
+    "bot_updated_at": "2026-11-06T13:36:35Z"
   },
   "kaido": {
     "generated_at": "2026-10-16T10:33:27Z",
@@ -11247,7 +11255,15 @@
       "beginner-guide": "/guides/bobb-s-world-beginner-guide/",
       "similar": "/guides/games-like-bobb-s-world/",
       "faq": "/guides/bobb-s-world-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-11-06T13:36:35Z"
   },
   "diggy": {
     "generated_at": "2026-10-16T10:37:42Z",

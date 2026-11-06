@@ -19,12 +19,95 @@
     "billiards.json": "96c279747b520d1eaae9ea35790fcc248072dd1f3f0e51daa63c1535c4633c19",
     "spellwright.json": "b5d608a1ab82dbb3fbf91c467fd6b76f1b79fc62df88897d2355013c21970d37",
     "angry-sharks.json": "e983a52ced8d89405d7fd80abee6057242d1a29f65ac818b49ad7c2216d3c945",
-    "astro-digger.json": "f406bb1d9384bc44ed531d4f851106845816b88eeda0de3e134cac54e986907e",
+    "astro-digger.json": "e34380eff120bb1585d694b34a248ee618f015d1d9a5f021f2bb5e85d7834ddf",
     "awesome-duck.json": "41e05839803231ccbd820daa258835fbc5bc00f3d29ac754464a1a15bc2d7991",
     "battalion-commander-2.json": "74d5243c2fa5a2dd05adebb8f344c5e104f3ae6668868f81d5910215261ab03e",
-    "stickman-that-one-level.json": "dcfddcd392287442ab7c8f9912a22c1ecc1de5f9e96e4b616d6666a2e3c24104"
+    "stickman-that-one-level.json": "dcfddcd392287442ab7c8f9912a22c1ecc1de5f9e96e4b616d6666a2e3c24104",
+    "bear-adventure-online-game.json": "e1991fe0a46d225f2afdd4ae0d8fc370ca10f4742040f6c5660e5642301abe3a",
+    "bobb-s-world.json": "004a8b061041442ceb479972490f7b055870ee1f4228444858118d3739eb7a55"
   },
   "runs": [
+    {
+      "ran_at": "2026-11-06T13:36:35Z",
+      "published": [
+        {
+          "file": "astro-digger.json",
+          "slug": "astro-digger",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/astro-digger-beginner-guide/",
+            "https://playpixelsprout.com/guides/astro-digger-controls/",
+            "https://playpixelsprout.com/guides/astro-digger-faq/",
+            "https://playpixelsprout.com/guides/games-like-astro-digger/",
+            "https://playpixelsprout.com/guides/astro-digger-tips/"
+          ],
+          "noindex_held": [
+            "/guides/astro-digger-beginner-guide/",
+            "/guides/astro-digger-controls/",
+            "/guides/astro-digger-faq/",
+            "/guides/astro-digger-tips/",
+            "/guides/games-like-astro-digger/"
+          ]
+        },
+        {
+          "file": "bear-adventure-online-game.json",
+          "slug": "bear-adventure-online-game",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/bear-adventure-online-game-beginner-guide/",
+            "https://playpixelsprout.com/guides/bear-adventure-online-game-controls/",
+            "https://playpixelsprout.com/guides/bear-adventure-online-game-faq/",
+            "https://playpixelsprout.com/guides/games-like-bear-adventure-online-game/",
+            "https://playpixelsprout.com/guides/bear-adventure-online-game-tips/"
+          ],
+          "noindex_held": [
+            "/guides/bear-adventure-online-game-beginner-guide/",
+            "/guides/bear-adventure-online-game-controls/",
+            "/guides/bear-adventure-online-game-faq/",
+            "/guides/bear-adventure-online-game-tips/",
+            "/guides/games-like-bear-adventure-online-game/"
+          ]
+        },
+        {
+          "file": "bobb-s-world.json",
+          "slug": "bobb-s-world",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/bobb-s-world-beginner-guide/",
+            "https://playpixelsprout.com/guides/bobb-s-world-controls/",
+            "https://playpixelsprout.com/guides/bobb-s-world-faq/",
+            "https://playpixelsprout.com/guides/games-like-bobb-s-world/",
+            "https://playpixelsprout.com/guides/bobb-s-world-tips/"
+          ],
+          "noindex_held": [
+            "/guides/bobb-s-world-beginner-guide/",
+            "/guides/bobb-s-world-controls/",
+            "/guides/bobb-s-world-faq/",
+            "/guides/bobb-s-world-tips/",
+            "/guides/games-like-bobb-s-world/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-11-05T06:55:09Z",
       "published": [
