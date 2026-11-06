@@ -1,0 +1,107 @@
+{
+  "slug": "bobb-s-world",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Bobb's World opens on an interactive title stage with hanging signs, three tooth-lined doorways and a blue round character. These tips come from a session that walked that stage, opened Options and practiced the listed keys.",
+      "tips": [
+        "Read the hanging controls sign on the right before you move. It lists MOVE on Left, Right, A and D; JUMP on Space, W and Up; and ENTER on E.",
+        "Stand in a doorway before you press E. Walking near the left doorway raised an OPTIONS sign, and pressing E there opened the options room; standing under PLAY on the center platform is how that sign appeared for me.",
+        "In Options, jump on the red floor buttons. A banner says JUMP ON THE BUTTONS, and each button sits under a hanging setting such as SFX, MUSIC or CONTROLS.",
+        "To leave Options, walk into the small exit hut on the right and press E. The EXIT sign shows an E key and the word ENTER above that hut.",
+        "Use the center raised platform when you want the PLAY sign. In my run PLAY hung under the title once Bobb was on that middle ledge.",
+        "Practice jumps on the title grass before you commit to a doorway. Space, W and Up all jumped for me, and short hops were enough to climb from the left ledge onto the center platform."
+      ],
+      "conclusion": "Learn the listed keys on the title sign, use E only when you are in the doorway you want, and jump on the Options buttons when you need to change SFX, music or controls.",
+      "extra_sections": [
+        {
+          "heading": "How the title stage is laid out",
+          "paragraphs": [
+            "The title stage sits on a yellow brick wall with brown earth and green grass platforms. Three brown doorways with green stripes and red tooth edges sit left, center and right. Green pipes rise on the far right, and thin poles with round green tops act as simple trees.",
+            "BOBB'S WORLD hangs at the top in blue block letters. A large yellow controls board hangs on the right, and smaller chain signs such as OPTIONS or PLAY appear depending on where Bobb stands."
+          ]
+        },
+        {
+          "heading": "What I changed in Options",
+          "paragraphs": [
+            "The options room uses a blue brick wall and a grass floor with three red and white buttons. Signs showed SFX: ON, MUSIC: ON, CONTROLS: KEYBOARD and EXIT with an E Enter hint. After I jumped on the music button, the music sign read MUSIC: OFF for the rest of that visit."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Bobb's World prints its keyboard map on the title stage. These are the keys that moved Bobb and opened doors in my session.",
+      "desktop": "Move with the Left and Right arrow keys or with A and D. Jump with Space, W or the Up arrow. Press E to enter a doorway when you are standing in it. In Options, jump on the floor buttons to change settings, then stand in the right-hand exit hut and press E to return to the title stage.",
+      "tips": [
+        "Keep the controls sign in view on the title stage until the move, jump and enter keys feel natural.",
+        "Press E only after Bobb is clearly inside or overlapping the doorway you want.",
+        "In Options, one jump on a button is enough to flip the sign above it, as when MUSIC changed from ON to OFF for me."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "Just starting Bobb's World? Here is the title stage and Options room as they appeared in a short keyboard session.",
+      "what_it_is": "Bobb's World is a pixel platformer whose first screen is already a small level. You steer Bobb, a round grinning character that looked blue on the title stage and purple in Options, across grass platforms under a yellow brick wall. Hanging signs show the controls, and tooth-lined doorways lead to Options or toward PLAY. The Options room lets you jump on buttons to toggle SFX, music and the controls mode before you exit with E.",
+      "first_steps": [
+        "Look at the yellow controls sign on the right so you know MOVE, JUMP and ENTER.",
+        "Walk with Left and Right or A and D and jump with Space to reach the center platform.",
+        "When the PLAY sign hangs under the title, stand on that center ledge near the middle doorway.",
+        "If you want settings first, stand in the left doorway until OPTIONS appears and press E.",
+        "In Options, jump on the buttons under SFX, MUSIC or CONTROLS, then enter the right hut with E to leave."
+      ],
+      "who_its_for": "Players who like pixel platformers with on-screen control reminders and a menu you walk through instead of clicking lists.",
+      "extra_sections": [
+        {
+          "heading": "Bobb's look on each screen",
+          "paragraphs": [
+            "On the yellow-brick title stage Bobb was a small blue round body with a wide toothy grin and tiny legs. In the Options room the same round body appeared purple while the grin and walk stayed the same."
+          ]
+        },
+        {
+          "heading": "Doorways versus hanging signs",
+          "paragraphs": [
+            "The hanging OPTIONS and PLAY signs told me which doorway I was near, but entering still needed the E key while Bobb overlapped that doorway. Walking alone past a hut did not open it until I pressed E in place."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Bobb's World mixes a bright pixel look with simple left-right jumps and doorways you enter with a key. If that platformer adventure pace fits you, Pixelsprout also has Swimming Bee, Butterfly Dash, Drive Crazy, Super Willie World 2, Birdy Bird and Somewhere, which share short movement loops, clear goals and light side-view exploration."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "What keys move Bobb?",
+          "answer": "The title sign lists Left and Right arrows plus A and D for MOVE. Those keys walked Bobb on the title stage in my session."
+        },
+        {
+          "question": "How do you jump in Bobb's World?",
+          "answer": "Jump with Space, W or the Up arrow. All three worked for me when climbing from the left ledge onto the center platform."
+        },
+        {
+          "question": "What does the E key do?",
+          "answer": "E is listed as ENTER. Pressing E while Bobb stood in a doorway opened Options from the left hut and later left Options through the exit hut."
+        },
+        {
+          "question": "How do you open Options?",
+          "answer": "Walk to the left doorway until the OPTIONS sign hangs, then press E. That loaded a blue-brick room with setting buttons."
+        },
+        {
+          "question": "How do you change music or sound?",
+          "answer": "In Options, jump on the red buttons under the hanging signs. After I jumped on the music button, the sign switched from MUSIC: ON to MUSIC: OFF."
+        },
+        {
+          "question": "How do you leave the Options room?",
+          "answer": "Walk into the small tan exit hut on the right under the EXIT sign and press E. That returned me to the yellow-brick title stage."
+        },
+        {
+          "question": "Where does the PLAY sign appear?",
+          "answer": "When Bobb stood on the raised center platform under the title, a PLAY sign hung on chains in the middle of the screen."
+        },
+        {
+          "question": "What does the title stage look like?",
+          "answer": "A yellow brick wall, grass platforms, three tooth-lined doorways, green pipes on the right, simple green-topped poles and a large controls board on a chain."
+        }
+      ]
+    }
+  }
+}

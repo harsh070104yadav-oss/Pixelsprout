@@ -1,0 +1,103 @@
+{
+  "slug": "bear-adventure-online-game",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Bear Adventure Online Game is a short forest platformer with a red square bear, purple ledges and hanging beehives. These tips come from a headless session that opened the title screen, started a run and climbed around the first forest layout.",
+      "tips": [
+        "Use the arrow keys on a keyboard. Left and Right walked the bear, and Up jumped; holding Left or Right while tapping Up helped me reach higher ledges.",
+        "Watch for vine loops under the purple platforms. In my run the bear grabbed those loops and hung under a ledge, which is a different path than standing on top.",
+        "Falling is forgiving on the first layout. When I missed a jump the bear dropped to the dark purple ground and kept going, so I could reset and climb again.",
+        "Aim for the beehives. I saw an orange hive above the left mid ledge and a yellow hive hanging from the top-center platform, with a white score in the top right that stayed at 0 until I could reach one.",
+        "Open the pause menu from the blue button in the top left if you need a break. In my session it showed a Play button plus list, sound and music toggles on a card over the forest.",
+        "Practice short hops before long ones. A quick Up tap only lifted the bear a little, while a longer press carried it onto the mid platforms more reliably."
+      ],
+      "conclusion": "Walk and jump with the arrow keys, use the vines under ledges when you hang, and climb toward the beehives while the score sits in the top right.",
+      "extra_sections": [
+        {
+          "heading": "What the first forest layout looked like",
+          "paragraphs": [
+            "After the title screen, the run opened on a pale forest with mint and cream tree trunks, soft light beams and small white particles in the air. Dark purple platforms sat at several heights, each with jagged undersides and purple vine loops hanging down.",
+            "The ground strip across the bottom was the same dark purple and showed faint bone and skull marks. A blue pause control sat top left, the score sat top right, and blue left, right and up buttons stayed along the bottom of the view."
+          ]
+        },
+        {
+          "heading": "Climbing toward the left hive",
+          "paragraphs": [
+            "The orange beehive floated above a wide mid-height platform on the left. From the ground I held Left to get under it, then mixed Right and Up jumps to try to land on that ledge. I hung from vines a few times and dropped back to the floor more than once before the session ended, so the climb needs steady jump timing."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "On a keyboard, Bear Adventure Online Game responded to the arrow keys in my session. On-screen arrow buttons also sat along the bottom of the play view.",
+      "desktop": "Press Left or Right to walk the red bear. Press Up to jump; a longer press reached higher ledges than a short tap. The blue pause button in the top left opened a menu with Play, a list button, sound and music. From that menu I clicked Play to return to the forest.",
+      "tips": [
+        "Hold Left or Right while you tap Up when you need to clear a gap onto a mid platform.",
+        "If you hang under a ledge on a vine loop, use Left or Right to shift before you jump again.",
+        "Use the top-left pause button when you want the sound or music toggles; Play on that card resumes the run."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Bear Adventure Online Game? Here is what I saw from the title screen through the first forest climb.",
+      "what_it_is": "Bear Adventure Online Game is a side-view forest platformer. You steer a small red square bear across dark purple platforms set against pale trees and light snowfall. Beehives hang in the air as clear targets, and a score counter sits in the top right. The title screen shows Bear ADVENTURE with a blue Play button, a BEST line and sound and music toggles before the run starts.",
+      "first_steps": [
+        "On the title screen, click the blue Play circle under the Bear ADVENTURE title.",
+        "Note the score in the top right and the beehives on the left mid ledge and top center.",
+        "Walk with Left and Right and jump with Up to climb the purple platforms.",
+        "If you fall, land on the ground strip and climb again; my falls did not end the run.",
+        "Use the top-left pause button if you need the in-run menu for sound or music."
+      ],
+      "who_its_for": "Players who want a calm forest climb with simple left, right and jump controls and clear beehive targets.",
+      "extra_sections": [
+        {
+          "heading": "Title screen before the run",
+          "paragraphs": [
+            "The title shows Bear in orange letters and ADVENTURE in a green leafy style, with a small beehive above the word Bear. A glossy blue Play button sits in the center over a forest preview, BEST starts at 0, and two blue buttons in the top right control sound and music."
+          ]
+        },
+        {
+          "heading": "On-screen arrows during play",
+          "paragraphs": [
+            "While the keyboard arrows moved the bear for me, the play view also showed blue left and right buttons on the bottom left and a blue up button on the bottom right. I used the keyboard for the climb, and those on-screen arrows stayed visible the whole time."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Bear Adventure Online Game is about climbing forest platforms, hanging under ledges and reaching hanging targets as a small animal character. If that calm adventure climb suits you, Pixelsprout also has Cave Escape, Diggy, Fox Adventurer, Stickman Huggy Escape, The Rooms-Escape Challenge and Noob Saving Friends, which lean on exploration, careful jumps and route-finding through tight spaces."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "What is Bear Adventure Online Game?",
+          "answer": "It is a forest platformer where a red square bear walks and jumps on purple platforms. Beehives hang in the level and a score sits in the top right."
+        },
+        {
+          "question": "How do you move the bear?",
+          "answer": "On a keyboard, Left and Right walk and Up jumps. In my session those keys moved the bear on the first forest layout."
+        },
+        {
+          "question": "What are the hanging yellow and orange objects?",
+          "answer": "They are beehives. I saw one above the left mid platform and one hanging from the top-center platform while the score stayed at 0."
+        },
+        {
+          "question": "What happens if you fall off a platform?",
+          "answer": "In my run the bear landed on the dark purple ground strip and could climb again. Falls did not end the session for me."
+        },
+        {
+          "question": "Can the bear hang under platforms?",
+          "answer": "Yes. The purple ledges have vine loops underneath, and in my session the bear grabbed those loops and hung under a ledge."
+        },
+        {
+          "question": "Where is the pause menu?",
+          "answer": "A blue pause button sits in the top left during play. Opening it showed Play, a list button, sound and music on a card over the forest."
+        },
+        {
+          "question": "What does the title screen show?",
+          "answer": "Bear ADVENTURE with a beehive icon, a blue Play button, BEST starting at 0, and sound and music toggles in the top right over a forest preview."
+        }
+      ]
+    }
+  }
+}
