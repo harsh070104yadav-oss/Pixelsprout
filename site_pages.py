@@ -328,6 +328,10 @@ GAME_SOCIAL_LINKS = {
         ("YouTube Short (Part 9)", "https://youtube.com/shorts/ih7EmQfzK9Y"),
         ("Reel on Instagram (Part 9)", "https://www.instagram.com/reel/DfYObTKCADw/"),
         ("Reel on Facebook (Part 9)", "https://www.facebook.com/reel/954153614150444/"),
+        ("YouTube Short (Part 10)", "https://youtube.com/shorts/gN_fzHxBGic"),
+        ("Reel on Instagram (Part 10)", "https://www.instagram.com/playpixelsprout/reel/DfVu0aJDyZx/"),
+        ("YouTube Short (Part 11)", "https://youtube.com/shorts/_9eTAwI7BSc"),
+        ("Reel on Instagram (Part 11)", "https://www.instagram.com/playpixelsprout/reel/DfVprLiHceO/"),
     ],
     "protect-my-dog": [
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/bBCWh7W_dyg"),
@@ -342,6 +346,26 @@ GAME_SOCIAL_LINKS = {
         ("Reel on Instagram (30 Oct Short)", "https://www.instagram.com/playpixelsprout/reel/DfIpD7ev59z/"),
         ("Reel on Instagram (Level 2 beat me 10 times)", "https://www.instagram.com/reel/DfLTR-OvaNT/"),
         ("YouTube Short (Part 5)", "https://youtube.com/shorts/QQOWoZFERlE"),
+        ("YouTube Short (Part 11)", "https://youtube.com/shorts/KoRxM37QRQ8"),
+        ("Reel on Instagram (Part 11)", "https://www.instagram.com/playpixelsprout/reel/DfVz5N5gMKO/"),
+    ],
+    "destroy-the-ragdoll-sandbox": [
+        ("YouTube Short (Could you survive 3 seconds?)", "https://youtube.com/shorts/zkL45kj9KTo"),
+        ("Reel on Instagram (Could you survive 3 seconds?)", "https://www.instagram.com/reel/DfYR2yzEr6p/"),
+        ("Reel on Facebook (Could you survive 3 seconds?)", "https://www.facebook.com/reel/1280852680891722"),
+        ("YouTube Short ($11 to $25 in 11 seconds)", "https://youtube.com/shorts/GKaJWX0D_XE"),
+        ("Reel on Instagram ($11 to $25 in 11 seconds)", "https://www.instagram.com/reel/DfYd0IfGVfj/"),
+        ("Reel on Facebook ($11 to $25 in 11 seconds)", "https://www.facebook.com/reel/1148833438138744"),
+    ],
+    "car-crash-test": [
+        ("YouTube Short (POV: you floor it into a wall)", "https://youtube.com/shorts/FkAOHBA_4a0"),
+        ("Reel on Instagram (POV: you floor it into a wall)", "https://www.instagram.com/reel/DfYV1l1jyfo/"),
+        ("Reel on Facebook (POV: you floor it into a wall)", "https://www.facebook.com/reel/1652858259553769"),
+    ],
+    "body-drop-3d": [
+        ("YouTube Short (How many times did you watch this loop?)", "https://youtube.com/shorts/ig4ZUb0vFNM"),
+        ("Reel on Instagram (How many times did you watch this loop?)", "https://www.instagram.com/reel/DfYZ1RFET2k/"),
+        ("Reel on Facebook (How many times did you watch this loop?)", "https://www.facebook.com/reel/1391830772763332"),
     ],
     "buba-jump": [
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/I9OXV5JlIc0"),
