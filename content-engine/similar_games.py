@@ -69,6 +69,15 @@ CURATED_SIMILAR = {
         "my-hungry-fish-game",
         "fish-rescue-go-shark-attack",
     ],
+    # Studio hand-picked (6 Nov guide review).
+    "bear-adventure-online-game": [
+        "cave-escape", "diggy", "fox-adventurer", "stickman-huggy-escape",
+        "the-rooms-escape-challenge", "noob-saving-friends",
+    ],
+    "bobb-s-world": [
+        "swimming-bee", "butterfly-dash", "drive-crazy", "super-willie-world-2",
+        "birdy-bird", "somewhere",
+    ],
     # Block-by-block digging and mining games.
     "astro-digger": [
         "cave-miner",
