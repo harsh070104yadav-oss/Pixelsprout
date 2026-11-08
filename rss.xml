@@ -5,6 +5,14 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Curve Kick</title>
+    <link>https://playpixelsprout.com/games/curve-kick.html</link>
+    <guid>https://playpixelsprout.com/games/curve-kick.html</guid>
+    <description>Play Curve Kick free online at Pixelsprout — no download needed.</description>
+    <pubDate>Sun, 08 Nov 2026 12:36:46 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/curve-kick/cover/curve-kick.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Frontline Conquest</title>
     <link>https://playpixelsprout.com/games/frontline-conquest.html</link>
     <guid>https://playpixelsprout.com/games/frontline-conquest.html</guid>
@@ -475,14 +483,6 @@
     <description>Play Shaftbound free online at Pixelsprout — no download needed.</description>
     <pubDate>Mon, 19 Oct 2026 11:50:01 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/of8yz42m8amsb74l8l436xixj4icaw3y/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Glimmer</title>
-    <link>https://playpixelsprout.com/games/glimmer.html</link>
-    <guid>https://playpixelsprout.com/games/glimmer.html</guid>
-    <description>Play Glimmer free online at Pixelsprout — no download needed.</description>
-    <pubDate>Mon, 19 Oct 2026 11:50:01 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/p7pltg6j7qidp662o7m483ub29w7wxa3/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
