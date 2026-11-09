@@ -945,6 +945,68 @@ def wrap_legacy_page(doc, total_games=None, active=None):
 # Category pages
 # ---------------------------------------------------------------------------
 
+
+def _category_faq_pairs(category, count):
+    """Visible FAQ copy for category / A–Z pages (must match FAQPage JSON-LD exactly)."""
+    label = S.pretty_genre(category) if category else "browser"
+    label_l = label.lower()
+    pairs = [
+        ("Are these games free?",
+         "Yes. Every game on this page is free to play in your browser on Pixelsprout."),
+        ("Do I need to download anything?",
+         "No. These games run in the browser — nothing to install."),
+        ("Do they work on mobile?",
+         "They are built for mouse and keyboard on desktop and have not been tested on touch screens, so some may not work on phones."),
+        (f"How many {label_l} games are listed here?",
+         f"This page lists {count} free {label_l} games you can open in your browser."),
+    ]
+    return pairs
+
+
+def _faq_section_html(pairs, heading_id="category-faq-title"):
+    items = "".join(
+        f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>"
+        for q, a in pairs
+    )
+    return (
+        f'<section class="block category-faq" aria-labelledby="{heading_id}">'
+        f'<h2 class="block__title" id="{heading_id}">FAQ</h2>{items}</section>'
+    )
+
+
+def _faq_jsonld(pairs):
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": q,
+                "acceptedAnswer": {"@type": "Answer", "text": a},
+            }
+            for q, a in pairs
+        ],
+    })
+
+
+def _itemlist_jsonld(name, games):
+    elements = []
+    for i, g in enumerate(games, 1):
+        elements.append({
+            "@type": "ListItem",
+            "position": i,
+            "name": g["title"],
+            "url": f"{DOMAIN}/games/{g['slug']}.html",
+        })
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": name,
+        "numberOfItems": len(games),
+        "itemListElement": elements,
+    })
+
+
 def category_intro(category, count):
     name = S.pretty_genre(category).lower()
     return (
@@ -969,6 +1031,9 @@ def render_category_page(category, games, all_categories, total_games=None, newn
             {"@type": "ListItem", "position": 2, "name": category, "item": canonical_url},
         ],
     })
+    faq_pairs = _category_faq_pairs(category, count)
+    itemlist_schema = _itemlist_jsonld(f"{label} games on Pixelsprout", games)
+    faq_schema = _faq_jsonld(faq_pairs)
     og = "\n".join([
         '<meta property="og:type" content="website">',
         f'<meta property="og:url" content="{canonical_url}">',
@@ -976,7 +1041,8 @@ def render_category_page(category, games, all_categories, total_games=None, newn
         f'<meta property="og:description" content="{esc(description)}">',
         f'<meta property="og:image" content="{DOMAIN}/assets/og-banner.jpg">',
     ])
-    head = S.head(esc(title), esc(description), canonical=canonical_url, meta_extra=og, jsonld=[breadcrumb_schema],
+    head = S.head(esc(title), esc(description), canonical=canonical_url, meta_extra=og,
+                  jsonld=[breadcrumb_schema, itemlist_schema, faq_schema],
                   head_extra='<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">')
 
     page_size = 60
@@ -1013,6 +1079,7 @@ def render_category_page(category, games, all_categories, total_games=None, newn
 <p class="empty-state" data-catalog-empty hidden>No {esc(label.lower())} games match that. Try a shorter word, or <button class="btn btn--quiet" type="button" data-search-open>search every game</button>.</p>
 <div class="load-more"{" hidden" if count <= page_size else ""}><button class="btn btn--ghost" type="button" data-load-more>Show more games</button></div>
 <div class="block">{S.ad_native()}</div>
+{_faq_section_html(faq_pairs)}
 <section class="related-genres" aria-labelledby="more-genres"><h2 class="section-title" id="more-genres">More genres</h2><div class="chips">{related_html}</div></section>
 <div class="block">{S.ad_leader(mobile="rect")}</div>"""
     return S.page(head, main, body_attrs='class="category-page" data-page="category"', active=f"/{slug}/", total_games=total_games)
@@ -1126,9 +1193,21 @@ def render_home(catalog, featured, popular_ranked, today=None):
         '<meta name="twitter:image" content="https://playpixelsprout.com/assets/og-banner.jpg">',
     ])
     website_ld = json.dumps({
-        "@context": "https://schema.org", "@type": "WebSite", "name": "Pixelsprout", "url": f"{DOMAIN}/",
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Pixelsprout",
+        "url": f"{DOMAIN}/",
     })
-    head = S.head(esc(title), esc(description), meta_extra=meta_extra, jsonld=[website_ld], preload_image=preload,
+    organization_ld = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pixelsprout",
+        "url": f"{DOMAIN}/",
+        "description": "Free browser-game portal with thousands of HTML5 games. No download, no account required.",
+    })
+    # SearchAction omitted: site search is an in-page overlay (data-search-open), not a query-param URL.
+    head = S.head(esc(title), esc(description), canonical=f"{DOMAIN}/", meta_extra=meta_extra,
+                  jsonld=[website_ld, organization_ld], preload_image=preload,
                   head_extra='<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">')
 
     continue_shelf = S.shelf("Continue playing", "", section_id="continue-playing", hidden=True,
@@ -1169,20 +1248,32 @@ def render_all_games(catalog):
         sections.append(f'<section class="az-group" id="letter-{anchor}"><h2>{k}</h2><ul class="az-list">{items}</ul></section>')
     title = "All Games A–Z - Every Free Game on Pixelsprout"
     description = f"An alphabetical list of all {len(games):,} free browser games on Pixelsprout. No downloads, no accounts."
+    faq_pairs = _category_faq_pairs("browser", len(games))
+    # Genre-specific line for A–Z: rephrase the 4th question for this page
+    faq_pairs[3] = (
+        "How many games are listed here?",
+        f"This page lists {len(games):,} free browser games in alphabetical order.",
+    )
+    breadcrumb_schema = json.dumps({
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{DOMAIN}/"},
+            {"@type": "ListItem", "position": 2, "name": "All games A–Z", "item": f"{DOMAIN}/all-games/"},
+        ]})
     head = S.head(esc(title), esc(description), canonical=f"{DOMAIN}/all-games/",
-                  jsonld=[json.dumps({
-                      "@context": "https://schema.org", "@type": "BreadcrumbList",
-                      "itemListElement": [
-                          {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{DOMAIN}/"},
-                          {"@type": "ListItem", "position": 2, "name": "All games A–Z", "item": f"{DOMAIN}/all-games/"},
-                      ]})])
+                  jsonld=[
+                      breadcrumb_schema,
+                      _itemlist_jsonld("All games on Pixelsprout", games),
+                      _faq_jsonld(faq_pairs),
+                  ])
     main = f"""{S.crumbs([("Home", "/"), ("All games A–Z", None)])}
 <header class="page-head">
 <h1 class="page-title">All games, A–Z</h1>
 <p class="page-lede">Every game on Pixelsprout in one list — {len(games):,} of them. Looking for something specific? <button class="btn btn--quiet" type="button" data-search-open>Search instead</button></p>
 </header>
 <nav class="az-nav" aria-label="Jump to letter">{nav}</nav>
-{''.join(sections)}"""
+{''.join(sections)}
+{_faq_section_html(faq_pairs)}"""
     return S.page(head, main, body_attrs='class="az-page" data-page="all-games"', active="/all-games/", total_games=len(games))
 
 
