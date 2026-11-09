@@ -228,7 +228,7 @@ FAN_MADE_CREDIT = {"getting-over-it": "griffpatch"}
 # Trademark-style notices shown directly above the game embed (visible without scrolling).
 _BRAWL_NOTICE = ('<strong>Not the official Brawl Stars.</strong> This is an unofficial browser arena game from a third-party '
                  'publisher. It is not made by or affiliated with Supercell. Looking for similar games? See '
-                 '<a href="/guides/games-like-brawl-stars/">games like Brawl Stars</a>.')
+                 '<a href="/guides/games-like-brawl-stars-browser/">games like Brawl Stars you can play in your browser</a>.')
 GAME_NOTICES = {
     "brawl-stars": _BRAWL_NOTICE,
     "brawl-stars-2": _BRAWL_NOTICE,
@@ -990,6 +990,60 @@ def wrap_legacy_page(doc, total_games=None, active=None):
 # ---------------------------------------------------------------------------
 
 
+# Topic guides (pages built from the 2026-11-10 pack). Linked from the guides hub, the homepage and category pages.
+POPULAR_GUIDES = [
+    ("Best free browser games with no download", "/guides/best-free-browser-games-no-download/"),
+    ("Sites like Poki and CrazyGames", "/guides/sites-like-poki-crazygames/"),
+    ("Games like Getting Over It (free online)", "/guides/games-like-getting-over-it-online-free/"),
+    ("Free online puzzle games, no download", "/guides/free-online-puzzle-games-no-download/"),
+    ("Free browser games for Chromebook", "/guides/browser-games-chromebook/"),
+    ("Free horror games in your browser", "/guides/free-horror-games-browser-no-download/"),
+    ("Games like Brawl Stars in your browser", "/guides/games-like-brawl-stars-browser/"),
+]
+HOME_GUIDES = [POPULAR_GUIDES[i] for i in (1, 3, 5, 4)]
+CATEGORY_GUIDE_LINK = {
+    "Puzzle": ("Read our guide to free online puzzle games with no download", "/guides/free-online-puzzle-games-no-download/"),
+    "Multiplayer": ("Read our guide to games like Brawl Stars you can play in your browser", "/guides/games-like-brawl-stars-browser/"),
+    "Horror": ("Read our guide to free browser horror games", "/guides/free-horror-games-browser-no-download/"),
+}
+HOME_FAQ = [
+    ("Is Pixelsprout free?", "Yes. Every game on Pixelsprout is free to play. The site is supported by ads."),
+    ("Do I need to download anything?", "No. Games are HTML5 and play directly in your browser tab. There is nothing to install."),
+    ("Do I need an account?", "No. You don't need a Pixelsprout account to play."),
+    ("Does Pixelsprout work on a Chromebook?",
+     "Games are HTML5 and run in the Chrome browser, so they usually work on Chromebooks if your network allows the site. "
+     "We have not tested every game on every model, and we do not help bypass school or work filters."),
+    ("Does it work on phones?", "Games are built for mouse and keyboard on desktop and have not been tested on touch screens."),
+    ("How many games are on Pixelsprout?", "More than 5,000 free browser games across puzzle, arcade, action, racing, sports, horror, multiplayer and many other genres."),
+]
+HOME_GENRE_LIST = [("Puzzle games", "/puzzle/"), ("Arcade games", "/arcade/"), ("Action games", "/action/"), ("Racing games", "/racing/"),
+                   ("Sports games", "/sports/"), ("Horror games", "/horror/"), ("Multiplayer games", "/multiplayer/"),
+                   ("Two Player games", "/two-player/"), ("Clicker games", "/clicker/"), ("Strategy games", "/strategy/"),
+                   ("Kids games", "/kids/"), ("Casual games", "/casual/")]
+# Official profiles only (same URLs the game pages already link to).
+ORG_SAME_AS = ["https://x.com/Playpixelsprout", "https://www.instagram.com/playpixelsprout/"]
+
+
+def _popular_guides_html():
+    items = "".join(f'<li><a href="{h}">{esc(t)}</a></li>' for t, h in POPULAR_GUIDES)
+    return (f'<section class="block featured-guides" aria-labelledby="popular-guides-title"><h2 class="block__title" id="popular-guides-title">'
+            f'Popular guides</h2><ul>{items}</ul></section>')
+
+
+def _popular_guides_jsonld():
+    return json.dumps({
+        "@context": "https://schema.org", "@type": "CollectionPage", "name": "Game guides", "url": f"{DOMAIN}/guides/",
+        "mainEntity": {"@type": "ItemList", "name": "Featured guides", "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": t, "url": f"{DOMAIN}{h}"} for i, (t, h) in enumerate(POPULAR_GUIDES, 1)]},
+    })
+
+
+def _home_guides_html():
+    links = " &middot; ".join(f'<a href="{h}">{esc(t)}</a>' for t, h in HOME_GUIDES)
+    return (f'<section class="block home-guides" aria-labelledby="home-guides-title"><h2 class="block__title" id="home-guides-title">Guides</h2>'
+            f'<p>{links}</p></section>')
+
+
 # Hand-written intro shown above the game grid on selected category pages (links must be live game pages).
 CATEGORY_INTRO_HTML = {
     "Horror": (
@@ -1023,6 +1077,13 @@ CATEGORY_FAQ = {
          "This page lists {count} free horror games you can open in your browser."),
     ],
 }
+
+
+def _category_guide_link(category):
+    if category not in CATEGORY_GUIDE_LINK:
+        return ""
+    t, h = CATEGORY_GUIDE_LINK[category]
+    return f'<p class="page-lede"><a href="{h}">{esc(t)}</a></p>\n'
 
 
 def _category_faq_pairs(category, count):
@@ -1146,7 +1207,7 @@ def render_category_page(category, games, all_categories, total_games=None, newn
 <p class="eyebrow"><span class="dot" style="--dot:{S.genre_color(category)}"></span> Genre</p>
 <h1 class="page-title">{esc(label)} games</h1>
 <p class="page-lede">{esc(category_intro(category, count))}</p>
-</header>
+{_category_guide_link(category)}</header>
 {CATEGORY_INTRO_HTML.get(category, "")}<div class="catalog-bar" data-catalog-bar>
 <label class="field"><span class="visually-hidden">Filter {esc(label)} games</span>{S.icon('search')}<input type="search" data-catalog-filter placeholder="Filter {count} {esc(label.lower())} games" autocomplete="off"></label>
 <div class="segmented" role="group" aria-label="Sort games">
@@ -1286,9 +1347,18 @@ def render_home(catalog, featured, popular_ranked, today=None):
         "url": f"{DOMAIN}/",
         "description": "Free browser-game portal with thousands of HTML5 games. No download, no account required.",
     })
+    website_ld = json.dumps({"@context": "https://schema.org", "@type": "WebSite", "@id": f"{DOMAIN}/#website", "name": "Pixelsprout",
+                             "alternateName": "Play Pixelsprout", "url": f"{DOMAIN}/", "publisher": {"@id": f"{DOMAIN}/#org"}, "inLanguage": "en"})
+    organization_ld = json.dumps({"@context": "https://schema.org", "@type": "Organization", "@id": f"{DOMAIN}/#org", "name": "Pixelsprout",
+                                  "url": f"{DOMAIN}/", "logo": f"{DOMAIN}/apple-touch-icon.png",
+                                  "description": "Free browser-game portal with 5,000+ HTML5 games. No download, no account required. Supported by ads.",
+                                  "sameAs": ORG_SAME_AS})
+    genres_ld = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name": "Game genres on Pixelsprout", "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": t, "url": f"{DOMAIN}{h}"} for i, (t, h) in enumerate(HOME_GENRE_LIST, 1)]})
+    home_faq_ld = _faq_jsonld(HOME_FAQ)
     # SearchAction omitted: site search is an in-page overlay (data-search-open), not a query-param URL.
     head = S.head(esc(title), esc(description), canonical=f"{DOMAIN}/", meta_extra=meta_extra,
-                  jsonld=[website_ld, organization_ld], preload_image=preload,
+                  jsonld=[organization_ld, website_ld, genres_ld, home_faq_ld], preload_image=preload,
                   head_extra='<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">')
 
     continue_shelf = S.shelf("Continue playing", "", section_id="continue-playing", hidden=True,
@@ -1306,6 +1376,8 @@ def render_home(catalog, featured, popular_ranked, today=None):
 <div class="shelf__head"><h2 class="shelf__title" id="all-genres-title">Browse all genres</h2><span class="shelf__count">{len(genre_pages)} genres</span></div>
 <div class="genre-grid">{genre_tiles}</div>
 </section>
+{_home_guides_html()}
+{_faq_section_html(HOME_FAQ, heading_id="home-faq-title")}
 <div class="home-foot"><a class="btn btn--ghost" href="/all-games/">{S.icon('list', 'i i--sm')}All games A–Z</a><a class="btn btn--ghost" href="/guides/">{S.icon('book', 'i i--sm')}Game guides</a></div>"""
     return S.page(head, main, body_attrs='class="home-page" data-page="home"', active="/", total_games=total)
 
@@ -1405,13 +1477,14 @@ def _hub_hidden_slugs():
 def render_guides_hub(total_games=None):
     title = "Game Guides - Tips, Controls & FAQs | Pixelsprout"
     description = "Tips, controls, beginner guides, and FAQs for every game on Pixelsprout."
-    head = S.head(esc(title), esc(description), canonical=f"{DOMAIN}/guides/")
+    head = S.head(esc(title), esc(description), canonical=f"{DOMAIN}/guides/", jsonld=[_popular_guides_jsonld()])
     main = f"""{S.crumbs([("Home", "/"), ("Guides", None)])}
 <header class="page-head">
 <p class="eyebrow">Read</p>
 <h1 class="page-title">Game guides</h1>
 <p class="page-lede">Tips, controls, beginner guides and FAQs for the games on Pixelsprout.</p>
 </header>
+{_popular_guides_html()}
 {_featured_guides_html()}
 <h2 class="block__title">All game guides</h2>
 <div class="catalog-bar"><label class="field"><span class="visually-hidden">Filter guides</span>{S.icon('search')}<input id="guides-search" type="search" placeholder="Find a game's guides" autocomplete="off"></label><span class="catalog-bar__count" id="guides-count"></span></div>
