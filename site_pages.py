@@ -392,6 +392,11 @@ GAME_SOCIAL_LINKS = {
     "faily-skater": [
         ("YouTube Short", "https://www.youtube.com/shorts/GB3MW-aZGpA"),
     ],
+    "falling-dummy": [
+        ("YouTube Short (Part 1 — X-ray)", "https://www.youtube.com/shorts/LWYfe1-UQzc"),
+        ("YouTube Short (Part 2 — Keep Crushing)", "https://www.youtube.com/shorts/cLI7AllbZ9M"),
+        ("YouTube Short (Part 3 — Rocket cart)", "https://www.youtube.com/shorts/sX4cKxCGaCc"),
+    ],
 }
 
 
