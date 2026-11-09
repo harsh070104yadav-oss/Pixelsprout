@@ -225,6 +225,30 @@ GUIDE_LABELS = [
 FAN_MADE_SLUGS = {"getting-over-it", "baba-is-you"}
 FAN_MADE_CREDIT = {"getting-over-it": "griffpatch"}
 
+# Trademark-style notices shown directly above the game embed (visible without scrolling).
+_BRAWL_NOTICE = ('<strong>Not the official Brawl Stars.</strong> This is an unofficial browser arena game from a third-party '
+                 'publisher. It is not made by or affiliated with Supercell. Looking for similar games? See '
+                 '<a href="/guides/games-like-brawl-stars/">games like Brawl Stars</a>.')
+GAME_NOTICES = {
+    "brawl-stars": _BRAWL_NOTICE,
+    "brawl-stars-2": _BRAWL_NOTICE,
+}
+
+# Extra visible FAQ shown on the game page (static HTML). add-faq-jsonld.py appends the same pairs to the
+# page's FAQPage JSON-LD after the 4 "At a glance" questions, so the schema only carries visible text.
+GAME_FAQ_EXTRA = {
+    "brawl-stars": [
+        ("Is this the official Brawl Stars by Supercell?",
+         "No. This is an unofficial arena game from a third-party publisher that uses the name Brawl Stars. "
+         "It is not made by or affiliated with Supercell."),
+        ("How do you play?",
+         "Pick a hero, move around the arena, eat food items to evolve and grow stronger, use upgrades for "
+         "speed and health, and battle opponents."),
+        ("What other browser games are like Brawl Stars?",
+         "Try Brawlers Arena Battle Stars, Ace Brawl Battle 3D, Archers.io, Guardz IO, Sword Battle.io and Diep.io."),
+    ],
+}
+
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
 # Short-video landing pages (YouTube Shorts / Instagram traffic). Only these slugs get the
 # eager, high-priority embed, the "Play now" button and the 3 picked games right under the game.
@@ -286,6 +310,7 @@ FAQ_MOBILE_ANSWER = {
     "8compute": _MOBILE_UNTESTED,
     "books-tower": "Not tested on touch screens.",
     "protect-my-dog": "Not tested on touch screens.",
+    "brawl-stars": "It's built for desktop with mouse and keyboard. Touch play has not been tested on this page.",
     "getting-over-it": "It's built for mouse play. This version has no on-screen touch controls, and touch play hasn't been tested here.",
 }
 
@@ -427,6 +452,13 @@ def render_game_page(f, catalog, guides=None, total_games=None):
     src_link = (f'<p class="how-to embed-source"><a href="{esc(EMBED_SOURCE_LINK[slug][1])}" rel="noopener" target="_blank">'
                 f'{esc(EMBED_SOURCE_LINK[slug][0])}</a></p>\n') if slug in EMBED_SOURCE_LINK else ""
     embed_note = f'<p class="rd-note embed-note"><strong>{EMBED_NOTES[slug]}</strong></p>\n' if slug in EMBED_NOTES else ""
+    if slug in GAME_NOTICES:
+        embed_note = f'<p class="rd-note game-notice">{GAME_NOTICES[slug]}</p>\n' + embed_note
+    extra_faq = ""
+    if slug in GAME_FAQ_EXTRA:
+        extra_faq = (f'<section class="game-faq" aria-labelledby="game-faq-title"><h2 id="game-faq-title">FAQ</h2>'
+                     + "".join(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>" for q, a in GAME_FAQ_EXTRA[slug])
+                     + "</section>\n")
     landing = slug in LANDING_PAGES
     iframe_extra = ' id="game-frame" loading="eager" fetchpriority="high"' if landing else ""
     play_now = ('<a class="btn btn--primary play-now-btn" href="#game-frame" '
@@ -523,7 +555,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
 <p class="how-to"><!--ps:desc-->{description}<!--/ps:desc--></p>
 {fan_made_note}<div class="facts"><span class="chip">Free to play</span><span class="chip">No download</span><span class="chip">Plays in your browser</span></div>
 </section>
-{_social_section(slug, title)}{S.ad_native()}
+{extra_faq}{_social_section(slug, title)}{S.ad_native()}
 {guides_html}
 {S.ad_adsense(S.AD_SLOT_BANNER)}
 {more_like}
@@ -958,8 +990,45 @@ def wrap_legacy_page(doc, total_games=None, active=None):
 # ---------------------------------------------------------------------------
 
 
+# Hand-written intro shown above the game grid on selected category pages (links must be live game pages).
+CATEGORY_INTRO_HTML = {
+    "Horror": (
+        '<section class="genre-intro block"><h2 class="block__title">Free horror games in your browser</h2>'
+        "<p>Pixelsprout's horror games are short, free and open in a browser tab with no download. You will find "
+        '<strong>escape-the-house stealth games</strong> (<a href="/games/granny-house-escape.html">Granny House Escape</a>, '
+        '<a href="/games/scary-doll.html">Scary Doll</a>, <a href="/games/dr-psycho-hospital-escape.html">Dr. Psycho - Hospital Escape</a>), '
+        '<strong>creepy point-and-click mysteries</strong> (<a href="/games/the-house-2.html">The House 2</a>, '
+        '<a href="/games/exhibit-of-sorrows.html">Exhibit of Sorrows</a>) and <strong>horror shooters</strong> '
+        '(<a href="/games/horror-sniper-clown-ghost.html">Horror Sniper Clown Ghost</a>). Some have jump scares, so they suit '
+        "teens and adults. Tip: use headphones and full screen.</p></section>"
+    ),
+}
+
+# Per-category FAQ replacing the default 4 questions ({count} is filled in). Visible FAQ and JSON-LD share this copy.
+CATEGORY_FAQ = {
+    "Horror": [
+        ("Are these horror games free?",
+         "Yes. Every horror game on this page is free to play in your browser on Pixelsprout, with no download or account."),
+        ("Which horror game should I play first?",
+         "For stealth and escape, start with Granny House Escape or Scary Doll. For something less intense, try The House 2 (point-and-click) or Escape From Work."),
+        ("Do these games have jump scares?",
+         "Some do, especially the chase-style escape games and Floppa Scary Horror. Point-and-click mysteries like The House 2 rely more on atmosphere."),
+        ("Are these horror games OK for kids?",
+         "Many have jump scares or creepy themes and are aimed at teens and adults. Younger players should try the Kids or Puzzle sections instead."),
+        ("Do I need to download anything?",
+         "No. These games run in the browser, so there is nothing to install."),
+        ("Do they work on mobile?",
+         "They are built for mouse and keyboard on desktop and have not been tested on touch screens, so some may not work on phones."),
+        ("How many horror games are listed here?",
+         "This page lists {count} free horror games you can open in your browser."),
+    ],
+}
+
+
 def _category_faq_pairs(category, count):
     """Visible FAQ copy for category / A–Z pages (must match FAQPage JSON-LD exactly)."""
+    if category in CATEGORY_FAQ:
+        return [(q, a.replace("{count}", str(count))) for q, a in CATEGORY_FAQ[category]]
     label = S.pretty_genre(category) if category else "browser"
     label_l = label.lower()
     pairs = [
@@ -1078,7 +1147,7 @@ def render_category_page(category, games, all_categories, total_games=None, newn
 <h1 class="page-title">{esc(label)} games</h1>
 <p class="page-lede">{esc(category_intro(category, count))}</p>
 </header>
-<div class="catalog-bar" data-catalog-bar>
+{CATEGORY_INTRO_HTML.get(category, "")}<div class="catalog-bar" data-catalog-bar>
 <label class="field"><span class="visually-hidden">Filter {esc(label)} games</span>{S.icon('search')}<input type="search" data-catalog-filter placeholder="Filter {count} {esc(label.lower())} games" autocomplete="off"></label>
 <div class="segmented" role="group" aria-label="Sort games">
 <button type="button" data-sort="popular" aria-pressed="true">Popular</button>
