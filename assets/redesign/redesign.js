@@ -133,8 +133,7 @@
   function gamepage() {
     var page = document.querySelector('.game-page'); if (!page || document.body.dataset.linkout) return; /* link-out pages: no in-page play, so no generated FAQ/trust line */
     var slug = location.pathname.replace(/^.*\/games\//, '').replace(/\.html$/, '');
-    var title = (document.querySelector('.game-bar__title') || document.querySelector('h1') || {}).textContent || document.title;
-    title = title.trim();
+    var title = (document.body.getAttribute('data-title') || (document.querySelector('.game-bar__title') || document.querySelector('h1') || {}).textContent || document.title || '').trim();
     var genre = 'Arcade';
     document.querySelectorAll('script[type="application/ld+json"]').forEach(function (s) {
       try { var j = JSON.parse(s.textContent); if (j['@type'] === 'VideoGame' && j.genre) genre = j.genre; } catch (e) {}
@@ -160,14 +159,17 @@
       about.parentNode.insertBefore(ht, about.nextSibling); about = ht;
     }
     var hasFaq = Array.prototype.some.call(document.querySelectorAll('script[type="application/ld+json"]'), function (s) { return /FAQPage/.test(s.textContent); });
-    var sec = document.createElement('section'); sec.className = 'rd-faq';
-    sec.innerHTML = '<h2>At a glance</h2>' + faq.map(function (q) { return '<details><summary>' + esc(q[0]) + '</summary><p>' + esc(q[1]) + '</p></details>'; }).join('');
-    about.parentNode.insertBefore(sec, about.nextSibling);
-    if (!hasFaq) {
-      var ld = document.createElement('script'); ld.type = 'application/ld+json';
-      ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(function (q) {
-        return { '@type': 'Question', name: q[0], acceptedAnswer: { '@type': 'Answer', text: q[1] } }; }) });
-      document.head.appendChild(ld);
+    var hasStaticFaq = !!document.querySelector('.game-faq');
+    if (!hasStaticFaq) {
+      var sec = document.createElement('section'); sec.className = 'rd-faq';
+      sec.innerHTML = '<h2>At a glance</h2>' + faq.map(function (q) { return '<details><summary>' + esc(q[0]) + '</summary><p>' + esc(q[1]) + '</p></details>'; }).join('');
+      about.parentNode.insertBefore(sec, about.nextSibling);
+      if (!hasFaq) {
+        var ld = document.createElement('script'); ld.type = 'application/ld+json';
+        ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(function (q) {
+          return { '@type': 'Question', name: q[0], acceptedAnswer: { '@type': 'Answer', text: q[1] } }; }) });
+        document.head.appendChild(ld);
+      }
     }
     Promise.all([getJSON(D + 'cat/' + slugify(genre) + '.json').catch(function () { return []; }), home().catch(function () { return { originals: [] }; })]).then(function (r) {
       origSet = {}; r[1].originals.forEach(function (g) { origSet[g.s] = 1; });

@@ -184,14 +184,16 @@ def extract_game_page(doc, slug):
         category = text(_body_attr(doc, "data-genre"))
         thumbnail = text(_body_attr(doc, "data-thumbnail"))
         description = _region("desc", doc)
+        data_title = text(_body_attr(doc, "data-title"))
     else:
         category = text(_first(r'<div class="game-meta">(.*?)</div>', doc))
         thumbnail = text(_first(r'data-thumbnail="([^"]*)"', doc))
         description = _first(r'<p class="how-to">(.*?)</p>', doc).strip()
+        data_title = ""
     onclick = _first(r'fullscreen-btn"[^>]*?onclick="([^"]*)"', doc)
     fields = {
         "slug": slug,
-        "title": S.clean_title(text(title_html)),
+        "title": data_title or S.clean_title(text(title_html)),
         "title_tag": _first(r"<title>(.*?)</title>", doc).strip(),
         "meta_desc": _first(r'<meta name="description" content="([^"]*)"', doc),
         "category": category or "Arcade",
@@ -249,6 +251,102 @@ GAME_FAQ_EXTRA = {
     ],
 }
 
+
+# Answer-first ChatGPT landing pages (10 Nov 2026). H1 + lead answer "play X free online, no download".
+# Visible FAQ (h3) must match FAQPage JSON-LD for these slugs; dateModified is ISO date.
+ANSWER_FIRST = {
+    "brawl-stars": {
+        "h1": "Play Brawl Stars Free Online — No Download",
+        "title_tag": "Play Brawl Stars Free Online (Unofficial, No Download) | Pixelsprout",
+        "meta_desc": "Play an unofficial Brawl Stars browser arena free online on Pixelsprout. No download, no sign-up. Not made by or affiliated with Supercell.",
+        "lead": "Play Brawl Stars free online in your browser on Pixelsprout — no download and no sign-up. This is an unofficial .io-style arena game from a third-party publisher (not Supercell): pick a hero, move around the arena, eat food to evolve, use speed and health upgrades, and battle other players. Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Brawl Stars free online with no download?",
+             "Yes. Open this page and the unofficial browser arena loads in the tab. There is nothing to install and no Pixelsprout account required."),
+            ("Is this the official Brawl Stars by Supercell?",
+             "No. This is an unofficial arena game from a third-party publisher that uses the name Brawl Stars. It is not made by or affiliated with Supercell."),
+            ("How do you play?",
+             "Pick a hero, move around the arena, eat food items to evolve and grow stronger, use upgrades for speed and health, and battle opponents."),
+            ("What similar games can I play next?",
+             "Try Brawlers Arena Battle Stars, Ace Brawl Battle 3D and Archers.io — all free in the browser on Pixelsprout."),
+        ],
+        "similar": ["brawlers-arena-battle-stars", "ace-brawl-battle-3d", "archers-io"],
+        "date_modified": "2026-11-10",
+    },
+    "getting-over-it": {
+        "h1": "Play Getting Over It Free Online — No Download",
+        "title_tag": "Play Getting Over It Free Online (No Download) | Pixelsprout",
+        "meta_desc": "Play Getting Over It free online in your browser on Pixelsprout. Fan-made Scratch remake, no download. Climb with the mouse and hammer.",
+        "lead": "Play Getting Over It free online in your browser on Pixelsprout — no download and no sign-up. This page hosts a fan-made Scratch remake by griffpatch (not the original Bennet Foddy game): you guide a cat in a pot up a pile of giant Scratch blocks using a hammer controlled with the mouse. The first load can take a few minutes. Built for mouse play; this version has no on-screen touch controls.",
+        "faq": [
+            ("Can I play Getting Over It free online with no download?",
+             "Yes. The Scratch remake loads in this page. There is nothing to install and no account required."),
+            ("Is this the original Getting Over It?",
+             "No. This is a fan-made Scratch remake by griffpatch, not the original game by Bennett Foddy."),
+            ("How do you control it?",
+             "Use the mouse only. The hammer head follows your cursor; plant it on a block and pull the opposite way to push the pot up or along."),
+            ("What similar games can I play next?",
+             "Try Mad Climbing, Carrot Climber and Stickman That One Level — climbing challenges you can open free in the browser."),
+        ],
+        "similar": ["mad-climbing", "carrot-climber", "stickman-that-one-level"],
+        "date_modified": "2026-11-10",
+    },
+    "your-dream-room": {
+        "h1": "Play Your Dream Room Free Online — No Download",
+        "title_tag": "Play Your Dream Room Free Online (No Download) | Pixelsprout",
+        "meta_desc": "Play Your Dream Room free online in your browser on Pixelsprout. Design rooms with wallpaper, flooring and furniture. No download.",
+        "lead": "Play Your Dream Room free online in your browser on Pixelsprout — no download and no sign-up. It is a room-design game: pick wallpaper, flooring, furniture and accessories to build cozy interiors. Use the mouse and keyboard as the on-screen prompts show when the game loads. Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Your Dream Room free online with no download?",
+             "Yes. The game loads in this browser tab. Nothing to install and no account required."),
+            ("What do you do in the game?",
+             "Decorate empty spaces with wallpaper, flooring, furniture and accessories until the room feels finished."),
+            ("How do you control it?",
+             "Use your mouse and keyboard following the in-game prompts after it loads."),
+            ("What similar games can I play next?",
+             "Try Girl Game Organizing Fun, Big Supermarket Simulator and Amanda's Perfect Date — free browser games on Pixelsprout."),
+        ],
+        "similar": ["girl-game-organizing-fun", "big-supermarket-simulator", "amandas-perfect-date"],
+        "date_modified": "2026-11-10",
+    },
+    "amandas-perfect-date": {
+        "h1": "Play Amanda's Perfect Date Free Online — No Download",
+        "title_tag": "Play Amanda's Perfect Date Free Online (No Download) | Pixelsprout",
+        "meta_desc": "Play Amanda's Perfect Date free online in your browser on Pixelsprout. Dress-up dating game, no download, no sign-up.",
+        "lead": "Play Amanda's Perfect Date free online in your browser on Pixelsprout — no download and no sign-up. Help Amanda get ready for a date: choose her outfit, hairstyle and date, then see how the night goes. Click the options on screen to pick looks and progress. Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Amanda's Perfect Date free online with no download?",
+             "Yes. Open this page and the dress-up game loads in the tab. No install and no account required."),
+            ("What kind of game is it?",
+             "A girls' fashion and dating dress-up game: style Amanda, pick her date and check the compatibility score."),
+            ("How do you play?",
+             "Click through the on-screen choices for outfits, hairstyles and her date partner, then see the result."),
+            ("What similar games can I play next?",
+             "Try Your Dream Room, Girl Game Organizing Fun and Highschool Mean Girls 2 — free in the browser on Pixelsprout."),
+        ],
+        "similar": ["your-dream-room", "girl-game-organizing-fun", "highschool-mean-girls-2"],
+        "date_modified": "2026-11-10",
+    },
+    "dont-splash": {
+        "h1": "Play Don't Splash Free Online — No Download",
+        "title_tag": "Play Don't Splash Free Online (No Download) | Pixelsprout",
+        "meta_desc": "Play Don't Splash free online in your browser on Pixelsprout. 3D horror platformer in an abandoned pool. No download.",
+        "lead": "Play Don't Splash free online in your browser on Pixelsprout — no download and no sign-up. It is a 3D horror platformer set in an abandoned pool: jump from tile to tile through the fog, avoid falling in (a blind creature hunts by sound), and cross rooms of sinking tiles and traps. Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Don't Splash free online with no download?",
+             "Yes. The game loads in this browser tab. Nothing to install and no account required."),
+            ("What is Don't Splash?",
+             "A 3D horror platformer in an endless abandoned pool. Stay out of the water, cross nine rooms of hazards, and use thrown objects to lure the monster away."),
+            ("How do you play?",
+             "Move and jump across tiles in the game frame using the on-screen control prompts. Avoid splashing; one fall alerts the creature."),
+            ("What similar games can I play next?",
+             "Try The Man From The Window, Boo Scared? Escape from Backrooms and Granny House Escape — free browser horror on Pixelsprout."),
+        ],
+        "similar": ["the-man-from-the-window", "boo-scared-escape-from-backrooms", "granny-house-escape"],
+        "date_modified": "2026-11-10",
+    },
+}
+
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
 # Short-video landing pages (YouTube Shorts / Instagram traffic). Only these slugs get the
 # eager, high-priority embed, the "Play now" button and the 3 picked games right under the game.
@@ -262,6 +360,9 @@ LANDING_PAGES = {
 LANDING_HEAD = ('<link rel="preconnect" href="https://play.gamepix.com" crossorigin>\n'
                 '<style>@media (max-width:767px){.game-main>.crumbs{display:none}'
                 '.game-main>.game-bar{padding:var(--sp-2) 0}}</style>\n')
+# Hide crumbs on small screens so the playable frame sits higher (all game pages).
+GAME_MOBILE_CSS = ('<style>@media (max-width:767px){.game-main>.crumbs{display:none}.game-main>.rd-note{margin:var(--sp-2) 0}}</style>\n')
+
 
 
 def _landing_related(slug, catalog):
@@ -459,6 +560,54 @@ def render_game_page(f, catalog, guides=None, total_games=None):
         extra_faq = (f'<section class="game-faq" aria-labelledby="game-faq-title"><h2 id="game-faq-title">FAQ</h2>'
                      + "".join(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>" for q, a in GAME_FAQ_EXTRA[slug])
                      + "</section>\n")
+    af = ANSWER_FIRST.get(slug)
+    last_updated_html = ""
+    similar_html = ""
+    h1_text = title
+    if af:
+        h1_text = af["h1"]
+        f = dict(f)
+        f["title_tag"] = esc(af["title_tag"])
+        f["meta_desc"] = esc(af["meta_desc"])
+        extra_faq = (f'<section class="game-faq" aria-labelledby="game-faq-title"><h2 id="game-faq-title">FAQ</h2>'
+                     + "".join(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>" for q, a in af["faq"])
+                     + "</section>\n")
+        last_updated_html = '<p class="last-updated">Last updated: 10 Nov 2026</p>\n'
+        by_slug_af = {g["slug"]: g for g in catalog}
+        sim_links = []
+        for s2 in af.get("similar", [])[:3]:
+            g2 = by_slug_af.get(s2)
+            if g2:
+                sim_links.append(f'<a href="/games/{esc(s2)}.html">{esc(g2.get("title") or s2)}</a>')
+        if sim_links:
+            similar_html = ('<p class="similar-inline"><strong>Similar games:</strong> '
+                            + " · ".join(sim_links) + "</p>\n")
+        new_blocks = []
+        for block in f.get("jsonld") or []:
+            try:
+                data = json.loads(block)
+            except (ValueError, TypeError):
+                new_blocks.append(block)
+                continue
+            if data.get("@type") == "VideoGame":
+                data["name"] = ("Brawl Stars (unofficial browser arena game)" if slug == "brawl-stars" else title)
+                data["description"] = af["lead"]
+                data["dateModified"] = af["date_modified"]
+                data["url"] = f"{DOMAIN}/games/{slug}.html"
+                new_blocks.append(json.dumps(data, ensure_ascii=False))
+            elif data.get("@type") == "FAQPage":
+                continue
+            else:
+                new_blocks.append(block)
+        new_blocks.append(json.dumps({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+                for q, a in af["faq"]
+            ],
+        }, ensure_ascii=False))
+        f["jsonld"] = new_blocks
     landing = slug in LANDING_PAGES
     iframe_extra = ' id="game-frame" loading="eager" fetchpriority="high"' if landing else ""
     play_now = ('<a class="btn btn--primary play-now-btn" href="#game-frame" '
@@ -468,10 +617,13 @@ def render_game_page(f, catalog, guides=None, total_games=None):
     description = (f.get("description_html") or "").strip()
     if not text(description):
         description = esc(f"{title} is a free {genre_label.lower()} game you can play right here in your browser — no download, no sign-up.")
+    if af:
+        description = esc(af["lead"])
 
+    og_title = af["title_tag"].split("|")[0].strip() if af else f"{title} — Pixelsprout"
     og = [
         '<meta property="og:type" content="website">',
-        f'<meta property="og:title" content="{esc(title)} — Pixelsprout">',
+        f'<meta property="og:title" content="{esc(og_title)}">',
         f'<meta property="og:description" content="{f["meta_desc"]}">',
         f'<meta property="og:url" content="{DOMAIN}/games/{esc(slug)}.html">',
     ]
@@ -484,7 +636,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
         canonical=f"{DOMAIN}/games/{slug}.html",
         meta_extra="\n".join(og),
         jsonld=f["jsonld"],
-        head_extra=(LANDING_HEAD if landing else "")
+        head_extra=GAME_MOBILE_CSS + (LANDING_HEAD if landing else "")
         + '<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">',
     )
 
@@ -537,7 +689,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
 {S.crumbs(crumb_items)}
 {embed_note}<div class="stage"><div class="embed-frame-wrap"><iframe src="{embed_url}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{esc(title)}"{iframe_extra}></iframe></div></div>
 {landing_related}{src_link}<div class="game-bar">
-<div class="game-bar__info"><h1 class="game-bar__title">{esc(title)}</h1>{chip}</div>
+<div class="game-bar__info"><h1 class="game-bar__title">{esc(h1_text)}</h1>{chip}</div>
 <div class="game-bar__actions">
 {play_now}<button class="btn btn--ghost fullscreen-btn" type="button" onclick="{f['onclick']}">{S.icon('maximize')}<span>Fullscreen</span></button>
 <button class="icon-btn icon-btn--outline" type="button" data-fav aria-pressed="false" aria-label="Add to favorites">{S.icon('heart')}</button>
@@ -553,7 +705,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
 <section class="game-about" aria-labelledby="about-title">
 <h2 id="about-title">About {esc(title)}</h2>
 <p class="how-to"><!--ps:desc-->{description}<!--/ps:desc--></p>
-{fan_made_note}<div class="facts"><span class="chip">Free to play</span><span class="chip">No download</span><span class="chip">Plays in your browser</span></div>
+{fan_made_note}{similar_html}{last_updated_html}<div class="facts"><span class="chip">Free to play</span><span class="chip">No download</span><span class="chip">Plays in your browser</span></div>
 </section>
 {extra_faq}{_social_section(slug, title)}{S.ad_native()}
 {guides_html}
@@ -999,6 +1151,7 @@ POPULAR_GUIDES = [
     ("Free browser games for Chromebook", "/guides/browser-games-chromebook/"),
     ("Free horror games in your browser", "/guides/free-horror-games-browser-no-download/"),
     ("Games like Brawl Stars in your browser", "/guides/games-like-brawl-stars-browser/"),
+    ("Browser games for school (no download)", "/guides/unblocked-games-to-play-at-school/"),
 ]
 HOME_GUIDES = [POPULAR_GUIDES[i] for i in (1, 3, 5, 4)]
 CATEGORY_GUIDE_LINK = {
@@ -1163,8 +1316,13 @@ def render_category_page(category, games, all_categories, total_games=None, newn
     canonical_url = f"{DOMAIN}/{slug}/"
     count = len(games)
     label = S.pretty_genre(category)
-    title = f"{category} Games - Free Online, No Download | Pixelsprout"
-    description = f"Play {count} free {category.lower()} games online at Pixelsprout. No downloads, no accounts - instant browser play."
+    if category == "Horror":
+        title = "Play Horror Games Free Online, No Download | Pixelsprout"
+        description = ("Play free horror games online in your browser on Pixelsprout — no download, no account. "
+                       f"{count} short stealth, mystery and horror titles ready in the tab.")
+    else:
+        title = f"{category} Games - Free Online, No Download | Pixelsprout"
+        description = f"Play {count} free {category.lower()} games online at Pixelsprout. No downloads, no accounts - instant browser play."
     breadcrumb_schema = json.dumps({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -1183,8 +1341,15 @@ def render_category_page(category, games, all_categories, total_games=None, newn
         f'<meta property="og:description" content="{esc(description)}">',
         f'<meta property="og:image" content="{DOMAIN}/assets/og-banner.jpg">',
     ])
+    jsonld_list = [breadcrumb_schema, itemlist_schema, faq_schema]
+    if category == "Horror":
+        jsonld_list.insert(0, json.dumps({
+            "@context": "https://schema.org", "@type": "CollectionPage",
+            "name": "Horror games on Pixelsprout", "url": canonical_url,
+            "dateModified": "2026-11-10", "description": description,
+        }))
     head = S.head(esc(title), esc(description), canonical=canonical_url, meta_extra=og,
-                  jsonld=[breadcrumb_schema, itemlist_schema, faq_schema],
+                  jsonld=jsonld_list,
                   head_extra='<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">')
 
     page_size = 60
@@ -1205,8 +1370,9 @@ def render_category_page(category, games, all_categories, total_games=None, newn
     main = f"""{S.crumbs([("Home", "/"), (esc(label), None)])}
 <header class="page-head">
 <p class="eyebrow"><span class="dot" style="--dot:{S.genre_color(category)}"></span> Genre</p>
-<h1 class="page-title">{esc(label)} games</h1>
-<p class="page-lede">{esc(category_intro(category, count))}</p>
+<h1 class="page-title">{esc("Play Horror Games Free Online — No Download" if category == "Horror" else f"{label} games")}</h1>
+<p class="page-lede">{esc("Play free horror games online in your browser on Pixelsprout — no download and no account. Short stealth escapes, creepy point-and-click mysteries and horror shooters load in the tab. Built for mouse and keyboard; touch play has not been tested for every title." if category == "Horror" else category_intro(category, count))}</p>
+{('<p class="last-updated">Last updated: 10 Nov 2026</p>' if category == "Horror" else '')}
 {_category_guide_link(category)}</header>
 {CATEGORY_INTRO_HTML.get(category, "")}<div class="catalog-bar" data-catalog-bar>
 <label class="field"><span class="visually-hidden">Filter {esc(label)} games</span>{S.icon('search')}<input type="search" data-catalog-filter placeholder="Filter {count} {esc(label.lower())} games" autocomplete="off"></label>
@@ -1318,8 +1484,8 @@ def render_home(catalog, featured, popular_ranked, today=None):
         for cat, n, url in sorted(genre_pages, key=lambda x: S.pretty_genre(x[0]).lower())
     )
 
-    title = "Pixelsprout — Play. Grow. Explore."
-    description = "Pixelsprout is a free browser gaming library with thousands of games across every genre. No installs, no accounts — just click and play."
+    title = "Play Free Browser Games Online, No Download | Pixelsprout"
+    description = "Play free browser games online on Pixelsprout — no download, no account. Thousands of HTML5 games across every genre, ready in your tab."
     meta_extra = "\n".join([
         '<meta name="p:domain_verify" content="119e6733e3c5887bb3f24d440ab498fa"/>',
         '<meta property="og:type" content="website">',
@@ -1348,7 +1514,8 @@ def render_home(catalog, featured, popular_ranked, today=None):
         "description": "Free browser-game portal with thousands of HTML5 games. No download, no account required.",
     })
     website_ld = json.dumps({"@context": "https://schema.org", "@type": "WebSite", "@id": f"{DOMAIN}/#website", "name": "Pixelsprout",
-                             "alternateName": "Play Pixelsprout", "url": f"{DOMAIN}/", "publisher": {"@id": f"{DOMAIN}/#org"}, "inLanguage": "en"})
+                             "alternateName": "Play Pixelsprout", "url": f"{DOMAIN}/", "publisher": {"@id": f"{DOMAIN}/#org"}, "inLanguage": "en",
+                             "dateModified": "2026-11-10"})
     organization_ld = json.dumps({"@context": "https://schema.org", "@type": "Organization", "@id": f"{DOMAIN}/#org", "name": "Pixelsprout",
                                   "url": f"{DOMAIN}/", "logo": f"{DOMAIN}/apple-touch-icon.png",
                                   "description": "Free browser-game portal with 5,000+ HTML5 games. No download, no account required. Supported by ads.",
@@ -1366,8 +1533,9 @@ def render_home(catalog, featured, popular_ranked, today=None):
     popular_shelf = S.shelf("Popular now", popular_cards, section_id="popular-now")
 
     main = f"""<div class="home-intro">
-<h1>Free browser games</h1>
-<p>{total:,} games across {len(genre_pages)} genres. Nothing to install, no account needed.</p>
+<h1>Play Free Browser Games Online — No Download</h1>
+<p>Play free browser games online on Pixelsprout with no download and no account. {total:,} HTML5 games across {len(genre_pages)} genres load in your tab — puzzle, arcade, action, horror, multiplayer and more. Built for mouse and keyboard; touch screens have not been tested for every title.</p>
+<p class="last-updated">Last updated: 10 Nov 2026</p>
 </div>
 {continue_shelf}
 {popular_shelf}
