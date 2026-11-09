@@ -11,7 +11,7 @@ import glob
 import os
 import re
 
-DOMAIN = "https://playpixelsprout.com"
+DOMAIN = "https://www.playpixelsprout.com"
 SKIP = {"games", "assets", ".github", "api", "content-engine", "legacy-scripts", "node_modules", "qa", "qa-screenshots"}
 
 with open("sitemap.xml", encoding="utf-8") as f:

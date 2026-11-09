@@ -1323,16 +1323,16 @@ def render_home(catalog, featured, popular_ranked, today=None):
     meta_extra = "\n".join([
         '<meta name="p:domain_verify" content="119e6733e3c5887bb3f24d440ab498fa"/>',
         '<meta property="og:type" content="website">',
-        '<meta property="og:url" content="https://playpixelsprout.com/">',
+        '<meta property="og:url" content="https://www.playpixelsprout.com/">',
         '<meta property="og:title" content="Pixelsprout - Play. Grow. Explore.">',
         '<meta property="og:description" content="Pixelsprout is a free browser gaming library with thousands of games across every genre. No installs, no accounts -- just click and play.">',
-        '<meta property="og:image" content="https://playpixelsprout.com/assets/og-banner.jpg">',
+        '<meta property="og:image" content="https://www.playpixelsprout.com/assets/og-banner.jpg">',
         '<meta property="og:image:width" content="1200">',
         '<meta property="og:image:height" content="971">',
         '<meta name="twitter:card" content="summary_large_image">',
         '<meta name="twitter:title" content="Pixelsprout - Play. Grow. Explore.">',
         '<meta name="twitter:description" content="Free browser gaming library with thousands of games. No installs, no accounts.">',
-        '<meta name="twitter:image" content="https://playpixelsprout.com/assets/og-banner.jpg">',
+        '<meta name="twitter:image" content="https://www.playpixelsprout.com/assets/og-banner.jpg">',
     ])
     website_ld = json.dumps({
         "@context": "https://schema.org",

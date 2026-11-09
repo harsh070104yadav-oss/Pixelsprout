@@ -45,7 +45,7 @@ TRACKING_FILE = f"{SITE_ROOT}/gamemonetize-data.json"   # separate from games-da
 GAMES_INDEX_FILE = f"{SITE_ROOT}/games-index.json"
 SITEMAP_FILE = f"{SITE_ROOT}/sitemap.xml"
 GAMES_DIR = f"{SITE_ROOT}/games"
-DOMAIN = "https://playpixelsprout.com"
+DOMAIN = "https://www.playpixelsprout.com"
 
 
 # Identical template to auto-add-games.py, byte-for-byte, so a GameMonetize

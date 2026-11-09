@@ -18,7 +18,7 @@ import json
 from datetime import datetime, timedelta, timezone
 from xml.sax.saxutils import escape
 
-DOMAIN = "https://playpixelsprout.com"
+DOMAIN = "https://www.playpixelsprout.com"
 MAX_ITEMS = 60
 
 

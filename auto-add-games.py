@@ -35,7 +35,7 @@ SITE_ROOT = "."
 TRACKING_FILE = f"{SITE_ROOT}/games-data.json"
 SITEMAP_FILE = f"{SITE_ROOT}/sitemap.xml"
 GAMES_DIR = f"{SITE_ROOT}/games"
-DOMAIN = "https://playpixelsprout.com"
+DOMAIN = "https://www.playpixelsprout.com"
 
 
 

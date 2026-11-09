@@ -212,10 +212,10 @@ def update_sitemap(new_urls):
     with open(SITEMAP_PATH, encoding="utf-8") as f:
         content = f.read()
     noindex = noindex_guides.load_urls()
-    to_add = [u for u in new_urls if u not in noindex and f"<loc>https://playpixelsprout.com{u}</loc>" not in content]
+    to_add = [u for u in new_urls if u not in noindex and f"<loc>https://www.playpixelsprout.com{u}</loc>" not in content]
     if not to_add:
         return
-    entries = "\n".join(f"  <url><loc>https://playpixelsprout.com{u}</loc><priority>0.5</priority></url>" for u in to_add)
+    entries = "\n".join(f"  <url><loc>https://www.playpixelsprout.com{u}</loc><priority>0.5</priority></url>" for u in to_add)
     if "</urlset>" in content:
         content = content.replace("</urlset>", entries + "\n</urlset>")
     else:

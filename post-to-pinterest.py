@@ -21,7 +21,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-DOMAIN = "https://playpixelsprout.com"
+DOMAIN = "https://www.playpixelsprout.com"
 POSTS_PER_RUN = 5
 TRACKING_FILE = "pinterest-posted.json"
 GAMES_INDEX_FILE = "games-index.json"

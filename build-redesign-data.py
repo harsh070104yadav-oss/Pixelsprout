@@ -172,11 +172,11 @@ _main = (_S.crumbs([("Home", "/"), ("New games", None)]) +
          (f'<p>The {len(recent)} games that went live on Pixelsprout on 16 October 2026.</p></header>' if INTERIM_NEW else f'<p>Every game added to Pixelsprout in the last {WINDOW_DAYS} days, newest first. {len(recent)} games.</p></header>') +
          f'<div class="grid">{_rows}</div>')
 _head = _S.head("New games — Pixelsprout", _html.escape(f"Free browser games added to Pixelsprout in the last {WINDOW_DAYS} days, newest first."),
-                canonical="https://playpixelsprout.com/new-games/")
+                canonical="https://www.playpixelsprout.com/new-games/")
 os.makedirs(os.path.join(R, "new-games"), exist_ok=True)
 open(os.path.join(R, "new-games", "index.html"), "w", encoding="utf-8", newline="\n").write(
     _S.page(_head, _main, body_attrs='class="category-page" data-page="new-games"', total_games=len(idx)))
 _sm = os.path.join(R, "sitemap.xml"); _t = open(_sm, encoding="utf-8").read()
 if "/new-games/<" not in _t:
-    open(_sm, "w", encoding="utf-8").write(_t.replace("</urlset>", "  <url><loc>https://playpixelsprout.com/new-games/</loc><priority>0.8</priority></url>\n</urlset>"))
+    open(_sm, "w", encoding="utf-8").write(_t.replace("</urlset>", "  <url><loc>https://www.playpixelsprout.com/new-games/</loc><priority>0.8</priority></url>\n</urlset>"))
 print("new in 7 days:", home["new7"], "| recent (30d):", len(recent))

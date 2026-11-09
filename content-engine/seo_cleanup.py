@@ -43,7 +43,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAMES_INDEX_PATH = os.path.join(REPO_ROOT, "games-index.json")
 MANIFEST_PATH = os.path.join(os.path.dirname(__file__), "manifest.json")
 SITEMAP_PATH = os.path.join(REPO_ROOT, "sitemap.xml")
-SITE = "https://playpixelsprout.com"
+SITE = "https://www.playpixelsprout.com"
 
 NOINDEX_TAG = '<meta name="robots" content="noindex,follow">'
 NOINDEX_RE = re.compile(r'\s*<meta name="robots" content="noindex,follow">')

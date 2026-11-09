@@ -50,12 +50,12 @@ def update_sitemap(new_urls):
         content = f.read()
     existing = set()
     for url in new_urls:
-        if f"<loc>https://playpixelsprout.com{url}</loc>" in content:
+        if f"<loc>https://www.playpixelsprout.com{url}</loc>" in content:
             existing.add(url)
     to_add = [u for u in new_urls if u not in existing]
     if not to_add:
         return
-    entries = "\n".join(f"  <url><loc>https://playpixelsprout.com{u}</loc><priority>0.6</priority></url>" for u in to_add)
+    entries = "\n".join(f"  <url><loc>https://www.playpixelsprout.com{u}</loc><priority>0.6</priority></url>" for u in to_add)
     content = content.replace("</urlset>", entries + "\n</urlset>") if "</urlset>" in content else content + "\n" + entries
     with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
         f.write(content)

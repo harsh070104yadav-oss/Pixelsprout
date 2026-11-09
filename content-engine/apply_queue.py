@@ -191,7 +191,7 @@ def handle_collection(fname, sha, item, intros, run_log, applied_hashes):
     intros[slug] = {"intro": html.escape(item["intro"].strip(), quote=True), "source": "bot",
                     "updated_at": run_log["ran_at"]}
     run_log["published"].append({"file": fname, "collection": slug,
-                                 "urls": [f"https://playpixelsprout.com/games-like/{slug}/"]})
+                                 "urls": [f"https://www.playpixelsprout.com/games-like/{slug}/"]})
 
 
 SHOTS_RE = re.compile(r"<!--ps:shots-->.*?<!--/ps:shots-->", re.S)
@@ -338,7 +338,7 @@ def main():
         touched_slugs.append(slug)
 
         published = {"file": fname, "slug": slug, "pages": sorted(good_pages),
-                     "urls": [f"https://playpixelsprout.com{page_urls[p]}" for p in sorted(good_pages)]}
+                     "urls": [f"https://www.playpixelsprout.com{page_urls[p]}" for p in sorted(good_pages)]}
         if page_errors:
             published["rejected_pages"] = {p: e[:10] for p, e in page_errors.items()}
         # Never take URLs off the NOINDEX_GUIDES list here: Studio checks the rewrite first,

@@ -13,7 +13,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-DOMAIN = "https://playpixelsprout.com"
+DOMAIN = "https://www.playpixelsprout.com"
 ASSET_VERSION = "20260923"
 
 ADSENSE_CLIENT = "ca-pub-8466016918717424"
