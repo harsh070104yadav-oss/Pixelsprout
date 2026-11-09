@@ -399,6 +399,7 @@ def head(title_html, description_attr, *, canonical=None, meta_extra="", jsonld=
         '<html lang="en">',
         "<head>",
         '<meta charset="UTF-8">',
+        '<meta name="msvalidate.01" content="724892B4727853067A2A92995D63909C" />',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">',
         f"<title>{title_html}</title>",
     ]
