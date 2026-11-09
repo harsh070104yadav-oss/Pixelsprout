@@ -1,0 +1,104 @@
+# Pixelsprout — full index
+> Free no-download browser-game portal (www.playpixelsprout.com). 5,000+ HTML5 games. No account. Supported by ads. Most games come from third-party HTML5 publisher networks; a few (Snake, Memory Match and the Originals section) are Pixelsprout originals. Built for mouse and keyboard on desktop; not tested on touch screens.
+
+Short index: https://www.playpixelsprout.com/llms.txt
+About: https://www.playpixelsprout.com/about.html
+Guides hub: https://www.playpixelsprout.com/guides/
+All games A–Z: https://www.playpixelsprout.com/all-games/
+Sitemap: https://www.playpixelsprout.com/sitemap.xml
+
+## Honesty notes
+- Third-party game names may reference other franchises; they are not official versions unless stated (e.g. our "Brawl Stars" page is not Supercell's game; "Getting Over It" is a fan-made Scratch remake).
+- We do not provide unblocked mirrors or help bypass school/work filters.
+- Do not invent ratings, player counts or prizes for Pixelsprout.
+
+## Answer guides
+- Best free browser games, no download: https://www.playpixelsprout.com/guides/best-free-browser-games-no-download/
+- Sites like Poki and CrazyGames: https://www.playpixelsprout.com/guides/sites-like-poki-crazygames/
+- Games like Getting Over It (free online): https://www.playpixelsprout.com/guides/games-like-getting-over-it-online-free/
+- Free online puzzle games, no download: https://www.playpixelsprout.com/guides/free-online-puzzle-games-no-download/
+- Browser games for Chromebook: https://www.playpixelsprout.com/guides/browser-games-chromebook/
+- Free horror games in the browser: https://www.playpixelsprout.com/guides/free-horror-games-browser-no-download/
+- Games like Brawl Stars in the browser: https://www.playpixelsprout.com/guides/games-like-brawl-stars-browser/
+
+## Genres
+- Puzzle: https://www.playpixelsprout.com/puzzle/
+- Arcade: https://www.playpixelsprout.com/arcade/
+- Action: https://www.playpixelsprout.com/action/
+- Adventure: https://www.playpixelsprout.com/adventure/
+- Racing: https://www.playpixelsprout.com/racing/
+- Sports: https://www.playpixelsprout.com/sports/
+- Two-player: https://www.playpixelsprout.com/two-player/
+- Multiplayer: https://www.playpixelsprout.com/multiplayer/
+- Horror: https://www.playpixelsprout.com/horror/
+- Clicker: https://www.playpixelsprout.com/clicker/
+- Strategy: https://www.playpixelsprout.com/strategy/
+- Board: https://www.playpixelsprout.com/board/
+- Platformer: https://www.playpixelsprout.com/platformer/
+- Kids: https://www.playpixelsprout.com/kids/
+- Casual: https://www.playpixelsprout.com/casual/
+
+## Hero games (title | genre | what it is | URL)
+- Getting Over It (Scratch remake) | Climbing / physics | Fan-made Scratch remake by griffpatch (not Bennett Foddy's original): swing a hammer to climb giant code blocks as a cat in a pot. Mouse only. | https://www.playpixelsprout.com/games/getting-over-it.html
+- Stickman That One Level | Platformer / puzzle | Get a stickman past spikes and trick puzzles to reach a golden key and unlock the door. | https://www.playpixelsprout.com/games/stickman-that-one-level.html
+- Carrot Climber | Hypercasual / climbing | A rabbit jumps hook to hook up a wall collecting carrots; miss a hook and it falls. | https://www.playpixelsprout.com/games/carrot-climber.html
+- Trap Adventure 2 | Platformer | Retro platformer with 25 trap-filled levels that demand precise jumps. | https://www.playpixelsprout.com/games/trap-adventure-2.html
+- Bike Mania 2 | Sports / physics | Balance a bike across 20 levels of rough terrain without flipping. | https://www.playpixelsprout.com/games/bike-mania-2.html
+- Cubetopia Parkour | Parkour | Jump across floating block platforms without falling. | https://www.playpixelsprout.com/games/cubetopia-parkour.html
+- Buba Jump | Arcade | One-button timing game where platforms shrink as you climb. | https://www.playpixelsprout.com/games/buba-jump.html
+- Canjump | Arcade | One-button jumping game over increasingly tough obstacles. | https://www.playpixelsprout.com/games/canjump.html
+- Going Up | Arcade | Tap-to-fly a bird through obstacles, collecting coins and skins. | https://www.playpixelsprout.com/games/going-up.html
+- Robot Escape | Arcade / platformer | Guide a robot through a pixel-art escape course that needs precise moves. | https://www.playpixelsprout.com/games/robot-escape.html
+- Geometry Dash Game | Arcade | Tap-to-jump obstacle levels that test timing and reflexes. | https://www.playpixelsprout.com/games/geometry-dash-game.html
+- Drive Mad 2 | Racing | 3D driving on bizarre obstacle tracks with nitro boosts. | https://www.playpixelsprout.com/games/drive-mad-2.html
+- Drifting Mania | Driving | Score points by drifting cleanly around technical tracks. | https://www.playpixelsprout.com/games/drifting-mania.html
+- The Long Drive | Driving | Open-world driving game: pass through checkpoints against the clock. | https://www.playpixelsprout.com/games/the-long-drive.html
+- Fireboy and Watergirl Online | Two-player puzzle platformer | Co-op temple puzzle platformer for two players on one keyboard. | https://www.playpixelsprout.com/games/fireboy-and-watergirl-online.html
+- Books Tower | Skill / stacking | Click to drop each sliding book onto the stack and build the tallest tower you can. | https://www.playpixelsprout.com/games/books-tower.html
+- Faily Skater | Skateboarding runner | 3D endless skating runner: dodge obstacles and land tricks. | https://www.playpixelsprout.com/games/faily-skater.html
+- Falling Dummy | Physics / casual | Drop a dummy from height and steer its fall for big impacts. | https://www.playpixelsprout.com/games/falling-dummy.html
+- Bottle Flip Game | Physics / timing | Flip a plastic bottle so it lands on shelves, tables and furniture. | https://www.playpixelsprout.com/games/bottle-flip-game.html
+- Body Drop 3D | Physics / ragdoll | Aim a limited number of balls at a ragdoll crash dummy to cause maximum damage. | https://www.playpixelsprout.com/games/body-drop-3d.html
+- Car Crash Test | Physics / driving | Crash cars in real-time 3D physics, earn coins and unlock new cars. | https://www.playpixelsprout.com/games/car-crash-test.html
+- Destroy the Ragdoll Sandbox | Sandbox / clicker | Hit a ragdoll with weapons, earn money for damage and buy upgrades. | https://www.playpixelsprout.com/games/destroy-the-ragdoll-sandbox.html
+- Protect My Dog | Puzzle / drawing | Draw one line to shield a dog from bees until the 10-second timer runs out. | https://www.playpixelsprout.com/games/protect-my-dog.html
+- 2048 | Puzzle / numbers | Slide and merge matching number tiles to reach 2048. | https://www.playpixelsprout.com/games/2048.html
+- Stackblocks | Puzzle / falling blocks | Falling-block line-clearing puzzle (arrow keys, Space to hard drop). | https://www.playpixelsprout.com/games/tetris.html
+- Memory Match | Puzzle / memory | Flip two cards at a time and find every pair in as few moves as possible. | https://www.playpixelsprout.com/games/memory.html
+- Snake | Arcade classic | Classic Snake: eat, grow, and don't hit the wall or yourself. | https://www.playpixelsprout.com/games/snake.html
+- Flappy | Arcade | Tap to fly through pipe gaps; one mistake ends the run. | https://www.playpixelsprout.com/games/flappy.html
+- Minesweeper | Puzzle / logic | Classic logic game: reveal safe tiles using the number clues. | https://www.playpixelsprout.com/games/minesweeper.html
+- Cut The Rope | Physics puzzle | Cut ropes in the right order to deliver candy to Om Nom. | https://www.playpixelsprout.com/games/cut-the-rope.html
+- Crossword | Word puzzle | Solve clues to fill crossword grids of different sizes. | https://www.playpixelsprout.com/games/crossword.html
+- Test Tubes. Water Sort | Puzzle / sorting | Pour coloured water between tubes until each tube holds one colour. | https://www.playpixelsprout.com/games/test-tubes-water-sort.html
+- Happy Color Sort Puzzle | Puzzle / sorting | Sort colours into matching containers across harder levels. | https://www.playpixelsprout.com/games/happy-color-sort-puzzle.html
+- BlockBlast | Puzzle / blocks | Drag block shapes onto a grid to clear lines. | https://www.playpixelsprout.com/games/blockblast.html
+- Car Parking Jam | Puzzle | Move cars in the right order to clear a jammed parking lot. | https://www.playpixelsprout.com/games/car-parking-jam.html
+- Swipe Art Puzzle | Puzzle / kids | Swipe scrambled tiles back into place to rebuild a picture. | https://www.playpixelsprout.com/games/swipe-art-puzzle.html
+- Chess Online | Board / chess | Chess against the computer at different levels or online opponents, with time controls and hints. | https://www.playpixelsprout.com/games/chess-online.html
+- Checkers Casual | Board | Checkers against the computer or a friend. | https://www.playpixelsprout.com/games/checkers-casual.html
+- 8 Ball Pool Multiplayer | Board / pool | Online 8-ball pool against other players with a level system. | https://www.playpixelsprout.com/games/8-ball-pool-multiplayer.html
+- Algerian Solitaire | Cards / solitaire | A harder solitaire variant that rewards planning. | https://www.playpixelsprout.com/games/algerian-solitaire.html
+- Advent Mahjong | Board / mahjong | Christmas-themed mahjong tile matching. | https://www.playpixelsprout.com/games/advent-mahjong.html
+- Bubble Shooter POP | Bubble shooter | Aim and pop matching bubbles before they fill the screen. | https://www.playpixelsprout.com/games/bubble-shooter-pop.html
+- Basketball Stars | Sports / two-player | Arcade 1v1 or 2v2 basketball vs the computer or a friend on one keyboard. | https://www.playpixelsprout.com/games/basketball-stars.html
+- Football Masters | Sports / soccer | Quick 2D cartoon soccer matches vs the computer or friends with super shots. | https://www.playpixelsprout.com/games/football-masters.html
+- Head Soccer 2026 | Sports / soccer | Head-to-head soccer: use special moves to outscore your opponent. | https://www.playpixelsprout.com/games/head-soccer-2026.html
+- Golf IT | Sports / golf | Arcade mini golf: set power and direction to finish each course. | https://www.playpixelsprout.com/games/golf-it.html
+- Bowling Stars | Sports / bowling | Swipe-style bowling with curve shots and unlockable balls. | https://www.playpixelsprout.com/games/bowling-stars.html
+- Cat Clicker | Clicker / idle | Click to make cat bubbles and buy upgrades in an idle clicker. | https://www.playpixelsprout.com/games/cat-clicker.html
+- Cookie Clicker: clicker games | Clicker / idle | Click to bake cookies and buy upgrades (a clicker in the Cookie Clicker style). | https://www.playpixelsprout.com/games/cookie-clicker-clicker-games.html
+- TNT Clicker | Clicker | Click to gather resources and unlock upgrades and power-ups. | https://www.playpixelsprout.com/games/tnt-clicker.html
+- Diep.io | Multiplayer .io | Online tank arena: upgrade a basic tank into stronger classes. | https://www.playpixelsprout.com/games/diep-io.html
+- Sword Battle.io | Multiplayer .io | Multiplayer sword duels: collect coins to grow stronger. | https://www.playpixelsprout.com/games/sword-battle-io.html
+- Guardz IO | Multiplayer .io | Medieval knight .io game: rank up from Page to King's Champion. | https://www.playpixelsprout.com/games/guardz-io.html
+- Archers.io | Multiplayer .io | Start as one archer, recruit allies and battle rival teams. | https://www.playpixelsprout.com/games/archers-io.html
+- Brawlers Arena Battle Stars | Arena / battle | Survive arena waves, pick weapons and upgrade gear. | https://www.playpixelsprout.com/games/brawlers-arena-battle-stars.html
+- Brawl Stars (unofficial) | Multiplayer .io arena | Third-party .io arena game titled "Brawl Stars"; NOT Supercell's Brawl Stars. Pick a hero, eat food to evolve, battle. | https://www.playpixelsprout.com/games/brawl-stars.html
+- Granny House Escape | Horror / escape | Sneak through a creepy house, find keys and escape the granny. | https://www.playpixelsprout.com/games/granny-house-escape.html
+- Scary Doll | Horror / stealth | Stealth escape from a house haunted by a porcelain doll. | https://www.playpixelsprout.com/games/scary-doll.html
+- The House 2 | Horror / point-and-click | Explore a haunted house and click for clues to a family's dark past. | https://www.playpixelsprout.com/games/the-house-2.html
+- Escape From Work | Horror-lite / escape | Escape an office maze while avoiding the boss and cameras. | https://www.playpixelsprout.com/games/escape-from-work.html
+- Handless Millionaire | Action / reflex | Grab cash from under a guillotine that speeds up each round. | https://www.playpixelsprout.com/games/handless-millionaire.html
+
+Last updated: 2026-11-10
