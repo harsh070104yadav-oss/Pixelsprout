@@ -361,6 +361,7 @@ GAME_SOCIAL_LINKS = {
         ("YouTube Short (POV: you floor it into a wall)", "https://youtube.com/shorts/FkAOHBA_4a0"),
         ("Reel on Instagram (POV: you floor it into a wall)", "https://www.instagram.com/reel/DfYV1l1jyfo/"),
         ("Reel on Facebook (POV: you floor it into a wall)", "https://www.facebook.com/reel/1652858259553769"),
+        ("YouTube Short (dead-center)", "https://www.youtube.com/shorts/QetygKeDIME"),
     ],
     "body-drop-3d": [
         ("YouTube Short (How many times did you watch this loop?)", "https://youtube.com/shorts/ig4ZUb0vFNM"),
@@ -384,6 +385,12 @@ GAME_SOCIAL_LINKS = {
         ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/De0NBp6grRs/"),
         ("Reel on Facebook", "https://www.facebook.com/reel/28733576349667923"),
         ("Post on X", "https://x.com/Playpixelsprout/status/2113417618178904207"),
+    ],
+    "bottle-flip-game": [
+        ("YouTube Short", "https://www.youtube.com/shorts/wxiM5W8nnr4"),
+    ],
+    "faily-skater": [
+        ("YouTube Short", "https://www.youtube.com/shorts/GB3MW-aZGpA"),
     ],
 }
 
