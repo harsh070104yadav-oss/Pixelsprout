@@ -5,6 +5,11 @@
       "slug": "this-game-about-climbing",
       "reason": "Embed loads a different game (\"Master climber\"), not This Game About Climbing.",
       "added": "2026-10-23"
+    },
+    {
+      "slug": "flappy-bird-classic",
+      "reason": "GamePix embed throws ReferenceError: GameScore is not defined and the game never starts.",
+      "added": "2026-11-09"
     }
   ]
 }

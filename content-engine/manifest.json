@@ -13451,17 +13451,6 @@
       "faq": "/guides/jungle-runner-faq/"
     }
   },
-  "flappy-bird-classic": {
-    "generated_at": "2026-10-22T11:04:20Z",
-    "any_fallback": false,
-    "pages": {
-      "tips": "/guides/flappy-bird-classic-tips/",
-      "controls": "/guides/flappy-bird-classic-controls/",
-      "beginner-guide": "/guides/flappy-bird-classic-beginner-guide/",
-      "similar": "/guides/games-like-flappy-bird-classic/",
-      "faq": "/guides/flappy-bird-classic-faq/"
-    }
-  },
   "birdy-bird-floppy": {
     "generated_at": "2026-10-22T11:04:35Z",
     "any_fallback": false,
