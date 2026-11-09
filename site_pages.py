@@ -1434,11 +1434,36 @@ def render_home(catalog, featured, popular_ranked, today=None):
     pick, hero_game = _featured_pick(featured, by_slug, today)
     used = set()
     hero_html = ""
+    # LCP with redesign is the GTA collage's first tile; preload + SSR it (don't wait on JS).
     preload = None
+    ssr_collage_html = ""
+    try:
+        with open(os.path.join(S.ROOT, "assets/redesign/home.json"), encoding="utf-8") as _hf:
+            _col = (json.load(_hf).get("collage") or [])
+        if _col and _col[0].get("i"):
+            preload = _col[0]["i"]
+            if isinstance(preload, str) and preload.startswith("/") and not preload.startswith("//"):
+                preload = f"{DOMAIN}{preload}"
+        if len(_col) >= 3:
+            tiles = []
+            for i, g in enumerate(_col[:5]):
+                src = g.get("i") or "/assets/logo-icon.webp"
+                attrs = ' fetchpriority="high"' if i == 0 else ' loading="lazy"'
+                tiles.append(
+                    f'<a class="rd-collage__c rd-collage__c{i}" href="/games/{esc(g.get("s",""))}.html">'
+                    f'<img src="{esc(src)}" alt="{esc(g.get("t") or "")}" width="400" height="250" '
+                    f'decoding="async"{attrs}></a>'
+                )
+            ssr_collage_html = (
+                '<div class="rd-collage rd-collage--ssr" aria-label="City action games">'
+                + "".join(tiles) + "</div>"
+            )
+    except (OSError, ValueError, TypeError, AttributeError, IndexError, NameError):
+        preload = None
+        ssr_collage_html = ""
     if hero_game:
         used.add(hero_game["slug"])
-        art = S.thumb_of(hero_game, size=640)
-        preload = art
+        art = S.thumb_of(hero_game, size=480)
         genre_url = S.category_url(hero_game.get("category", ""))
         genre_label = S.pretty_genre(hero_game.get("category", ""))
         chip = (f'<a class="chip" href="{genre_url}"><span class="dot" style="--dot:{S.genre_color(hero_game.get("category", ""))}"></span>{esc(genre_label)}</a>'
@@ -1452,7 +1477,7 @@ def render_home(catalog, featured, popular_ranked, today=None):
 <div class="hero__meta">{chip}<span class="chip">Free · No download</span></div>
 <div class="hero__cta"><a class="btn btn--primary" href="/games/{esc(hero_game['slug'])}.html">{S.icon('play', 'i i--sm')}Play now</a>{f'<a class="btn btn--ghost" href="{genre_url}">More {esc(genre_label.lower())} games</a>' if genre_url else ''}</div>
 </div>
-<a class="hero__art" href="/games/{esc(hero_game['slug'])}.html" tabindex="-1" aria-hidden="true"><img src="{esc(art)}" alt="" width="640" height="400" fetchpriority="high" decoding="async"></a>
+<a class="hero__art" href="/games/{esc(hero_game['slug'])}.html" tabindex="-1" aria-hidden="true"><img src="{esc(art)}" alt="" width="640" height="400" loading="lazy" decoding="async"></a>
 </section>"""
 
     ranked = [by_slug[r["slug"]] for r in (popular_ranked or []) if r.get("slug") in by_slug]
@@ -1469,7 +1494,7 @@ def render_home(catalog, featured, popular_ranked, today=None):
             continue
         ordered = sorted((g for g in games if g.get("thumbnail") and g["slug"] not in used),
                          key=lambda g: (S.source_rank(g), games.index(g)))
-        picks = ordered[:18]
+        picks = ordered[:6]  # mobile weight: 6 cards/shelf (was 18)
         used.update(g["slug"] for g in picks)
         shelves.append(S.shelf(esc(S.pretty_genre(cat)), "".join(S.card(g, show_meta=False) for g in picks),
                                more_href=url, count=f"{len(games)} games", dot=S.genre_color(cat)))
@@ -1532,7 +1557,7 @@ def render_home(catalog, featured, popular_ranked, today=None):
                              track_id="continue-playing-track")
     popular_shelf = S.shelf("Popular now", popular_cards, section_id="popular-now")
 
-    main = f"""<div class="home-intro">
+    main = f"""{ssr_collage_html}<div class="home-intro">
 <h1>Play Free Browser Games Online — No Download</h1>
 <p>Play free browser games online on Pixelsprout with no download and no account. {total:,} HTML5 games across {len(genre_pages)} genres load in your tab — puzzle, arcade, action, horror, multiplayer and more. Built for mouse and keyboard; touch screens have not been tested for every title.</p>
 <p class="last-updated">Last updated: 10 Nov 2026</p>

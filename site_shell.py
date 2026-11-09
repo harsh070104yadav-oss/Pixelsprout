@@ -1,3 +1,4 @@
+import os
 """Shared page shell for every generated Pixelsprout page.
 
 Every generator (auto-add, bulk-add, category pages, homepage, guides,
@@ -14,7 +15,7 @@ import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DOMAIN = "https://www.playpixelsprout.com"
-ASSET_VERSION = "20260923"
+ASSET_VERSION = "20261110a"
 
 ADSENSE_CLIENT = "ca-pub-8466016918717424"
 AD_SLOT_BANNER = "4936643192"
@@ -215,11 +216,22 @@ def clean_title(title):
 
 
 def thumb_of(game, size=None):
+    """Return a thumbnail URL. Prefer local WebP under /assets/thumbs/<slug>.webp when present.
+    For GamePix, clamp ?w= to `size` (default 320)."""
+    slug = (game.get("slug") or "").strip()
+    if slug:
+        local = os.path.join(ROOT, "assets", "thumbs", f"{slug}.webp")
+        if os.path.isfile(local):
+            return f"/assets/thumbs/{slug}.webp"
     url = (game.get("thumbnail") or "").strip()
     if not url:
         return FALLBACK_THUMB
-    if size and "img.gamepix.com" in url:
-        url = re.sub(r"([?&])w=\d+", rf"\g<1>w={size}", url)
+    size = 320 if size is None else size
+    if "img.gamepix.com" in url:
+        if re.search(r"[?&]w=\d+", url):
+            url = re.sub(r"([?&])w=\d+", rf"\g<1>w={size}", url)
+        else:
+            url += ("&" if "?" in url else "?") + f"w={size}"
     return url
 
 
@@ -290,8 +302,8 @@ def tool_card(href, title, subtitle, image):
 
 
 TOOL_CARDS = [
-    ("/cold-read/", "Cold Read", "Pixelsprout original", "/assets/cold-read-logo.jpg"),
-    ("/gift-file/", "Guess It Box", "Pixelsprout original", "/assets/gift-file-logo.jpg"),
+    ("/cold-read/", "Cold Read", "Pixelsprout original", "/assets/cold-read-logo.webp"),
+    ("/gift-file/", "Guess It Box", "Pixelsprout original", "/assets/gift-file-logo.webp"),
 ]
 
 
@@ -418,20 +430,38 @@ def head(title_html, description_attr, *, canonical=None, meta_extra="", jsonld=
         '<link rel="manifest" href="/manifest.json">',
         '<link rel="preconnect" href="https://fonts.googleapis.com">',
         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
-        f'<link rel="stylesheet" href="{FONTS_HREF}">',
-        f'<link rel="stylesheet" href="{WORDMARK_FONT_HREF}">',
+        # Non-blocking webfonts (keeps LCP from waiting on Google Fonts CSS).
+        (
+            f'<link rel="preload" as="style" href="{FONTS_HREF}" '
+            "onload=\"this.onload=null;this.rel='stylesheet'\">"
+        ),
+        (
+            f'<link rel="preload" as="style" href="{WORDMARK_FONT_HREF}" '
+            "onload=\"this.onload=null;this.rel='stylesheet'\">"
+        ),
+        f'<noscript><link rel="stylesheet" href="{FONTS_HREF}"><link rel="stylesheet" href="{WORDMARK_FONT_HREF}"></noscript>',
         f'<link rel="stylesheet" href="/styles.css?v={ASSET_VERSION}">',
     ]
+
     if preload_image:
         lines.append(f'<link rel="preload" as="image" href="{esc(preload_image)}" fetchpriority="high">')
     for block in jsonld:
         lines.append(f'<script type="application/ld+json">{block}</script>')
     lines += [
-        f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT}" crossorigin="anonymous"></script>',
+        # Ads + GA after first interaction (or 8s). Cuts mobile first-load JS weight.
+        (
+            "<script>(function(){var d=false;function go(){if(d)return;d=true;"
+            "var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8';s.async=true;document.head.appendChild(s);"
+            "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config', + ga + );"
+            "var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + ADSENSE_CLIENT + "';"
+            "a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);"
+            "var b=document.createElement('script');b.src='/assets/ads.js?v=" + ASSET_VERSION + "';b.defer=true;document.head.appendChild(b);"
+            "}['pointerdown','keydown','touchstart','scroll'].forEach(function(e){window.addEventListener(e,go,{once:true,passive:true});});"
+            "setTimeout(go,8000);})();</script>"
+        ),
+        '<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>',
         '<script defer src="/_vercel/insights/script.js"></script>',
-        GA_SNIPPET,
         f'<script defer src="/pixelsprout-features.js?v={ASSET_VERSION}"></script>',
-        f'<script defer src="/assets/ads.js?v={ASSET_VERSION}"></script>',
         SW_SNIPPET,
     ]
     if head_extra:
@@ -451,7 +481,7 @@ def topbar(total_games=None):
         '<a class="skip-link" href="#main">Skip to content</a>\n'
         '<header class="topbar"><div class="topbar__inner">'
         f'<button class="icon-btn menu-btn" type="button" data-menu-open aria-controls="rail" aria-expanded="false" aria-label="Open menu">{icon("menu")}</button>'
-        '<a class="wordmark" href="/" aria-label="Pixelsprout home"><img src="/assets/logo-icon.png" width="28" height="28" alt=""><span>PIXEL<b>SPROUT</b></span></a>'
+        '<a class="wordmark" href="/" aria-label="Pixelsprout home"><img src="/assets/logo-icon.webp" width="28" height="28" alt="" decoding="async"><span>PIXEL<b>SPROUT</b></span></a>'
         f'<button class="search-trigger" type="button" data-search-open aria-label="Search games">{icon("search")}<span>{_count_label(total_games)}</span><kbd>/</kbd></button>'
         '<nav class="topnav" aria-label="Primary">'
         '<a href="/all-games/">Browse</a><a href="/originals/">Originals</a><a href="/guides/">Guides</a>'
@@ -535,7 +565,7 @@ def footer():
     coll_items.append('<li><a href="/guides/">Game guides</a></li>')
     return (
         '<footer class="footer"><div class="footer__inner">'
-        '<div class="footer__brand"><a class="wordmark" href="/" aria-label="Pixelsprout home"><img src="/assets/logo-icon.png" width="28" height="28" alt="" loading="lazy"><span>PIXEL<b>SPROUT</b></span></a>'
+        '<div class="footer__brand"><a class="wordmark" href="/" aria-label="Pixelsprout home"><img src="/assets/logo-icon.webp" width="28" height="28" alt="" loading="lazy" decoding="async"><span>PIXEL<b>SPROUT</b></span></a>'
         "<p>A free library of browser games, kept tidy by hand. Nothing to download, no account to make. Pick something and play.</p></div>"
         f'<nav aria-label="Popular genres"><h2>Genres</h2><ul>{"".join(genre_items)}</ul></nav>'
         f'<nav aria-label="Collections"><h2>Collections</h2><ul>{"".join(coll_items)}</ul></nav>'

@@ -1321,3 +1321,7 @@ html:not(.rd-ready) body.home-page #main { opacity: 0; animation: rdReveal .01s 
 .rd-collage__c3,.rd-collage__c4{display:none}
 .rd-collage__c:hover,.rd-collage__c:focus-visible{transform:rotate(0) scale(1.03);z-index:5}
 @media (min-width:900px){.rd-collage{float:right;width:46%;height:250px;margin:0 0 0 24px}.rd-collage__c{width:52%}.rd-collage__c3{display:block;right:28%;top:150px;z-index:4;transform:rotate(6deg)}}
+
+
+/* speed: hide duplicate SSR hero when redesign home mounts */
+body:has(.rd-home) .hero { display: none; }
