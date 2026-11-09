@@ -1,4 +1,9 @@
 {
+  "redirects": [
+    { "source": "/guides/games-like-getting-over-it", "destination": "/guides/games-like-getting-over-it-online-free/", "statusCode": 301 },
+    { "source": "/guides/games-like-getting-over-it/", "destination": "/guides/games-like-getting-over-it-online-free/", "statusCode": 301 },
+    { "source": "/guides/games-like-getting-over-it/index.html", "destination": "/guides/games-like-getting-over-it-online-free/", "statusCode": 301 }
+  ],
   "rewrites": [
     {
       "source": "/",
