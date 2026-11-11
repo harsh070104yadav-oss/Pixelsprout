@@ -20,6 +20,8 @@ Sitemap: https://www.playpixelsprout.com/sitemap.xml
 - Browser games for Chromebook: https://www.playpixelsprout.com/guides/browser-games-chromebook/
 - Free horror games in the browser: https://www.playpixelsprout.com/guides/free-horror-games-browser-no-download/
 - Games like Brawl Stars in the browser: https://www.playpixelsprout.com/guides/games-like-brawl-stars-browser/
+- Free games to play with friends online (no download): https://www.playpixelsprout.com/guides/free-games-to-play-with-friends-online-no-download/
+- Games to play when bored, online free: https://www.playpixelsprout.com/guides/games-to-play-when-bored-online-free/
 
 ## Genres
 - Puzzle: https://www.playpixelsprout.com/puzzle/
@@ -106,4 +108,7 @@ Sitemap: https://www.playpixelsprout.com/sitemap.xml
 - Games like Among Us (free online) | Guide | Honest list of impostor-style browser games on Pixelsprout. | https://www.playpixelsprout.com/guides/games-like-among-us-online-free/
 - Two-player games like Fireboy and Watergirl | Guide | Two-player browser games, including the unofficial Fireboy and Watergirl page. | https://www.playpixelsprout.com/guides/two-player-games-like-fireboy-and-watergirl/
 
-Last updated: 2026-11-11
+- Free games to play with friends online (no download) | Guide | Two-player and multiplayer browser games on Pixelsprout, with unofficial notices where they apply. | https://www.playpixelsprout.com/guides/free-games-to-play-with-friends-online-no-download/
+- Games to play when bored, online free | Guide | A short list of free catalog games you can open in the browser with no download. | https://www.playpixelsprout.com/guides/games-to-play-when-bored-online-free/
+
+Last updated: 2026-11-12

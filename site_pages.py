@@ -1279,6 +1279,8 @@ POPULAR_GUIDES = [
     ("Browser games for school (no download)", "/guides/unblocked-games-to-play-at-school/"),
     ("Games like Among Us (free online)", "/guides/games-like-among-us-online-free/"),
     ("Two-player games like Fireboy and Watergirl", "/guides/two-player-games-like-fireboy-and-watergirl/"),
+    ("Free games to play with friends online (no download)", "/guides/free-games-to-play-with-friends-online-no-download/"),
+    ("Games to play when bored, online free", "/guides/games-to-play-when-bored-online-free/"),
 ]
 HOME_GUIDES = [POPULAR_GUIDES[i] for i in (1, 3, 5, 4)]
 CATEGORY_GUIDE_LINK = {
