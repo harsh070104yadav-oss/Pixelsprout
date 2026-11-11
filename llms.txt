@@ -1,5 +1,5 @@
 # Pixelsprout
-> Free no-download browser-game portal. 5,000+ HTML5 games across dozens of genres. No account required. Play in the tab.
+> Pixelsprout is a free browser-game portal with 5,000+ HTML5 games — no download and no account needed.
 
 Site: https://www.playpixelsprout.com/
 About: https://www.playpixelsprout.com/about.html

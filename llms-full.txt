@@ -1,5 +1,5 @@
 # Pixelsprout — full index
-> Free no-download browser-game portal (www.playpixelsprout.com). 5,000+ HTML5 games. No account. Supported by ads. Most games come from third-party HTML5 publisher networks; a few (Snake, Memory Match and the Originals section) are Pixelsprout originals. Built for mouse and keyboard on desktop; not tested on touch screens.
+> Pixelsprout is a free browser-game portal with 5,000+ HTML5 games — no download and no account needed.
 
 Short index: https://www.playpixelsprout.com/llms.txt
 About: https://www.playpixelsprout.com/about.html

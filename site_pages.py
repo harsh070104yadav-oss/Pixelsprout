@@ -1637,7 +1637,7 @@ def render_home(catalog, featured, popular_ranked, today=None):
     )
 
     title = "Play Free Browser Games Online, No Download | Pixelsprout"
-    description = "Play free browser games online on Pixelsprout — no download, no account. Thousands of HTML5 games across every genre, ready in your tab."
+    description = "Pixelsprout is a free browser-game portal with 5,000+ HTML5 games — no download and no account needed."
     meta_extra = "\n".join([
         '<meta name="p:domain_verify" content="119e6733e3c5887bb3f24d440ab498fa"/>',
         '<meta property="og:type" content="website">',
@@ -1666,11 +1666,11 @@ def render_home(catalog, featured, popular_ranked, today=None):
         "description": "Free browser-game portal with thousands of HTML5 games. No download, no account required.",
     })
     website_ld = json.dumps({"@context": "https://schema.org", "@type": "WebSite", "@id": f"{DOMAIN}/#website", "name": "Pixelsprout",
-                             "alternateName": "Play Pixelsprout", "url": f"{DOMAIN}/", "publisher": {"@id": f"{DOMAIN}/#org"}, "inLanguage": "en",
+                             "alternateName": "Play Pixelsprout", "url": f"{DOMAIN}/", "description": "Pixelsprout is a free browser-game portal with 5,000+ HTML5 games — no download and no account needed.", "publisher": {"@id": f"{DOMAIN}/#org"}, "inLanguage": "en",
                              "dateModified": "2026-11-10"})
     organization_ld = json.dumps({"@context": "https://schema.org", "@type": "Organization", "@id": f"{DOMAIN}/#org", "name": "Pixelsprout",
                                   "url": f"{DOMAIN}/", "logo": f"{DOMAIN}/apple-touch-icon.png",
-                                  "description": "Free browser-game portal with 5,000+ HTML5 games. No download, no account required. Supported by ads.",
+                                  "description": "Pixelsprout is a free browser-game portal with 5,000+ HTML5 games — no download and no account needed.",
                                   "sameAs": ORG_SAME_AS})
     genres_ld = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name": "Game genres on Pixelsprout", "itemListElement": [
         {"@type": "ListItem", "position": i, "name": t, "url": f"{DOMAIN}{h}"} for i, (t, h) in enumerate(HOME_GENRE_LIST, 1)]})
