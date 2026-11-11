@@ -49,4 +49,7 @@ Allow: /
 User-agent: Amzn-SearchBot
 Allow: /
 
+User-agent: MistralAI-User
+Allow: /
+
 Sitemap: https://www.playpixelsprout.com/sitemap.xml
