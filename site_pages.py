@@ -231,9 +231,17 @@ FAN_MADE_CREDIT = {"getting-over-it": "griffpatch"}
 _BRAWL_NOTICE = ('<strong>Not the official Brawl Stars.</strong> This is an unofficial browser arena game from a third-party '
                  'publisher. It is not made by or affiliated with Supercell. Looking for similar games? See '
                  '<a href="/guides/games-like-brawl-stars-browser/">games like Brawl Stars you can play in your browser</a>.')
+_AMONG_NOTICE = ('<strong>Not the official Among Us.</strong> This is an unofficial browser game from a third-party '
+                 'publisher. It is not made by or affiliated with InnerSloth. Looking for similar games? See '
+                 '<a href="/guides/games-like-among-us-online-free/">games like Among Us you can play free online</a>.')
+_FIREBOY_NOTICE = ('<strong>Not the official Fireboy and Watergirl games.</strong> This is an unofficial browser '
+                   'co-op game from a third-party publisher. It is not the original Forest Temple series. See '
+                   '<a href="/guides/two-player-games-like-fireboy-and-watergirl/">two-player games like Fireboy and Watergirl</a>.')
 GAME_NOTICES = {
     "brawl-stars": _BRAWL_NOTICE,
     "brawl-stars-2": _BRAWL_NOTICE,
+    "among-us": _AMONG_NOTICE,
+    "fireboy-and-watergirl-online": _FIREBOY_NOTICE,
 }
 
 # Extra visible FAQ shown on the game page (static HTML). add-faq-jsonld.py appends the same pairs to the
@@ -345,6 +353,96 @@ ANSWER_FIRST = {
         "similar": ["the-man-from-the-window", "boo-scared-escape-from-backrooms", "granny-house-escape"],
         "date_modified": "2026-11-10",
     },
+    "among-us": {
+        "h1": "Play Among Us Free Online — No Download",
+        "title_tag": "Play Among Us Free Online (Unofficial, No Download) | Pixelsprout",
+        "meta_desc": "Play an unofficial Among Us-style browser game free online on Pixelsprout. No download, no sign-up. Not made by or affiliated with InnerSloth.",
+        "lead": "Play Among Us free online in your browser on Pixelsprout — no download and no sign-up. This is an unofficial browser game from a third-party publisher (not InnerSloth): crewmates complete tasks while looking for an impostor, and you talk, vote and try to last until the end. Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Among Us free online with no download?",
+             "Yes. Open this page and the unofficial browser game loads in the tab. There is nothing to install and no Pixelsprout account required."),
+            ("Is this the official Among Us by InnerSloth?",
+             "No. This is an unofficial browser game from a third-party publisher that uses the name Among Us. It is not made by or affiliated with InnerSloth."),
+            ("How do you play?",
+             "Complete tasks if you are a crewmate, or blend in if you are the impostor. Use the on-screen buttons and the discussion and voting screens as they appear."),
+            ("What similar games can I play next?",
+             "Try Eggdog Among Us, The Dead Among Us and Red Impostor Guys — all free in the browser on Pixelsprout."),
+        ],
+        "similar": ["eggdog-among-us", "the-dead-among-us", "red-impostor-guys"],
+        "date_modified": "2026-11-11",
+    },
+    "fireboy-and-watergirl-online": {
+        "h1": "Play Fireboy and Watergirl Free Online — No Download",
+        "title_tag": "Play Fireboy and Watergirl Free Online (Unofficial, No Download) | Pixelsprout",
+        "meta_desc": "Play an unofficial Fireboy and Watergirl co-op game free online on Pixelsprout. Two-player temple puzzles, no download. Not the original Forest Temple games.",
+        "lead": "Play Fireboy and Watergirl free online in your browser on Pixelsprout — no download and no sign-up. This is an unofficial two-player co-op game from a third-party publisher (not the original Forest Temple series): guide Fireboy and Watergirl through temple rooms, collect gems and solve puzzles together. One player can use the keyboard for each character, or two people can share the same keyboard, following the on-screen control prompts. Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Fireboy and Watergirl free online with no download?",
+             "Yes. The unofficial browser game loads in this tab. Nothing to install and no account required."),
+            ("Is this the original Fireboy and Watergirl?",
+             "No. This is an unofficial co-op game from a third-party publisher. It is not the original Forest Temple series."),
+            ("Can two people play on one keyboard?",
+             "Yes. It is built as a two-player game. Follow the on-screen control prompts for each character. Built for mouse and keyboard; touch play has not been tested on this page."),
+            ("What similar games can I play next?",
+             "Try 12 MiniBattles - Two Players, Steve Alex Spooky - 2 Player and Nooby And Obby 2 Player — free two-player browser games on Pixelsprout."),
+        ],
+        "similar": ["12-minibattles-two-players", "steve-alex-spooky-2-player", "nooby-and-obby-2-player"],
+        "date_modified": "2026-11-11",
+    },
+    "referee-simulator-3d": {
+        "h1": "Play Referee Simulator 3D Free Online — No Download",
+        "title_tag": "Play Referee Simulator 3D Free Online (No Download) | Pixelsprout",
+        "meta_desc": "Play Referee Simulator 3D free online in your browser on Pixelsprout. Call fouls, penalties and VAR reviews. No download, no sign-up.",
+        "lead": "Play Referee Simulator 3D free online in your browser on Pixelsprout — no download and no sign-up. You take the whistle in a 3D sports match: stay with play, call fouls, penalties, offsides and cards, and use the pitchside VAR monitor when you are unsure. Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Referee Simulator 3D free online with no download?",
+             "Yes. The game loads in this browser tab. Nothing to install and no account required."),
+            ("What do you do in the game?",
+             "You referee a match in 3D: run with play, decide fouls, penalties, offsides and cards, and review incidents on the VAR monitor when needed."),
+            ("How do you control it?",
+             "Use the mouse and keyboard following the on-screen prompts in the game frame."),
+            ("What similar games can I play next?",
+             "Try Crazy Goal, Ninja Head Ball and Gully Cricket — free sports games in the browser on Pixelsprout."),
+        ],
+        "similar": ["crazy-goal", "ninja-head-ball", "gully-cricket"],
+        "date_modified": "2026-11-11",
+    },
+    "scary-doll": {
+        "h1": "Play Scary Doll Free Online — No Download",
+        "title_tag": "Play Scary Doll Free Online (No Download) | Pixelsprout",
+        "meta_desc": "Play Scary Doll free online in your browser on Pixelsprout. Stealth horror in a house with a porcelain doll. No download.",
+        "lead": "Play Scary Doll free online in your browser on Pixelsprout — no download and no sign-up. It is a stealth horror game: you are in a decaying house with a porcelain doll, so you explore rooms quietly, solve puzzles and try to escape without making too much noise. Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Scary Doll free online with no download?",
+             "Yes. The game loads in this browser tab. Nothing to install and no account required."),
+            ("What is Scary Doll?",
+             "A stealth horror escape: move quietly through a house, solve puzzles and avoid a porcelain doll that comes after you if you make too much noise."),
+            ("How do you play?",
+             "Explore room by room with the mouse and keyboard, following the on-screen prompts. Stay quiet and look for a way out."),
+            ("What similar games can I play next?",
+             "Try Granny House Escape, The House 2 and Escape From Work — free browser horror on Pixelsprout."),
+        ],
+        "similar": ["granny-house-escape", "the-house-2", "escape-from-work"],
+        "date_modified": "2026-11-11",
+    },
+    "renovation": {
+        "h1": "Play Renovation! Free Online — No Download",
+        "title_tag": "Play Renovation! Free Online (No Download) | Pixelsprout",
+        "meta_desc": "Play Renovation! free online in your browser on Pixelsprout. Move furniture, sell houses and rebuild. No download, no sign-up.",
+        "lead": "Play Renovation! free online in your browser on Pixelsprout — no download and no sign-up. You control workers who move furniture out of messy houses, sell the homes and spend the money to build new ones. Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not been tested on this page.",
+        "faq": [
+            ("Can I play Renovation! free online with no download?",
+             "Yes. The game loads in this browser tab. Nothing to install and no account required."),
+            ("What do you do in the game?",
+             "Direct workers to clear furniture from messy houses, sell those houses and use the money to build new ones."),
+            ("How do you control it?",
+             "Use the mouse and keyboard following the on-screen prompts after the game loads."),
+            ("What similar games can I play next?",
+             "Try Your Dream Room, Big Supermarket Simulator and Girl Game Organizing Fun — free in the browser on Pixelsprout."),
+        ],
+        "similar": ["your-dream-room", "big-supermarket-simulator", "girl-game-organizing-fun"],
+        "date_modified": "2026-11-11",
+    },
 }
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
@@ -361,7 +459,7 @@ LANDING_HEAD = ('<link rel="preconnect" href="https://play.gamepix.com" crossori
                 '<style>@media (max-width:767px){.game-main>.crumbs{display:none}'
                 '.game-main>.game-bar{padding:var(--sp-2) 0}}</style>\n')
 # Hide crumbs on small screens so the playable frame sits higher (all game pages).
-GAME_MOBILE_CSS = ('<style>@media (max-width:767px){.game-main>.crumbs{display:none}.game-main>.rd-note{margin:var(--sp-2) 0}}</style>\n')
+GAME_MOBILE_CSS = ('<style>.game-page .rd-note,.game-page .game-notice,.game-page .game-bar__title,.game-page .how-to,.game-page .similar-inline,.game-page .last-updated{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}@media (max-width:767px){.game-main>.crumbs{display:none}.game-main>.rd-note{margin:var(--sp-2) 0}}</style>\n')
 
 
 
@@ -418,6 +516,23 @@ FAQ_MOBILE_ANSWER = {
 
 # Per-game "See it in action" links to Pixelsprout's own gameplay clips, shown on the game page.
 GAME_SOCIAL_LINKS = {
+
+    "getting-over-it": [
+        ("YouTube Short (Part 1, 10 Nov)", "https://youtube.com/shorts/QP6ngTJL1tk"),
+        ("YouTube Short (Part 2, 10 Nov)", "https://youtube.com/shorts/d8bWKiCNZzE"),
+        ("YouTube Short (Part 3, 10 Nov)", "https://youtube.com/shorts/XvA67BWEa0E"),
+        ("YouTube Short (4'51 at the tower, 10 Nov)", "https://youtube.com/shorts/zFjHUEt0RnE"),
+        ("YouTube Short (Part 4, 11 Nov)", "https://youtube.com/shorts/gKptSEmKcI8"),
+    ],
+    "escape-tsunami-for-brainrots": [
+        ("YouTube Short (fast wave, 10 Nov)", "https://youtube.com/shorts/tL4Zhker8wQ"),
+        ("YouTube Short (slow wave, 11 Nov)", "https://youtube.com/shorts/lDucmG_wOK8"),
+    ],
+    "moto-x3m-spooky-land": [
+        ("YouTube Short (Part 1)", "https://youtube.com/shorts/qZ1AI9H69gI"),
+        ("YouTube Short (Part 2)", "https://youtube.com/shorts/VSXzofGETf0"),
+        ("YouTube Short (Part 3)", "https://youtube.com/shorts/CevJXC4bbIU"),
+    ],
     "gravity-merge": [
         ("YouTube Short", "https://youtube.com/shorts/Uq54-x44wEQ"),
         ("Post on X", "https://x.com/Playpixelsprout/status/2112692842246099447"),
@@ -572,7 +687,8 @@ def render_game_page(f, catalog, guides=None, total_games=None):
         extra_faq = (f'<section class="game-faq" aria-labelledby="game-faq-title"><h2 id="game-faq-title">FAQ</h2>'
                      + "".join(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>" for q, a in af["faq"])
                      + "</section>\n")
-        last_updated_html = '<p class="last-updated">Last updated: 10 Nov 2026</p>\n'
+        _lu = {"2026-11-10": "10 Nov 2026", "2026-11-11": "11 Nov 2026"}.get(af["date_modified"], "11 Nov 2026")
+        last_updated_html = f'<p class="last-updated">Last updated: {_lu}</p>\n'
         by_slug_af = {g["slug"]: g for g in catalog}
         sim_links = []
         for s2 in af.get("similar", [])[:3]:
@@ -608,6 +724,15 @@ def render_game_page(f, catalog, guides=None, total_games=None):
             ],
         }, ensure_ascii=False))
         f["jsonld"] = new_blocks
+    if not similar_html:
+        sim_links = []
+        for g2 in (rail_list or similar or [])[:3]:
+            s2 = g2.get("slug")
+            if s2 and s2 != slug:
+                sim_links.append(f'<a href="/games/{esc(s2)}.html">{esc(g2.get("title") or s2)}</a>')
+        if sim_links:
+            similar_html = ('<p class="similar-inline"><strong>Similar games:</strong> '
+                            + " · ".join(sim_links) + "</p>\n")
     landing = slug in LANDING_PAGES
     iframe_extra = ' id="game-frame" loading="eager" fetchpriority="high"' if landing else ""
     play_now = ('<a class="btn btn--primary play-now-btn" href="#game-frame" '
@@ -1152,6 +1277,8 @@ POPULAR_GUIDES = [
     ("Free horror games in your browser", "/guides/free-horror-games-browser-no-download/"),
     ("Games like Brawl Stars in your browser", "/guides/games-like-brawl-stars-browser/"),
     ("Browser games for school (no download)", "/guides/unblocked-games-to-play-at-school/"),
+    ("Games like Among Us (free online)", "/guides/games-like-among-us-online-free/"),
+    ("Two-player games like Fireboy and Watergirl", "/guides/two-player-games-like-fireboy-and-watergirl/"),
 ]
 HOME_GUIDES = [POPULAR_GUIDES[i] for i in (1, 3, 5, 4)]
 CATEGORY_GUIDE_LINK = {
