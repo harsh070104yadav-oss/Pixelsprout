@@ -101,4 +101,9 @@ Sitemap: https://www.playpixelsprout.com/sitemap.xml
 - Escape From Work | Horror-lite / escape | Escape an office maze while avoiding the boss and cameras. | https://www.playpixelsprout.com/games/escape-from-work.html
 - Handless Millionaire | Action / reflex | Grab cash from under a guillotine that speeds up each round. | https://www.playpixelsprout.com/games/handless-millionaire.html
 
-Last updated: 2026-11-10
+- Among Us (unofficial) | Social deduction | Third-party browser game titled "Among Us"; NOT InnerSloth's Among Us. Crewmates complete tasks; an impostor blends in. | https://www.playpixelsprout.com/games/among-us.html
+- Fireboy And Watergirl Online (unofficial) | Two-player co-op | Unofficial temple co-op; not the original Forest Temple series. Guide both characters and collect gems. | https://www.playpixelsprout.com/games/fireboy-and-watergirl-online.html
+- Games like Among Us (free online) | Guide | Honest list of impostor-style browser games on Pixelsprout. | https://www.playpixelsprout.com/guides/games-like-among-us-online-free/
+- Two-player games like Fireboy and Watergirl | Guide | Two-player browser games, including the unofficial Fireboy and Watergirl page. | https://www.playpixelsprout.com/guides/two-player-games-like-fireboy-and-watergirl/
+
+Last updated: 2026-11-11
