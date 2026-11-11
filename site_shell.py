@@ -452,7 +452,7 @@ def head(title_html, description_attr, *, canonical=None, meta_extra="", jsonld=
         (
             "<script>(function(){var d=false;function go(){if(d)return;d=true;"
             "var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8';s.async=true;document.head.appendChild(s);"
-            "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config', + ga + );"
+            "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','" + GA_ID + "');"
             "var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + ADSENSE_CLIENT + "';"
             "a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);"
             "var b=document.createElement('script');b.src='/assets/ads.js?v=" + ASSET_VERSION + "';b.defer=true;document.head.appendChild(b);"
