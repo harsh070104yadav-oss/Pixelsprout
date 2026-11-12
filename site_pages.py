@@ -443,6 +443,75 @@ ANSWER_FIRST = {
         "similar": ["your-dream-room", "big-supermarket-simulator", "girl-game-organizing-fun"],
         "date_modified": "2026-11-11",
     },
+
+    "books-tower": {'h1': 'Play Books Tower Free Online — No Download',
+ 'title_tag': 'Play Books Tower Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Books Tower free online in your browser on Pixelsprout. Stack sliding books '
+              'into a tower. No download, no sign-up.',
+ 'lead': 'Play Books Tower free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a stacking skill game: click to drop each sliding book onto the stack and '
+         'see how tall a tower you can build before one falls off. Use the on-screen controls in '
+         'the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not '
+         'been tested on this page.',
+ 'faq': [('Can I play Books Tower free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Books Tower?',
+          'A stacking game. You drop sliding books onto a pile and try to keep the tower balanced '
+          'as it grows.'),
+         ('How do you play?',
+          'Click to drop each book when it lines up with the stack. Use the on-screen prompts in '
+          'the game frame.'),
+         ('What similar games can I play next?',
+          'Try Tower Blocks Deluxe 3D, Stack Block - Up and BuildTower — all free in the browser '
+          'on Pixelsprout.')],
+ 'similar': ['tower-blocks-deluxe-3d', 'stack-block-up', 'buildtower'],
+ 'date_modified': '2026-11-12'},
+
+    "protect-my-dog": {'h1': 'Play Protect My Dog Free Online — No Download',
+ 'title_tag': 'Play Protect My Dog Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Protect My Dog free online in your browser on Pixelsprout. Draw a line to '
+              'shield the dog from bees. No download.',
+ 'lead': 'Play Protect My Dog free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a draw-to-save puzzle: draw one line to shield the dog from a swarm of '
+         'bees until the 10-second clock runs out. Use the on-screen controls in the game frame '
+         '(mouse and keyboard). Built for mouse and keyboard; touch play has not been tested on '
+         'this page.',
+ 'faq': [('Can I play Protect My Dog free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Protect My Dog?',
+          'A short puzzle game. You draw a line to protect a dog from bees and try to last until '
+          'the 10-second timer ends.'),
+         ('How do you play?',
+          "Draw with the mouse in the game frame to place a shield in the bees' path. Follow the "
+          'on-screen prompts.'),
+         ('What similar games can I play next?',
+          'Try Save the Doge, Draw Save Puzzle and Stickman Rescue Draw 2 Save — all free in the '
+          'browser on Pixelsprout.')],
+ 'similar': ['save-the-doge', 'draw-save-puzzle', 'stickman-rescue-draw-2-save'],
+ 'date_modified': '2026-11-12'},
+
+    "the-house-2": {'h1': 'Play The House 2 Free Online — No Download',
+ 'title_tag': 'Play The House 2 Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play The House 2 free online in your browser on Pixelsprout. Explore a haunted '
+              'house and collect clues. No download.',
+ 'lead': 'Play The House 2 free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a point-and-click horror mystery: explore a haunted house, examine '
+         'objects and collect clues about the family who lived there. Use the on-screen controls '
+         'in the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not '
+         'been tested on this page.',
+ 'faq': [('Can I play The House 2 free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is The House 2?',
+          'A point-and-click horror mystery set in a haunted house. You search rooms and piece '
+          'together a dark family history.'),
+         ('How do you play?',
+          'Click around the rooms, examine objects and pick up clues. Use the mouse and keyboard '
+          'as the on-screen prompts show.'),
+         ('What similar games can I play next?',
+          'Try Granny House Escape, Escape From Work and Scary Doll — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['granny-house-escape', 'escape-from-work', 'scary-doll'],
+ 'date_modified': '2026-11-12'},
 }
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).

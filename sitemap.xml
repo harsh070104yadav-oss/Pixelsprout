@@ -721,7 +721,7 @@
   <url><loc>https://www.playpixelsprout.com/games/final-freeway.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/baby-hazel-bathroom-hygiene.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/math-battle.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.playpixelsprout.com/games/protect-my-dog.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.playpixelsprout.com/games/protect-my-dog.html</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/funny-rescue-carpenter.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/stick-hero-tower-defense.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/ghost-sniper.html</loc><priority>0.7</priority></url>
@@ -2435,7 +2435,7 @@
   <url><loc>https://www.playpixelsprout.com/games/happy-farm.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/happy-fruit-game.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/tommy-the-monkey-pilot.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.playpixelsprout.com/games/the-house-2.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.playpixelsprout.com/games/the-house-2.html</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/raven-3d-front-line.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/tank-commander-3d-army-rush.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/ultimate-robot-fighting.html</loc><priority>0.7</priority></url>
@@ -2776,7 +2776,7 @@
   <url><loc>https://www.playpixelsprout.com/games/sand-sort-puzzle.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/birdy-bird.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/dino-cards.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.playpixelsprout.com/games/books-tower.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.playpixelsprout.com/games/books-tower.html</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/flying-triangle.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/dumbocalypse.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/games/galaxy-crush.html</loc><priority>0.7</priority></url>
@@ -10787,4 +10787,6 @@
   <url><loc>https://www.playpixelsprout.com/guides/free-games-to-play-with-friends-online-no-download/</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/guides/games-to-play-when-bored-online-free/</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.playpixelsprout.com/guides/the-house-2-walkthrough/</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.playpixelsprout.com/guides/books-tower-online-free/</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.playpixelsprout.com/guides/protect-my-dog-online-free/</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
 </urlset>
