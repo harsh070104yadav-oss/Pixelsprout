@@ -17,11 +17,12 @@ Sitemap: https://www.playpixelsprout.com/sitemap.xml
 - Sites like Poki and CrazyGames: https://www.playpixelsprout.com/guides/sites-like-poki-crazygames/
 - Games like Getting Over It (free online): https://www.playpixelsprout.com/guides/games-like-getting-over-it-online-free/
 - Free online puzzle games, no download: https://www.playpixelsprout.com/guides/free-online-puzzle-games-no-download/
-- Browser games for Chromebook: https://www.playpixelsprout.com/guides/browser-games-chromebook/
+- Unblocked browser games for Chromebook: https://www.playpixelsprout.com/guides/browser-games-chromebook/
 - Free horror games in the browser: https://www.playpixelsprout.com/guides/free-horror-games-browser-no-download/
 - Games like Brawl Stars in the browser: https://www.playpixelsprout.com/guides/games-like-brawl-stars-browser/
 - Free games to play with friends online (no download): https://www.playpixelsprout.com/guides/free-games-to-play-with-friends-online-no-download/
 - Games to play when bored, online free: https://www.playpixelsprout.com/guides/games-to-play-when-bored-online-free/
+- The House 2 walkthrough: how to get inside and start the Living Room: https://www.playpixelsprout.com/guides/the-house-2-walkthrough/
 
 ## Genres
 - Puzzle: https://www.playpixelsprout.com/puzzle/
@@ -110,5 +111,7 @@ Sitemap: https://www.playpixelsprout.com/sitemap.xml
 
 - Free games to play with friends online (no download) | Guide | Two-player and multiplayer browser games on Pixelsprout, with unofficial notices where they apply. | https://www.playpixelsprout.com/guides/free-games-to-play-with-friends-online-no-download/
 - Games to play when bored, online free | Guide | A short list of free catalog games you can open in the browser with no download. | https://www.playpixelsprout.com/guides/games-to-play-when-bored-online-free/
+
+- The House 2 walkthrough: how to get inside and start the Living Room | Guide | Getting started and the Living Room (chapter 1 of 5) from a real play session; not a full walkthrough. | https://www.playpixelsprout.com/guides/the-house-2-walkthrough/
 
 Last updated: 2026-11-12

@@ -1273,7 +1273,7 @@ POPULAR_GUIDES = [
     ("Sites like Poki and CrazyGames", "/guides/sites-like-poki-crazygames/"),
     ("Games like Getting Over It (free online)", "/guides/games-like-getting-over-it-online-free/"),
     ("Free online puzzle games, no download", "/guides/free-online-puzzle-games-no-download/"),
-    ("Free browser games for Chromebook", "/guides/browser-games-chromebook/"),
+    ("Unblocked browser games for Chromebook", "/guides/browser-games-chromebook/"),
     ("Free horror games in your browser", "/guides/free-horror-games-browser-no-download/"),
     ("Games like Brawl Stars in your browser", "/guides/games-like-brawl-stars-browser/"),
     ("Browser games for school (no download)", "/guides/unblocked-games-to-play-at-school/"),
@@ -1281,6 +1281,7 @@ POPULAR_GUIDES = [
     ("Two-player games like Fireboy and Watergirl", "/guides/two-player-games-like-fireboy-and-watergirl/"),
     ("Free games to play with friends online (no download)", "/guides/free-games-to-play-with-friends-online-no-download/"),
     ("Games to play when bored, online free", "/guides/games-to-play-when-bored-online-free/"),
+    ("The House 2 walkthrough: get inside and start the Living Room", "/guides/the-house-2-walkthrough/"),
 ]
 HOME_GUIDES = [POPULAR_GUIDES[i] for i in (1, 3, 5, 4)]
 CATEGORY_GUIDE_LINK = {
