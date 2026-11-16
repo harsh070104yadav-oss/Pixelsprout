@@ -13,6 +13,7 @@ import re
 import sys
 
 import site_shell as S
+import sprout_build
 from site_shell import esc, text
 
 DOMAIN = S.DOMAIN
@@ -1750,10 +1751,13 @@ def render_home(catalog, featured, popular_ranked, today=None):
     # SearchAction omitted: site search is an in-page overlay (data-search-open), not a query-param URL.
     head = S.head(esc(title), esc(description), canonical=f"{DOMAIN}/", meta_extra=meta_extra,
                   jsonld=[organization_ld, website_ld, genres_ld, home_faq_ld], preload_image=preload,
-                  head_extra='<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">')
+                  head_extra='<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">\n' + sprout_build.SPROUT_HEAD)
 
     continue_shelf = S.shelf("Continue playing", "", section_id="continue-playing", hidden=True,
                              track_id="continue-playing-track")
+    # Sprout rewards + Picks (sprout_build.py). Journey and favourites stay
+    # hidden until the visitor has progress, so new visitors see no change.
+    journey_html, favourites_shelf, picks_html = sprout_build.home_fragments()
     popular_shelf = S.shelf("Popular now", popular_cards, section_id="popular-now")
 
     main = f"""{ssr_collage_html}<div class="home-intro">
@@ -1761,13 +1765,16 @@ def render_home(catalog, featured, popular_ranked, today=None):
 <p>Play free browser games online on Pixelsprout with no download and no account. {total:,} HTML5 games across {len(genre_pages)} genres load in your tab — puzzle, arcade, action, horror, multiplayer and more. Built for mouse and keyboard; touch screens have not been tested for every title.</p>
 <p class="last-updated">Last updated: 10 Nov 2026</p>
 </div>
+{journey_html}
 {continue_shelf}
+{favourites_shelf}
 {popular_shelf}
 {''.join(shelves)}
 <section class="shelf" id="all-genres" aria-labelledby="all-genres-title">
 <div class="shelf__head"><h2 class="shelf__title" id="all-genres-title">Browse all genres</h2><span class="shelf__count">{len(genre_pages)} genres</span></div>
 <div class="genre-grid">{genre_tiles}</div>
 </section>
+{picks_html}
 {_home_guides_html()}
 {_faq_section_html(HOME_FAQ, heading_id="home-faq-title")}
 <div class="home-foot"><a class="btn btn--ghost" href="/all-games/">{S.icon('list', 'i i--sm')}All games A–Z</a><a class="btn btn--ghost" href="/guides/">{S.icon('book', 'i i--sm')}Game guides</a></div>"""
@@ -1973,7 +1980,9 @@ def build_home(catalog, write=True):
         os.path.join(S.ROOT, "index.html"): render_home(catalog, featured, popular),
         os.path.join(S.ROOT, "all-games", "index.html"): render_all_games(catalog),
     }
+    pages.update(sprout_build.build_pages(catalog, write=False))
     if write:
+        sprout_build.write_game_map(catalog)
         for path, html_doc in pages.items():
             _write(path, html_doc)
     return pages

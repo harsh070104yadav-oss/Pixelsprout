@@ -571,6 +571,7 @@ def footer():
         f'<nav aria-label="Collections"><h2>Collections</h2><ul>{"".join(coll_items)}</ul></nav>'
         '<nav aria-label="Pixelsprout"><h2>Pixelsprout</h2><ul>'
         '<li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li>'
+        '<li><a href="/rewards/">Rewards</a></li><li><a href="/picks/">Pixelsprout Picks</a></li>'
         '<li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li></ul></nav>'
         "</div>"
         f'<div class="footer__base"><span>© {year} Pixelsprout</span><span>Some games provided via GamePix and GameMonetize.</span></div>'

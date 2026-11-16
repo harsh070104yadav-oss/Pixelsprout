@@ -134,3 +134,18 @@ export async function kvDeletePrefixOlderThan(prefix, beforeIso) {
   if (!r.ok) throw new Error(`Supabase DELETE failed: ${r.status}`);
   return true;
 }
+
+// Calls a Postgres function via PostgREST /rpc/ and returns its parsed JSON
+// result (rpcCall above discards the body). Used by /api/sprout.
+export async function rpcJson(fnName, params) {
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fnName}`, {
+    method: "POST",
+    headers: headers({ "Content-Type": "application/json", Accept: "application/json" }),
+    body: JSON.stringify(params || {}),
+  });
+  if (!r.ok) {
+    const body = await r.text().catch(() => "");
+    throw new Error(`Supabase RPC ${fnName} failed: ${r.status} ${body.slice(0, 200)}`);
+  }
+  return r.json();
+}

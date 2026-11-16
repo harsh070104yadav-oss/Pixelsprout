@@ -8,7 +8,7 @@
 
   var RECENT_KEY = 'pixelsprout_recent_v2';
   var FAVORITES_KEY = 'pixelsprout_favorites_v2';
-  var MAX_RECENT = 12;
+  var MAX_RECENT = 20;
   var ICONS = '/assets/icons.svg#';
   var TOOLS = [
     { slug: 'cold-read', title: 'Cold Read', category: 'Pixelsprout original', thumbnail: '/assets/originals/cold-read/cover.webp', href: '/cold-read/' },
@@ -63,6 +63,12 @@
       '<span class="card__title">' + escapeHTML(game.title) + '</span>' +
       (showMeta !== false && game.category ? '<span class="card__meta">' + escapeHTML(prettyGenre(game.category)) + '</span>' : '') +
       '</a>';
+  }
+
+  // Lets /assets/sprout/sprout.js keep favourites in sync with the
+  // anonymous server-side player progress.
+  function syncFavorite(game, on) {
+    try { document.dispatchEvent(new CustomEvent('pixelsprout:favorite', { detail: { slug: game.slug, on: on } })); } catch (e) { /* old browsers */ }
   }
 
   function track(name, params) {
@@ -179,6 +185,7 @@
     var d = openDialog({ title: isFav ? 'Favorites' : 'Recently played', bodyHTML: body, actionsHTML: actions, wide: true });
     var clear = $('[data-clear]', d.dialog);
     if (clear) clear.addEventListener('click', function () {
+      if (isFav) list.forEach(function (g) { syncFavorite(g, false); });
       saveList(key, []);
       d.close();
       toast(isFav ? 'Favorites cleared' : 'History cleared');
@@ -499,6 +506,7 @@
         var on = list.some(function (g) { return g.slug === game.slug; });
         list = on ? list.filter(function (g) { return g.slug !== game.slug; }) : [game].concat(list);
         saveList(FAVORITES_KEY, list);
+        syncFavorite(game, !on);
         paintFav();
         toast(on ? 'Removed from favorites' : 'Saved to favorites');
         track(on ? 'favorite_remove' : 'favorite_add', { game_title: game.title });
@@ -667,3 +675,6 @@
 
 /* Redesign layer (branch: redesign): Surprise me, homepage modules, game-page Play next / FAQ / trust line. */
 (function () { var s = document.createElement('script'); s.src = '/assets/redesign/redesign.js?v=20261017b'; s.defer = true; document.head.appendChild(s); })();
+
+/* Sprout XP, quests, weekly league, favourites sync and Pixelsprout Picks. */
+(function () { var s = document.createElement('script'); s.src = '/assets/sprout/sprout.js?v=20261116a'; s.defer = true; document.head.appendChild(s); })();

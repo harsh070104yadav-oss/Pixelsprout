@@ -1,0 +1,97 @@
+{
+  "_readme": "Pixelsprout Picks catalogue. See PIXELSPROUT-REWARDS-AND-PICKS.md. Only add products you have verified yourself on Amazon (name, ASIN, region). Never add prices, ratings, discounts or stock. 'image' must be a URL produced by Amazon's own tools (SiteStripe image link or Product Advertising API) on m.media-amazon.com; leave it empty to show the category illustration instead. Products failing validation are skipped by the site. Category cards link to Amazon search results tagged with the existing Associates IDs.",
+  "disclosure": "As an Amazon Associate I earn from qualifying purchases.",
+  "default_store": "IN",
+  "indexable": false,
+  "stores": {
+    "IN": {
+      "label": "Amazon.in",
+      "domain": "www.amazon.in",
+      "tag": "pixelsprout0e-21"
+    },
+    "US": {
+      "label": "Amazon.com",
+      "domain": "www.amazon.com",
+      "tag": "pixelsprout-20"
+    }
+  },
+  "categories": [
+    {
+      "id": "mice",
+      "name": "Gaming mice",
+      "art": "🖱️",
+      "query": "gaming mouse",
+      "description": "Arcade and shooting games reward quick, precise clicks. Look for a comfortable shape for your grip, adjustable DPI and buttons you will actually use."
+    },
+    {
+      "id": "headphones",
+      "name": "Gaming headphones",
+      "art": "🎧",
+      "query": "gaming headphones with mic",
+      "description": "Horror and atmospheric games are far better with good sound. Comfort over long sessions and a decent microphone matter more than flashy lighting."
+    },
+    {
+      "id": "controllers",
+      "name": "Controllers",
+      "art": "🎮",
+      "query": "pc game controller",
+      "description": "Many racing and platform browser games support gamepads. Check that a controller lists PC or browser compatibility before buying."
+    },
+    {
+      "id": "laptop-stands",
+      "name": "Laptop stands",
+      "art": "💻",
+      "query": "laptop stand",
+      "description": "Raising your screen to eye level makes long play sessions easier on your neck. An adjustable height and a stable base are the things to check."
+    },
+    {
+      "id": "accessories",
+      "name": "Gaming accessories",
+      "art": "🧰",
+      "query": "gaming mouse pad",
+      "description": "Small upgrades such as a large mouse pad or a wrist rest can make everyday browser gaming more comfortable."
+    },
+    {
+      "id": "keyboards",
+      "name": "Gaming keyboards",
+      "art": "⌨️",
+      "query": "gaming keyboard",
+      "description": "Plenty of browser games are played on the keyboard. Look for anti-ghosting, a layout you are used to and keys that feel good to you."
+    }
+  ],
+  "contextual": {
+    "Racing": "controllers",
+    "Driving": "controllers",
+    "Car": "controllers",
+    "Sports": "controllers",
+    "Soccer": "controllers",
+    "Basketball": "controllers",
+    "Platformer": "controllers",
+    "Horror": "headphones",
+    "Zombie": "headphones",
+    "Music": "headphones",
+    "Escape": "headphones",
+    "Arcade": "mice",
+    "Shooting": "mice",
+    "Shooter": "mice",
+    "First-Person Shooter": "mice",
+    "Action": "mice",
+    "Clicker": "mice",
+    "Strategy": "keyboards",
+    "Multiplayer": "keyboards",
+    "Puzzle": "laptop-stands",
+    "default": "accessories"
+  },
+  "home_categories": [
+    "mice",
+    "headphones",
+    "controllers",
+    "laptop-stands"
+  ],
+  "excluded_game_categories": [
+    "Kids",
+    "Educational",
+    "Math"
+  ],
+  "products": []
+}

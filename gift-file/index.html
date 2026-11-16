@@ -479,12 +479,13 @@ function GiftFileApp() {
                           : `https://www.amazon.in/s?k=${encodeURIComponent(g.name)}&tag=pixelsprout0e-21`
                       }
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="sponsored noopener"
                       className="text-xs font-medium px-3 py-2 rounded"
                       style={{ background: red, color: cream }}
                     >
                       Search on Amazon ↗
                     </a>
+                    <span className="text-xs self-center" style={{ color: smoke }}>(paid link)</span>
                     <button
                       onClick={() => confirmGood(g)}
                       disabled={confirmed[g.name]}
@@ -497,6 +498,7 @@ function GiftFileApp() {
                 </div>
               ))}
             </div>
+            <p className="text-xs mb-5" style={{ color: smoke }}>As an Amazon Associate I earn from qualifying purchases.</p>
             <div className="rounded-lg p-5 text-center" style={{ background: charcoal, border: "1px solid rgba(242,169,59,0.25)" }}>
               <p className="text-sm mb-3" style={{ color: "rgba(237,230,214,0.75)" }}>None of these quite right? Tell us what you actually got — it'll remember.</p>
               <input value={teachName} onChange={(e) => setTeachName(e.target.value)} placeholder="e.g. Noise-cancelling headphones" className="w-full px-3 py-2 rounded border text-sm mb-3" style={{ borderColor: smoke, background: "#fff", color: charcoal }} />
