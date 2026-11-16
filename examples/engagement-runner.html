@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Engagement example runner — Pixelsprout developers</title>
+<link rel="stylesheet" href="/styles.css">
+<style>
+  body { padding: 24px; }
+  .wrap { max-width: 560px; margin: 0 auto; }
+  .embed-frame-wrap { aspect-ratio: 3 / 4; max-height: 70vh; }
+  canvas { width: 100%; height: 100%; display: block; }
+  pre { margin-top: 16px; font: 12px/1.5 var(--f-mono); color: var(--text-2); white-space: pre-wrap; }
+</style>
+</head>
+<!-- data-slug / data-title / data-genre let the module label history,
+     best scores and recommendations. -->
+<body data-page="game" data-slug="example-runner" data-title="Example Runner" data-genre="Arcade">
+<div class="wrap">
+  <h1 class="game-bar__title">Example Runner</h1>
+  <p class="game-bar__info" style="margin:8px 0 16px;color:var(--text-2)">Space / tap to jump. Uses window.PixelsproutEngage for difficulty, continues, history and best scores.</p>
+  <div class="stage"><div class="embed-frame-wrap"><canvas id="c" width="360" height="480"></canvas></div></div>
+  <pre id="state"></pre>
+</div>
+
+<!-- 1. Include the module (the live site loads it automatically via pixelsprout-features.js). -->
+<script src="/assets/engagement/engagement.js"></script>
+<script>
+(function () {
+  var GAME_ID = 'example-runner';
+  var E = window.PixelsproutEngage;          // always treat as optional in real games
+  var c = document.getElementById('c'), ctx = c.getContext('2d');
+
+  // 2. Game variables that difficulty is allowed to touch.
+  var BASE_SPEED = 220, BASE_GAP = 1.4;      // px/s, seconds between obstacles
+  var speed, gap, mult = 1;
+
+  var y = 400, vy = 0, obstacles = [], t = 0, spawn = 1, score = 0, state = 'title', shield = 0, last = 0;
+
+  function start() {
+    // 3. On run start: read the multiplier and apply it.
+    mult = E ? E.startRun(GAME_ID).multiplier : 1;
+    speed = BASE_SPEED * mult;
+    gap = BASE_GAP / mult;
+    y = 400; vy = 0; obstacles = []; t = 0; spawn = 1; score = 0; shield = 0; state = 'play';
+  }
+
+  function resume() {
+    // 5. Continue accepted: keep the score, give a small advantage.
+    if (E) E.startRun(GAME_ID, { continued: true });
+    obstacles = obstacles.filter(function (o) { return o.x > 200; });
+    shield = 2.5;
+    state = 'play';
+  }
+
+  function die() {
+    state = 'over';
+    // 4. On fail: report the score; the module saves it, decides whether to
+    //    offer a continue, and shows the offer UI if so.
+    if (E) E.gameOver(GAME_ID, Math.floor(score), { boostLabel: 'a 2.5-second shield', onContinue: resume, onRestart: start });
+  }
+
+  function step(dt) {
+    if (state !== 'play') return;
+    t += dt; score += dt * 10; shield = Math.max(0, shield - dt);
+    vy += 1400 * dt; y = Math.min(400, y + vy * dt);
+    spawn -= dt;
+    if (spawn <= 0) { obstacles.push({ x: 380, h: 30 + Math.random() * 40 }); spawn = gap * (0.7 + Math.random() * 0.6); }
+    obstacles.forEach(function (o) { o.x -= speed * dt; });
+    obstacles = obstacles.filter(function (o) { return o.x > -30; });
+    obstacles.forEach(function (o) { if (shield <= 0 && o.x < 70 && o.x > 30 && y > 430 - o.h - 20) die(); });
+  }
+
+  function draw() {
+    ctx.fillStyle = '#102028'; ctx.fillRect(0, 0, 360, 480);
+    ctx.fillStyle = '#1d6b62'; ctx.fillRect(0, 430, 360, 50);
+    ctx.fillStyle = shield > 0 ? '#d8fbff' : '#7ad35a'; ctx.fillRect(40, y, 30, 30);
+    ctx.fillStyle = '#6a4a32'; obstacles.forEach(function (o) { ctx.fillRect(o.x, 430 - o.h, 24, o.h); });
+    ctx.fillStyle = '#eaffd8'; ctx.font = '600 20px sans-serif'; ctx.fillText(Math.floor(score || 0), 16, 30);
+    ctx.font = '12px sans-serif'; ctx.fillText('difficulty x' + mult.toFixed(2), 16, 48);
+    if (state !== 'play') { ctx.font = '700 22px sans-serif'; ctx.fillText(state === 'title' ? 'Tap to start' : 'Tap to retry', 110, 220); }
+  }
+
+  function frame(now) {
+    var dt = Math.min(0.033, ((now - (last || now)) / 1000)); last = now;
+    step(dt); draw();
+    if (E) document.getElementById('state').textContent = JSON.stringify(E.getPlayerState(GAME_ID), null, 1) + '\n' + JSON.stringify(E.stats());
+    requestAnimationFrame(frame);
+  }
+  function jump() { if (state !== 'play') { start(); return; } if (y >= 400) vy = -560; }
+  c.addEventListener('pointerdown', jump);
+  window.addEventListener('keydown', function (e) { if (e.key === ' ') { e.preventDefault(); jump(); } });
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

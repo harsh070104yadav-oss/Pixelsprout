@@ -73,12 +73,24 @@
       finishTurn();
     }
 
+    // Continue: clear the top two rows so the planter has room again.
+    function resumeRun() {
+      var e = engage();
+      if (e) e.startRun(GAME_ID, { continued: true });
+      for (var r = 0; r < 2; r++) for (var c = 0; c < COLS; c++) grid[r][c] = null;
+      busy = false;
+      anim = null;
+      if (!canPlace(current)) current = roll();
+      mode = "play";
+    }
+
     function finishTurn() {
       var goal = EVENINGS[evening].goal;
       if (goal && score >= goal) {
         mode = "clear";
         save.unlocked = Math.max(save.unlocked, evening + 2);
         persist();
+        if (engage()) engage().completeRun(GAME_ID, score);
         chord([392, 494, 587, 784], 0.28, 0.05);
         return;
       }
@@ -86,6 +98,12 @@
         mode = "over";
         persist();
         tone(140, 0.3, "sine", 0.06);
+        var e = engage();
+        if (e) e.gameOver(GAME_ID, score, {
+          boostLabel: "the top two rows cleared",
+          onContinue: resumeRun,
+          onRestart: function () { freshRun(evening); }
+        });
       }
     }
 

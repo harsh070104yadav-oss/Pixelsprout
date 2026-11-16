@@ -1,0 +1,77 @@
+/* Pixelsprout engagement layer. Uses the design tokens from /styles.css. */
+
+/* ---------- Continue offer (sits at the bottom of the game stage) ---------- */
+.pse-offer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 5; display: flex; justify-content: center;
+  padding: 16px; pointer-events: none; opacity: 0; transform: translateY(16px);
+  transition: opacity .28s var(--ease, ease), transform .28s var(--ease, ease); }
+.pse-offer.is-in { opacity: 1; transform: none; }
+.pse-offer__card { pointer-events: auto; width: min(420px, 100%); padding: 16px 18px 14px; border-radius: 16px;
+  background: linear-gradient(180deg, rgba(182, 242, 63, .10), rgba(182, 242, 63, 0) 60%), rgba(18, 23, 18, .92);
+  border: 1px solid rgba(182, 242, 63, .35); box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .9), 0 0 0 1px rgba(0, 0, 0, .3);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: var(--text, #F1F5EC); text-align: center; }
+.pse-offer__eyebrow { font: 600 11px/1 var(--f-mono, monospace); letter-spacing: .16em; text-transform: uppercase; color: var(--accent, #B6F23F); }
+.pse-offer__title { margin-top: 8px; font: 700 20px/1.2 var(--f-display, system-ui); letter-spacing: -0.01em; }
+.pse-offer__meta { margin-top: 4px; font-size: 13px; color: var(--text-2, #A3AE9C); }
+.pse-offer__meta b { color: var(--text, #fff); font-family: var(--f-mono, monospace); }
+.pse-offer__actions { display: grid; gap: 8px; margin-top: 14px; }
+.pse-offer__go { display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 52px; padding: 8px 16px; border: 0; border-radius: 999px;
+  background: var(--accent, #B6F23F); color: var(--accent-ink, #0B1404); font: 700 15px/1.2 var(--f-ui, system-ui); cursor: pointer;
+  box-shadow: 0 8px 22px -10px rgba(182, 242, 63, .8); transition: transform .15s, background .15s; }
+.pse-offer__go small { font-weight: 500; font-size: 12px; opacity: .8; }
+.pse-offer__go:hover { background: var(--accent-hover, #C9F76E); transform: translateY(-1px); }
+.pse-offer__go:disabled { opacity: .6; cursor: progress; transform: none; }
+.pse-offer__no { min-height: 40px; border: 1px solid var(--line-2, rgba(255,255,255,.13)); border-radius: 999px; background: transparent;
+  color: var(--text-2, #A3AE9C); font: 600 13px/1 var(--f-ui, system-ui); cursor: pointer; }
+.pse-offer__no:hover { color: var(--text, #fff); border-color: rgba(255, 255, 255, .3); }
+.pse-offer button:focus-visible { outline: 2px solid var(--accent, #B6F23F); outline-offset: 3px; }
+.pse-offer__note { margin-top: 8px; font-size: 11px; color: var(--text-3, #707B6B); }
+
+/* ---------- Chips ---------- */
+.pse-streak { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; padding: 0 12px; border-radius: 999px;
+  background: rgba(255, 153, 51, .12); border: 1px solid rgba(255, 153, 51, .35); color: #FFC28A; font: 600 12px/1 var(--f-ui, system-ui); white-space: nowrap; }
+.pse-chip-best { color: var(--accent, #B6F23F); border-color: rgba(182, 242, 63, .3); font-family: var(--f-mono, monospace); }
+
+/* ---------- Your best scores ---------- */
+.pse-best { margin-top: var(--sp-8, 32px); padding: var(--sp-5, 20px); border-radius: var(--r-panel, 14px); border: 1px solid var(--line, rgba(255,255,255,.07));
+  background: radial-gradient(600px 160px at 0% 0%, rgba(227, 196, 107, .10), transparent 70%), var(--s1, #121712); }
+.pse-best__head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.pse-best__title { font: 600 var(--fs-lg, 22px)/1.2 var(--f-display, system-ui); margin-right: auto; }
+.pse-best__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+.pse-best__list a { display: grid; grid-template-columns: 40px 1fr auto; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px;
+  background: var(--s2, #192019); color: var(--text, #fff); text-decoration: none; border: 1px solid transparent; transition: border-color .15s, transform .15s; }
+.pse-best__list a:hover { border-color: rgba(182, 242, 63, .35); transform: translateY(-1px); }
+.pse-best__list img { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; background: var(--s3, #222B22); }
+.pse-best__name { min-width: 0; font-weight: 600; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pse-best__name small { display: block; font-weight: 400; font-size: 12px; color: var(--text-3, #707B6B); }
+.pse-best__score { font: 700 16px/1 var(--f-mono, monospace); color: #E3C46B; }
+.pse-best__cta { grid-column: 2 / -1; font-size: 12px; color: var(--accent, #B6F23F); opacity: 0; max-height: 0; transition: opacity .15s; }
+.pse-best__list a:hover .pse-best__cta, .pse-best__list a:focus-visible .pse-best__cta { opacity: 1; max-height: 20px; }
+
+/* ---------- "Because you played" ---------- */
+.pse-shelf .shelf__title em { font-style: normal; color: var(--accent, #B6F23F); }
+.pse-track { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(140px, 168px); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+.pse-track > .card { scroll-snap-align: start; }
+.pse-reveal { opacity: 0; transform: translateY(10px); transition: opacity .4s var(--ease, ease), transform .4s var(--ease, ease); }
+.pse-reveal.is-in { opacity: 1; transform: none; }
+
+/* Wider stages: compact two-column card so it never covers the game's own buttons. */
+@media (min-width: 640px) {
+  .pse-offer { padding: 12px; }
+  .pse-offer__card { width: min(560px, 100%); display: grid; grid-template-columns: 1fr minmax(190px, 220px); align-items: center;
+    column-gap: 16px; text-align: left; padding: 12px 12px 12px 18px; }
+  .pse-offer__eyebrow, .pse-offer__title, .pse-offer__meta { grid-column: 1; }
+  .pse-offer__title { margin-top: 6px; font-size: 18px; }
+  .pse-offer__actions { grid-column: 2; grid-row: 1 / span 3; margin-top: 0; gap: 6px; }
+  .pse-offer__go { min-height: 46px; font-size: 14px; }
+  .pse-offer__no { min-height: 34px; }
+  .pse-offer__note { grid-column: 1 / -1; margin-top: 6px; }
+}
+@media (max-width: 520px) {
+  .pse-offer { padding: 10px; }
+  .pse-offer__card { padding: 14px; }
+  .pse-best { padding: var(--sp-4, 16px); }
+  .pse-best__list { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pse-offer, .pse-reveal, .pse-best__list a, .pse-offer__go { transition: none; }
+}

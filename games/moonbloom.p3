@@ -136,6 +136,7 @@
     }
 
     function onButton(id) {
+      if (id !== "mute" && engage()) engage().dismissOffer();
       unlockAudio();
       resumeAudio();
       if (id === "mute") { save.mute = !save.mute; persist(); return; }

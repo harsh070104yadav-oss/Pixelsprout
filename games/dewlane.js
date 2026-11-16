@@ -14,14 +14,31 @@
     var spawn = 0;
     var t = 0;
     var last = 0;
+    // Engagement hooks (see ENGAGEMENT.md). mult scales speed, spawn rate and
+    // how often a row has two roots; shield is the continue advantage.
+    var GAME_ID = 'dewlane';
+    var mult = 1;
+    var shield = 0;
+    function engage(){ return window.PixelsproutEngage || null; }
     function reset(){
-      lane = 1; score = 0; speed = 180; dist = 0; obstacles = []; drops = []; spawn = 0; t = 0;
+      lane = 1; score = 0; speed = 180; dist = 0; obstacles = []; drops = []; spawn = 0; t = 0; shield = 0;
+      var e = engage();
+      mult = e ? e.startRun(GAME_ID).multiplier : 1;
+      state = 'play';
+    }
+    function resume(){
+      // Continue: keep score/distance, clear roots near the sprout, 3 s shield.
+      var e = engage();
+      if (e) e.startRun(GAME_ID, { continued: true });
+      obstacles = obstacles.filter(function(o){ return o.y < H - 320; });
+      shield = 3;
+      spawn = 0.8;
       state = 'play';
     }
     function addRow(){
       var kind = Math.random();
       var safe = (Math.random() * 3) | 0;
-      if (kind < 0.62) {
+      if (kind < 0.62 * mult) {
         for (var i = 0; i < 3; i++) if (i !== safe) obstacles.push({ lane: i, y: -40, h: 36 });
       } else if (kind < 0.82) {
         obstacles.push({ lane: safe, y: -40, h: 36 });
@@ -32,24 +49,28 @@
       return Math.abs(px - ox) < hw && Math.abs(py - oy) < hh;
     }
     function end(){
+      if (state !== 'play') return;
       state = 'over';
       if (score > best) { best = score; try { localStorage.setItem('dewlane-best', String(best)); } catch (e) {} }
+      var e = engage();
+      if (e) e.gameOver(GAME_ID, Math.floor(score), { boostLabel: 'a 3-second shield', onContinue: resume, onRestart: reset });
     }
     function step(dt){
       if (state !== 'play') return;
       t += dt;
-      speed = Math.min(420, 180 + dist * 0.04);
+      speed = Math.min(420, 180 + dist * 0.04) * mult;
+      if (shield > 0) shield -= dt;
       dist += speed * dt;
       score += dt * 8;
       spawn -= dt;
-      if (spawn <= 0) { addRow(); spawn = Math.max(0.45, 1.15 - dist / 8000); }
+      if (spawn <= 0) { addRow(); spawn = Math.max(0.45, 1.15 - dist / 8000) / mult; }
       var py = H - 150;
       var px = 80 + lane * 160;
       obstacles.forEach(function(o){ o.y += speed * dt; });
       drops.forEach(function(d){ d.y += speed * dt; });
       obstacles = obstacles.filter(function(o){
         if (o.y > H + 40) return false;
-        if (hit(px, py, 80 + o.lane * 160, o.y, 46, 28)) end();
+        if (shield <= 0 && hit(px, py, 80 + o.lane * 160, o.y, 46, 28)) end();
         return state === 'play';
       });
       drops = drops.filter(function(d){
@@ -92,6 +113,11 @@
         ctx.fillStyle = '#3d6b34';
         ctx.fillRect(80 + o.lane * 160 - 28, o.y - 28, 16, 16);
       });
+      if (shield > 0 && state === 'play' && (shield > 1 || ((shield * 8) | 0) % 2 === 0)) {
+        ctx.strokeStyle = 'rgba(216,251,255,0.85)';
+        ctx.lineWidth = 4;
+        ctx.beginPath(); ctx.arc(80 + lane * 160, H - 156, 46, 0, 6.28); ctx.stroke();
+      }
       drawSprout(80 + lane * 160, H - 150);
       ctx.fillStyle = '#eaffd8';
       ctx.font = '600 22px Inter, sans-serif';
