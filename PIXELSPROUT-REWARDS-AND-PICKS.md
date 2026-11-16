@@ -19,6 +19,18 @@ Supabase setup. No login, no new framework, no build step.
 Quick check after deploy: open any game, play for a minute, then visit
 `/rewards/`.
 
+### Works before setup too (in-browser fallback)
+If the API answers `{"enabled":false}` (keys missing) or errors (migration not
+run, wrong key, outage), `assets/sprout/sprout.js` switches to an in-browser
+engine with the same rules: XP, levels, comeback reward, weekly bonus, quests,
+favourites and recently played keep working, saved in localStorage
+(`pixelsprout_sprout_local_v1`). The only thing that needs the server is the
+shared weekly league, which then says "opens soon". The server is retried
+every 5 minutes, and once it answers it takes over automatically. Local XP is
+**not** copied into the server ledger, because server XP must be validated
+server-side. If you change rules in `api/_sprout-config.js`, update the
+`Local` block in `sprout.js` to match.
+
 ## 2. How it works
 
 ### Identity

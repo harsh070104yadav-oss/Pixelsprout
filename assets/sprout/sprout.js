@@ -73,13 +73,180 @@
     }
   }
 
+  // -------------------------------------------------------------- API --
+  // Talks to /api/sprout. If the server side is not available (database
+  // keys not configured, migration not run, outage), the same requests are
+  // answered by the in-browser engine below so players never lose rewards.
+  // The server is retried every few minutes and takes over automatically.
+  var DOWN_KEY = 'pixelsprout_sprout_server_down';
+  var DOWN_RETRY_MS = 5 * 60 * 1000;
+  function serverDown() {
+    try { var t = +sessionStorage.getItem(DOWN_KEY); return t && Date.now() - t < DOWN_RETRY_MS; } catch (e) { return false; }
+  }
+  function markDown() { try { sessionStorage.setItem(DOWN_KEY, String(Date.now())); } catch (e) { /* ignore */ } }
+  function looksDown(j) { return !j || j.enabled === false || j.__status >= 500 || j.__status === 0; }
+
   function api(method, body, query) {
+    if (serverDown()) return Promise.resolve(Local.handle(method, body, query));
     var opts = { method: method, credentials: 'same-origin', headers: {} };
     if (body) { opts.headers['Content-Type'] = 'application/json'; opts.body = JSON.stringify(body); }
     return fetch(API + (query || ''), opts).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (j) { j.__status = r.status; return j; });
-    });
+    }).then(function (j) {
+      if (looksDown(j)) { markDown(); return Local.handle(method, body, query); }
+      return j;
+    }, function () { markDown(); return Local.handle(method, body, query); });
   }
+
+  // --------------------------------------------- in-browser fallback engine --
+  // Mirrors api/_sprout-config.js + api/_sprout-core.js. KEEP IN SYNC when
+  // changing rules there. Progress here lives only in this browser and is
+  // never merged into the server ledger (server XP must be server-validated).
+  var Local = (function () {
+    var KEY = 'pixelsprout_sprout_local_v1';
+    var OPT = 'pixelsprout_sprout_local_optout';
+    var R = {
+      qualifying_seconds: 60, first_session: 10, return_day: 25, weekly_return: 75, weekly_return_days: 3, daily_cap: 300,
+      levels: [{ level: 1, name: 'Seed', min: 0 }, { level: 2, name: 'Sprout', min: 50 }, { level: 3, name: 'Sapling', min: 150 },
+        { level: 4, name: 'Bloom', min: 350 }, { level: 5, name: 'Canopy', min: 700 }, { level: 6, name: 'Evergreen', min: 1200 }]
+    };
+    var DQ = [
+      { id: 'dq_new_game', title: 'Play a game you have never played before', metric: 'new_games', target: 1, xp: 15 },
+      { id: 'dq_new_category', title: 'Explore a different category: play games from 2 categories today', metric: 'categories', target: 2, xp: 15 },
+      { id: 'dq_session', title: 'Complete a qualifying game session (60 seconds of play)', metric: 'sessions', target: 1, xp: 10 }
+    ];
+    var WQ = [
+      { id: 'wq_five_games', title: 'Play five different games', metric: 'games', target: 5, xp: 60 },
+      { id: 'wq_three_categories', title: 'Explore three different categories', metric: 'categories', target: 3, xp: 50 },
+      { id: 'wq_three_days', title: 'Be active on three different days', metric: 'days', target: 3, xp: 40 }
+    ];
+    var A = ['Sprout', 'Pixel', 'Moss', 'Fern', 'Clover', 'Willow', 'Maple', 'Cedar', 'Acorn', 'Leafy', 'Bramble', 'Petal', 'Sunny', 'Misty', 'Pebble', 'Juniper'];
+    var B = ['Explorer', 'Runner', 'Seeker', 'Ranger', 'Hopper', 'Scout', 'Player', 'Voyager', 'Rover', 'Dasher', 'Wanderer', 'Climber'];
+
+    function utcDay(t) { return new Date(t).toISOString().slice(0, 10); }
+    function weekOf(day) { var d = new Date(day + 'T00:00:00Z'); var dow = (d.getUTCDay() + 6) % 7; return utcDay(d.getTime() - dow * 86400000); }
+    function addDays(day, n) { return utcDay(Date.parse(day + 'T00:00:00Z') + n * 86400000); }
+    function rnd(n) { var a = new Uint32Array(1); (window.crypto || window.msCrypto).getRandomValues(a); return a[0] % n; }
+    function newName() { return rnd(100) < 35 ? A[rnd(A.length)] + (100 + rnd(900)) : A[rnd(A.length)] + B[rnd(B.length)] + (10 + rnd(990)); }
+    function get() { var s = load(KEY, null); return s && s.v === 1 ? s : null; }
+    function put(s) { save(KEY, s); }
+    function create() { var s = { v: 1, name: newName(), lifetime: 0, ledger: {}, sessions: [], played: {}, opens: {}, favs: [], weekly: {} }; put(s); return s; }
+
+    function levelFor(xp) {
+      var L = R.levels, i = 0;
+      while (i + 1 < L.length && xp >= L[i + 1].min) i++;
+      var cur = L[i], next = L[i + 1] || null;
+      return { level: cur.level, name: cur.name, min: cur.min, next: next ? { level: next.level, name: next.name, min: next.min } : null,
+        into: xp - cur.min, span: next ? next.min - cur.min : 0, progress: next ? Math.min(1, (xp - cur.min) / (next.min - cur.min)) : 1 };
+    }
+    function uniq(a) { var o = {}; a.forEach(function (x) { o[x] = 1; }); return Object.keys(o).length; }
+    function metrics(s, day, week) {
+      var ws = s.sessions.filter(function (x) { return x.week === week; });
+      var td = ws.filter(function (x) { return x.day === day; });
+      var days = {}; ws.forEach(function (x) { days[x.day] = 1; });
+      return {
+        daily: { new_games: uniq(td.filter(function (x) { return x.newGame; }).map(function (x) { return x.slug; })), categories: uniq(td.map(function (x) { return x.cat; })), sessions: td.length, games: uniq(td.map(function (x) { return x.slug; })), days: td.length ? 1 : 0 },
+        weekly: { new_games: uniq(ws.filter(function (x) { return x.newGame; }).map(function (x) { return x.slug; })), categories: uniq(ws.map(function (x) { return x.cat; })), sessions: ws.length, games: uniq(ws.map(function (x) { return x.slug; })), days: Object.keys(days).length },
+        today: td.length, weekDays: Object.keys(days).sort()
+      };
+    }
+    function hasPriorDay(s, day) { return s.sessions.some(function (x) { return x.day < day; }) || Object.keys(s.played).some(function (k) { return s.played[k] < day; }); }
+    function todayXp(s, day) { var t = 0; Object.keys(s.ledger).forEach(function (k) { if (s.ledger[k].day === day) t += s.ledger[k].xp; }); return t; }
+
+    function view(s) {
+      var day = utcDay(Date.now()), week = weekOf(day);
+      var base = { day: day, week: week, daily_resets_at: addDays(day, 1) + 'T00:00:00Z', weekly_resets_at: addDays(week, 7) + 'T00:00:00Z', rules: R, local: true };
+      var keys = s ? s.ledger : {};
+      var m = s ? metrics(s, day, week) : metrics({ sessions: [], played: {} }, day, week);
+      var q = function (list, vals, prefix, period) {
+        return list.map(function (x) { var p = Math.min(x.target, vals[x.metric] || 0); return { id: x.id, title: x.title, xp: x.xp, target: x.target, progress: p, done: !!keys[prefix + ':' + x.id + ':' + period], ready: p >= x.target }; });
+      };
+      var life = s ? s.lifetime : 0;
+      return Object.assign(base, {
+        player: s ? { name: s.name } : null,
+        level: levelFor(life), lifetime_xp: life, weekly_xp: s ? (s.weekly[week] || 0) : 0, today_xp: s ? todayXp(s, day) : 0,
+        active: !!(s && (s.sessions.length || keys.first_session)),
+        week_progress: { days: m.weekDays, count: m.weekDays.length, target: R.weekly_return_days, bonus_xp: R.weekly_return, bonus_awarded: !!keys['weekly_return:' + week] },
+        comeback: { xp: R.return_day, available: !!(s && hasPriorDay(s, day)), claimed_today: !!keys['return:' + day] },
+        quests: { daily: q(DQ, m.daily, 'dq', day), weekly: q(WQ, m.weekly, 'wq', week) },
+        recent: load(RECENT_KEY, []).map(function (g) { return g && g.slug; }).filter(Boolean).slice(0, 20),
+        favorites: load(FAVORITES_KEY, []).map(function (g) { return g && g.slug; }).filter(Boolean),
+        sync_id: 'local'
+      });
+    }
+
+    function award(s, idem, reason, xp, label, out) {
+      if (s.ledger[idem]) return;
+      var day = utcDay(Date.now()), week = weekOf(day);
+      var grant = Math.max(0, Math.min(xp, R.daily_cap - todayXp(s, day)));
+      s.ledger[idem] = { xp: grant, day: day, week: week };
+      s.lifetime += grant;
+      s.weekly[week] = (s.weekly[week] || 0) + grant;
+      out.push({ reason: reason, label: label, xp: grant, capped: grant < xp, key: idem.split(':').slice(0, 2).join(':') });
+    }
+
+    function qualify(slug, cat) {
+      var s = get();
+      if (!s || !s.opens[slug]) return { ok: false, reason: 'not_opened' };
+      if (Date.now() - s.opens[slug] < R.qualifying_seconds * 1000) return { ok: false, reason: 'too_early' };
+      var day = utcDay(Date.now()), week = weekOf(day);
+      var before = levelFor(s.lifetime);
+      var exists = s.sessions.some(function (x) { return x.slug === slug && x.day === day; });
+      if (!exists) {
+        var newGame = !s.played[slug] || s.played[slug] === day;
+        s.sessions.push({ slug: slug, cat: cat || 'Games', day: day, week: week, newGame: newGame && !s.played[slug] });
+        if (!s.played[slug]) s.played[slug] = day;
+      }
+      // keep this week and last week only (older weeks are never needed)
+      var cutoff = addDays(week, -7);
+      s.sessions = s.sessions.filter(function (x) { return x.week >= cutoff; });
+      var m = metrics(s, day, week);
+      var out = [];
+      award(s, 'first_session', 'first_session', R.first_session, 'First game session', out);
+      if (hasPriorDay(s, day)) award(s, 'return:' + day, 'return_day', R.return_day, 'Welcome back', out);
+      if (m.weekDays.length >= R.weekly_return_days) award(s, 'weekly_return:' + week, 'weekly_return', R.weekly_return, 'Weekly return bonus', out);
+      DQ.forEach(function (x) { if ((m.daily[x.metric] || 0) >= x.target) award(s, 'dq:' + x.id + ':' + day, 'daily_quest', x.xp, x.title, out); });
+      WQ.forEach(function (x) { if ((m.weekly[x.metric] || 0) >= x.target) award(s, 'wq:' + x.id + ':' + week, 'weekly_quest', x.xp, x.title, out); });
+      // drop ledger keys older than two weeks (idempotency only matters for the current day/week)
+      Object.keys(s.ledger).forEach(function (k) { if (k !== 'first_session' && s.ledger[k].week < cutoff) delete s.ledger[k]; });
+      put(s);
+      var after = levelFor(s.lifetime);
+      return { ok: true, new_session: !exists, awards: out, level_up: after.level > before.level ? { from: before.name, to: after.name, level: after.level } : null, progress: view(s) };
+    }
+
+    function league(s) {
+      var week = weekOf(utcDay(Date.now()));
+      var xp = s ? (s.weekly[week] || 0) : 0;
+      return { local: true, week: week, resets_at: addDays(week, 7) + 'T00:00:00Z', players: 0, top: [], me: xp ? { rank: null, xp: xp } : null };
+    }
+
+    function handle(method, body, query) {
+      var optout = load(OPT, false);
+      if (method === 'GET') {
+        if (optout) return { enabled: true, optout: true, __status: 200, local: true };
+        var s = get();
+        var lb = /lb=([1-9]\d*)/.test(query || '') ? league(s) : null;
+        return { enabled: true, optout: false, progress: view(s), leaderboard: lb, __status: 200, local: true };
+      }
+      var a = body && body.action;
+      if (a === 'resume') { save(OPT, false); return { ok: true, __status: 200 }; }
+      if (a === 'forget') { try { localStorage.removeItem(KEY); } catch (e) { /* ignore */ } if (body.optout) save(OPT, true); return { ok: true, optout: !!body.optout, __status: 200 }; }
+      if (optout) return { ok: false, optout: true, __status: 200 };
+      if (a === 'open') {
+        var s2 = get(), created = false;
+        if (!s2) { s2 = create(); created = true; }
+        s2.opens[body.slug] = Date.now();
+        var keys = Object.keys(s2.opens).sort(function (x, y) { return s2.opens[y] - s2.opens[x]; });
+        keys.slice(40).forEach(function (k) { delete s2.opens[k]; });
+        put(s2);
+        return { ok: true, player_created: created, qualifying_seconds: R.qualifying_seconds, __status: 200, local: true };
+      }
+      if (a === 'qualify') { var r = qualify(body.slug, document.body.getAttribute('data-genre') || ''); r.__status = r.ok ? 200 : 409; return r; }
+      if (a === 'import') return { ok: true, progress: view(get()), __status: 200 };
+      return { ok: true, __status: 200 }; // favourites already live in localStorage
+    }
+    return { handle: handle };
+  })();
 
   // ------------------------------------------------- game metadata lookup --
 
@@ -294,6 +461,11 @@
 
   function leagueHTML(lb, compact) {
     if (!lb) return '<p class="sp-small sp-muted">League unavailable right now.</p>';
+    if (lb.local) {
+      return '<p class="sp-small"><strong>The weekly Sprout League opens soon.</strong> Your XP is already counting' +
+        (lb.me ? ': <strong>' + esc(lb.me.xp) + ' XP</strong> this week' : '') + '.</p>' +
+        '<p class="sp-small sp-muted">Week resets Monday 00:00 UTC (in <span data-sp-cd="' + esc(lb.resets_at) + '">' + fmtCountdown(lb.resets_at) + '</span>). Just for fun: no prizes, nothing to buy.</p>';
+    }
     var rows = lb.top || [];
     var body;
     if (!rows.length) {
@@ -392,7 +564,7 @@
         fillShelf('continue-playing', p2._recent);
         fillShelf('your-favourites', p2._fav);
       }).catch(function () {});
-      status.textContent = pr.active ? '' : 'Play any game for 60 seconds to start earning Sprout XP. No account needed.';
+      status.textContent = pr.active ? (res.local ? 'Your progress is saved in this browser.' : '') : 'Play any game for 60 seconds to start earning Sprout XP. No account needed.';
       status.hidden = !status.textContent;
       $('[data-sp-you]', page).innerHTML = levelHTML(pr) +
         '<ol class="sp-levels">' + pr.rules.levels.map(function (l) {

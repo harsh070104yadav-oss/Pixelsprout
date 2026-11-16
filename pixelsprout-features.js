@@ -677,7 +677,7 @@
 (function () { var s = document.createElement('script'); s.src = '/assets/redesign/redesign.js?v=20261017b'; s.defer = true; document.head.appendChild(s); })();
 
 /* Sprout XP, quests, weekly league, favourites sync and Pixelsprout Picks. */
-(function () { var s = document.createElement('script'); s.src = '/assets/sprout/sprout.js?v=20261116a'; s.defer = true; document.head.appendChild(s); })();
+(function () { var s = document.createElement('script'); s.src = '/assets/sprout/sprout.js?v=20261116b'; s.defer = true; document.head.appendChild(s); })();
 
 /* Engagement layer: run history, gentle difficulty, continue offers, streaks, best scores, recommendations. */
 (function () { var s = document.createElement('script'); s.src = '/assets/engagement/engagement.js?v=20261116b'; s.defer = true; document.head.appendChild(s); })();
