@@ -1,136 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Pixelsprout Growth Log</title>
-<style>
-:root{--bg:#0f1115;--card:#171a21;--line:#262a33;--text:#e8eaef;--mut:#9aa1ad;--acc:#5b8def;--good:#3fb97a;--bad:#e26d5c;--warn:#e2b13c}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
-h1{font-size:22px;margin:0 0 2px}h2{font-size:16px;margin:28px 0 10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
-.sub{color:var(--mut);font-size:13px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
-.kpi .v{font-size:22px;font-weight:650}.kpi .l{color:var(--mut);font-size:12px}.kpi .d{font-size:12px}
-.up{color:var(--good)}.down{color:var(--bad)}
-.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:8px 0}
-.bar>div{height:100%;background:var(--acc)}
-.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0}
-.filters input,.filters button{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit;font-size:13px}
-.filters button.on{border-color:var(--acc);color:var(--acc)}
-.row{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--line);font-size:14px}.row:last-child{border:0}
-.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--line);color:var(--mut);margin-right:6px}
-ul{margin:6px 0;padding-left:18px}li{margin:3px 0}
-.day h3{margin:0 0 6px;font-size:15px}
-.lbl{font-size:12px;color:var(--mut);margin-top:8px;text-transform:uppercase;letter-spacing:.05em}
-svg text{fill:var(--mut);font-size:10px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixelsprout Daily Growth Actionables — 2026-11-17</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #111; background: #fafafa; }
+    h1 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; }
+    h2 { margin-top: 2rem; color: #222; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background: #f4f4f4; }
+    .highlight { background: #fff3cd; padding: 0.5rem; border-left: 4px solid #ffc107; }
+    .critical { background: #f8d7da; padding: 0.5rem; border-left: 4px solid #dc3545; }
+    .brief { background: #e7f3ff; padding: 1rem; border-radius: 8px; }
+    a { color: #0066cc; }
+  </style>
 </head>
 <body>
-<main>
-<h1>Pixelsprout Growth Log</h1>
-<div class="sub">Goal: <span id="goal"></span> · updated <span id="upd"></span> · numbers are rolling 7-day windows</div>
+  <h1>Pixelsprout Daily Growth Actionables — 2026-11-17</h1>
+  <p><strong>Report generated:</strong> 2026-11-17T12:53:47Z (7d range)<br>
+  <strong>Shareable MD:</strong> <a href="https://raw.githubusercontent.com/harsh070104yadav-oss/Pixelsprout/main/growth/daily-actionables.md">daily-actionables.md</a></p>
 
-<div class="filters" id="filters">
-  <button data-r="7">7 days</button><button data-r="30" class="on">30 days</button><button data-r="0">All</button>
-  <input type="date" id="from"> <span class="sub">to</span> <input type="date" id="to">
-</div>
+  <h2>1. Executive Summary (Last 7d vs Prior Period)</h2>
+  <table>
+    <tr><th>Metric</th><th>Current</th><th>Previous</th><th>Change</th></tr>
+    <tr><td>Active Users</td><td>1,036</td><td>367</td><td><strong>+182.3%</strong></td></tr>
+    <tr><td>New Users</td><td>1,033</td><td>362</td><td><strong>+185.4%</strong></td></tr>
+    <tr><td>Sessions</td><td>1,139</td><td>386</td><td><strong>+195.1%</strong></td></tr>
+    <tr><td>Pageviews</td><td>2,481</td><td>651</td><td><strong>+281.1%</strong></td></tr>
+    <tr><td>Engagement Rate</td><td>56.9%</td><td>46.4%</td><td><strong>+22.7%</strong></td></tr>
+    <tr><td>Avg Engagement Time</td><td>2m 32s</td><td>117s</td><td><strong>+29.2%</strong></td></tr>
+    <tr><td>Bounce Rate</td><td>43.1%</td><td>53.6%</td><td><strong>-19.6%</strong></td></tr>
+  </table>
+  <p><strong>Western Sessions:</strong> 335 / 1,164 (<strong>28.8%</strong>)<br>
+  <strong>30d Western share:</strong> 29.8% (511 / 1,716) — flat.</p>
+  <p>Massive growth driven almost entirely by ChatGPT AI traffic. Organic search and social still tiny. Retention is weak (D1 12%, D7 8%).</p>
+  <div class="highlight"><strong>Note:</strong> 1d range request returned the same 7d data — possible API issue. Treat as last 7 days.</div>
 
-<h2>This week's target</h2>
-<div id="week"></div>
+  <h2>2. Western Audience Progress & Tactics</h2>
+  <p><strong>Current:</strong> ~29% Western (US 22% of sessions, DE 5%, FR 5%).</p>
+  <ul>
+    <li>Double down on English horror / escape / getting-over-it style games.</li>
+    <li>Create Western-targeted SEO pages and guides.</li>
+    <li>Post English Shorts/Reels with Western hooks targeting US/UK/CA/AU.</li>
+    <li>Geo-target any ads to Western countries only.</li>
+    <li>Improve landing pages for /horror/ and top games.</li>
+  </ul>
 
-<h2>Latest snapshot</h2>
-<div class="grid" id="kpis"></div>
+  <h2>3. Top Performing Games & Content Opportunities</h2>
+  <ol>
+    <li><strong>The House 2</strong> — 86 PVs, <strong>17m 43s</strong> avg engagement (star)</li>
+    <li>Escape From Work — 57 PVs</li>
+    <li>Boo Scared? Escape from Backrooms — 54 PVs</li>
+    <li>Among Us — 47 PVs</li>
+    <li>Getting Over It — 41 PVs, <strong>13m 10s</strong> engagement</li>
+  </ol>
+  <p><strong>High opportunity:</strong> /horror/ category (317 pageviews in 30d). Expand high-engagement titles with better recommendations and guides.</p>
 
-<h2>Trend</h2>
-<div class="card"><div id="chart"></div></div>
+  <h2>4. UTM / Social Performance Breakdown</h2>
+  <p><strong>Channels (7d):</strong> AI Assistant (ChatGPT) 803 sessions (69%), Direct 17%, Organic Social 11%, Organic Search 1%.</p>
+  <p>YouTube: 103 sessions (very low engagement). Facebook & Instagram small but high Western %. Lean into AI discovery while improving YouTube hooks and scaling FB/IG.</p>
 
-<h2>Where players come from</h2>
-<div class="card" id="channels"></div>
+  <h2>5. Concrete 2x Weekly Growth Plan</h2>
+  <p><strong>Target next week:</strong> 2,000+ active users / 2,300+ sessions.</p>
+  <p><strong>Today:</strong> Optimize top pages for ChatGPT + ship 3 Western Shorts + fix GA4 events.<br>
+  <strong>This week:</strong> New games/guides, daily content, small geo-targeted boosts, site speed improvements.</p>
 
-<h2>This week's plan</h2>
-<div id="plan"></div>
+  <h2>6. Revenue Optimization Ideas</h2>
+  <p>Adsterra: 1,413 impressions, 12 clicks, <strong>0.85% CTR</strong>, <strong>$0.52 CPM</strong> — extremely low.</p>
+  <ul>
+    <li>Better placements on high-engagement pages.</li>
+    <li>Prioritize longer-session games.</li>
+    <li>Increasing Western share is the highest-leverage move for CPM.</li>
+  </ul>
 
-<h2>Daily log</h2>
-<div id="log"></div>
+  <h2>7. Tracking Health Status & Blockers</h2>
+  <div class="critical">
+    <strong>CRITICAL BLOCKER:</strong> NO GA4 KEY EVENTS configured. Conversions read 0. Mark fullscreen_click, favorite_add, share_click etc. as key events in GA4 immediately.
+  </div>
+  <p>Post tracking incomplete on many posts. Search Console nearly zero clicks.</p>
 
-<h2>What we've learned</h2>
-<div class="card" id="learn"></div>
-</main>
-<script>
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const fmt=n=>n==null?'–':Number(n).toLocaleString('en-US');
-const secs=s=>s==null?'–':Math.floor(s/60)+'m '+String(Math.round(s%60)).padStart(2,'0')+'s';
-let D;
-fetch('data.json?t='+Date.now()).then(r=>r.json()).then(d=>{D=d;init()}).catch(()=>{$('kpis').innerHTML='<div class="card">Could not load data.</div>'});
+  <h2>8. Shareable Daily Brief</h2>
+  <div class="brief">
+    <strong>Pixelsprout Daily Brief — 17 Nov 2026</strong><br><br>
+    <strong>Growth:</strong> +182% active users (1,036), +195% sessions (1,139) in last 7d. Almost all from ChatGPT.<br>
+    <strong>Western:</strong> Stuck at ~29%. Must prioritize US/UK/CA/AU/DE/FR.<br>
+    <strong>Stars:</strong> The House 2 (17m eng), Getting Over It, /horror/ category.<br>
+    <strong>Problem:</strong> YouTube engagement low. Ad CPM $0.52. No GA4 key events.<br>
+    <strong>Focus today:</strong> Fix GA4 + optimize top pages for AI + ship 3 Western-targeted Shorts.
+  </div>
 
-function init(){
-  D.days.sort((a,b)=>a.date<b.date?-1:1);
-  $('goal').textContent=D.goal;$('upd').textContent=D.updatedAt;
-  const last=D.days.at(-1).date;
-  $('to').value=last;setRange(30);
-  document.querySelectorAll('#filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');setRange(+b.dataset.r)});
-  $('from').onchange=$('to').onchange=()=>{document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('on'));render()};
-}
-function setRange(n){
-  const to=$('to').value||D.days.at(-1).date;
-  if(!n){$('from').value=D.days[0].date}else{const d=new Date(to);d.setDate(d.getDate()-n+1);$('from').value=d.toISOString().slice(0,10)}
-  render();
-}
-function render(){
-  const f=$('from').value,t=$('to').value;
-  const days=D.days.filter(d=>d.date>=f&&d.date<=t);
-  const latest=days.at(-1)||D.days.at(-1);
-  const prev=D.days[D.days.indexOf(latest)-1];
-  // week
-  const wk=[...D.weeks].sort((a,b)=>a.weekOf<b.weekOf?-1:1).filter(w=>w.weekOf<=latest.date).at(-1)||D.weeks[0];
-  const cur=latest.kpis.sessions,pct=Math.min(100,Math.round(cur/wk.targetSessions*100));
-  $('week').innerHTML=`<div class="card"><div class="row"><span>Week of ${esc(wk.weekOf)} → ${esc(wk.ends)}</span><b>${fmt(cur)} / ${fmt(wk.targetSessions)} sessions</b></div>
-  <div class="bar"><div style="width:${pct}%"></div></div>
-  <div class="sub">${pct}% of target · baseline ${fmt(wk.baselineSessions)}</div>
-  ${tgt('Users',latest.kpis.users,wk.targetUsers,fmt)}${tgt('Western sessions',latest.westernSessions,wk.targetWestern,fmt)}${tgt('Ad revenue (7d)',latest.revenueUsd,wk.targetRevenueUsd,v=>'$'+Number(v).toFixed(2))}
-  <p style="margin:10px 0 0">${esc(wk.focus)}</p></div>`;
-  $('plan').innerHTML=(wk.plan||[]).map(p=>`<div class="card"><span class="tag">${esc(p.owner)}</span>${p.done?'<span class="tag" style="color:var(--good)">done</span>':''}<b>${esc(p.title)}</b><div class="sub" style="color:var(--text);margin-top:4px">${esc(p.detail)}</div></div>`).join('');
-  // kpis
-  const K=[['users','Users'],['sessions','Sessions'],['pageviews','Pageviews'],['engagementRate','Engaged %'],['avgEngSec','Avg time'],['bounceRate','Bounce %']];
-  $('kpis').innerHTML=K.map(([k,l])=>{
-    const v=latest.kpis[k],p=prev?.kpis?.[k];let d='';
-    if(p!=null&&p!==0){const c=(v-p)/p*100;const good=k==='bounceRate'?c<0:c>0;d=`<div class="d ${good?'up':'down'}">${c>0?'+':''}${c.toFixed(1)}% vs ${esc(prev.date)}</div>`}
-    else if(latest.kpiChange?.[k]!=null){d=`<div class="d up">+${latest.kpiChange[k]}% vs prior 7d</div>`}
-    const shown=k==='avgEngSec'?secs(v):(k.endsWith('Rate')?v+'%':fmt(v));
-    return `<div class="card kpi"><div class="l">${l}</div><div class="v">${shown}</div>${d}</div>`}).join('')+
-    `<div class="card kpi"><div class="l">Western share</div><div class="v">${latest.westernShare??'–'}%</div></div>`+
-    `<div class="card kpi"><div class="l">D1 / D7 retention</div><div class="v">${latest.retention?.d1??'–'}% / ${latest.retention?.d7??'–'}%</div></div>`+
-    `<div class="card kpi"><div class="l">Ad revenue (7d)</div><div class="v">$${latest.revenueUsd!=null?Number(latest.revenueUsd).toFixed(2):'–'}</div></div>`+
-    `<div class="card kpi"><div class="l">Adsterra CPM</div><div class="v">$${latest.adsterra?.cpm??'–'}</div><div class="d sub">${fmt(latest.adsterra?.impressions)} impr</div></div>`;
-  chart(days);
-  // channels
-  const src=latest.sources||latest.channels||{};const tot=Object.values(src).reduce((a,b)=>a+b,0)||1;
-  $('channels').innerHTML=Object.entries(src).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div class="row"><span>${esc(k)}</span><span>${fmt(v)} · ${Math.round(v/tot*100)}%</span></div><div class="bar" style="height:5px;margin:0 0 4px"><div style="width:${v/tot*100}%"></div></div>`).join('')+
-  (latest.aiLandingPages?`<div class="lbl">Top AI landing pages</div>`+latest.aiLandingPages.map(([p,v])=>`<div class="row"><span>${esc(p)}</span><span>${fmt(v)}</span></div>`).join(''):'');
-  // log
-  $('log').innerHTML=[...days].reverse().map(d=>`<div class="card day"><h3>${esc(d.date)} · ${fmt(d.kpis.sessions)} sessions</h3><div>${esc(d.summary)}</div>
-   ${list('Wins',d.wins)}${list('Problems',d.problems)}${list('Shipped',d.shipped)}${d.topGames?`<div class="lbl">Top games</div><div class="sub">${d.topGames.map(g=>esc(g[0])+' ('+g[1]+')').join(' · ')}</div>`:''}</div>`).join('')||'<div class="card sub">No days in this range.</div>';
-  const L=[];days.forEach(d=>(d.learnings||[]).forEach(x=>L.push([d.date,x])));
-  $('learn').innerHTML=L.length?L.reverse().map(([d,x])=>`<div class="row"><span>${esc(x)}</span><span class="sub">${esc(d)}</span></div>`).join(''):'<span class="sub">None yet.</span>';
-}
-function tgt(l,v,t,f){if(v==null||!t)return'';const p=Math.min(100,Math.round(v/t*100));return `<div class="row" style="margin-top:6px"><span>${l}</span><b>${f(v)} / ${f(t)}</b></div><div class="bar" style="height:6px"><div style="width:${p}%"></div></div>`}
-function list(t,a){return a&&a.length?`<div class="lbl">${t}</div><ul>${a.map(x=>`<li>${esc(typeof x==='string'?x:(x.title||JSON.stringify(x)))}</li>`).join('')}</ul>`:''}
-function chart(days){
-  if(days.length<2){$('chart').innerHTML='<div class="sub">The trend line appears once there are two or more daily snapshots.</div>';return}
-  const W=900,H=220,P=36,ser=[['sessions','var(--acc)'],['users','var(--good)']];
-  const max=Math.max(...days.map(d=>d.kpis.sessions),...D.weeks.map(w=>w.targetSessions))*1.05;
-  const x=i=>P+i*(W-2*P)/(days.length-1),y=v=>H-P+ -(v/max)*(H-2*P);
-  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%">`;
-  [0,.5,1].forEach(f=>{const v=max*f;s+=`<line x1="${P}" x2="${W-P}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="2" y="${y(v)+3}">${fmt(Math.round(v))}</text>`});
-  D.weeks.forEach(w=>{s+=`<line x1="${P}" x2="${W-P}" y1="${y(w.targetSessions)}" y2="${y(w.targetSessions)}" stroke="var(--warn)" stroke-dasharray="4 4" opacity=".5"/>`});
-  ser.forEach(([k,c])=>{s+=`<polyline fill="none" stroke="${c}" stroke-width="2" points="${days.map((d,i)=>x(i)+','+y(d.kpis[k])).join(' ')}"/>`});
-  days.forEach((d,i)=>{if(i%Math.ceil(days.length/8)===0||i===days.length-1)s+=`<text x="${x(i)-14}" y="${H-12}">${d.date.slice(5)}</text>`});
-  $('chart').innerHTML=s+`</svg><div class="sub"><span style="color:var(--acc)">■</span> sessions <span style="color:var(--good)">■</span> users <span style="color:var(--warn)">- -</span> weekly target</div>`;
-}
-</script>
+  <h3>3 Highest-Priority Actions for Next 24 Hours</h3>
+  <ol>
+    <li><strong>Fix GA4 Key Events</strong> — Mark game events as key events.</li>
+    <li><strong>AI + Western Optimization Sprint</strong> — Update top pages (/horror/, House 2, Getting Over It, Backrooms) for ChatGPT + Western users.</li>
+    <li><strong>Content Drop</strong> — Publish 3 high-hook English YouTube Shorts + FB/IG Reels for top games with proper UTMs.</li>
+  </ol>
+
+  <p><em>Goals: 2× users/sessions every week | Maximize Western share | Grow revenue | Fix tracking.</em></p>
 </body>
 </html>
