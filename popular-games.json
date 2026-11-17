@@ -2,19 +2,19 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 184
+      "views": 187
     },
     {
       "slug": "getting-over-it",
-      "views": 127
+      "views": 134
     },
     {
       "slug": "protect-my-dog",
-      "views": 94
+      "views": 98
     },
     {
       "slug": "books-tower",
-      "views": 60
+      "views": 64
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
@@ -29,15 +29,19 @@
       "views": 37
     },
     {
+      "slug": "the-house-2",
+      "views": 33
+    },
+    {
       "slug": "baba-is-you",
       "views": 28
     },
     {
-      "slug": "save-the-doge",
+      "slug": "100-seconds-labyrinth",
       "views": 27
     },
     {
-      "slug": "100-seconds-labyrinth",
+      "slug": "save-the-doge",
       "views": 27
     },
     {
@@ -65,19 +69,15 @@
       "views": 18
     },
     {
+      "slug": "slide-ball-puzzle",
+      "views": 18
+    },
+    {
       "slug": "stickman-that-one-level",
       "views": 17
     },
     {
-      "slug": "slide-ball-puzzle",
-      "views": 17
-    },
-    {
       "slug": "dop-in-love-story-find-part",
-      "views": 16
-    },
-    {
-      "slug": "agent-hunt-hitman-shooter",
       "views": 16
     }
   ]
