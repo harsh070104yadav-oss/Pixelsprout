@@ -1,0 +1,214 @@
+{
+ "updatedAt": "2026-11-17",
+ "goal": "Double users, Western users and ad revenue every week",
+ "weeks": [
+  {
+   "weekOf": "2026-11-17",
+   "ends": "2026-11-24",
+   "baselineSessions": 1139,
+   "targetSessions": 2278,
+   "baselineUsers": 1036,
+   "targetUsers": 2072,
+   "focus": "ChatGPT sends 69% of traffic but only 28.8% of sessions are Western, and Western visitors earn the high CPMs. This week: grow US/UK/CA/AU/EU players specifically, push YouTube Shorts as the one social channel that works, and fix tracking so revenue per channel is visible.",
+   "plan": [
+    {
+     "owner": "Claude (daily task)",
+     "title": "Win Western players from AI assistants",
+     "detail": "Ship English pages written for US/UK search and ChatGPT prompts ('unblocked games for school', 'free horror games no download', 'games like Among Us in browser'). Use US spelling and Western references, and link them from /horror/ and llms.txt."
+    },
+    {
+     "owner": "Claude (daily task)",
+     "title": "Feed ChatGPT more landing pages",
+     "detail": "ChatGPT's top landing page is /horror/ (171 sessions). Ship one AI-friendly page a day (best-of lists, 'games like X' guides) for the categories ChatGPT already links to: horror, escape, cooking, Among Us-style, Brawl Stars-style. Keep llms.txt and the sitemap updated."
+    },
+    {
+     "owner": "Grok bot / team",
+     "title": "Post Shorts at US prime time",
+     "detail": "Schedule YouTube Shorts for 7–10 PM US Eastern (5:30–8:30 AM IST) with English titles and #shorts #gaming tags. Facebook and Instagram already send 100% Western traffic (18 + 7 sessions): repost the same Shorts there as Reels."
+    },
+    {
+     "owner": "Grok bot / team",
+     "title": "YouTube Shorts only: 3 a day",
+     "detail": "YouTube brought 48 of 60 post-attributed sessions; X and Reddit brought 0. Make Shorts of The House 2, Getting Over It, Protect My Dog, Books Tower and Escape From Work. Pause X and cut Facebook/Instagram to reposts of the same Shorts."
+    },
+    {
+     "owner": "Harsh (5 min)",
+     "title": "Mark GA4 key events",
+     "detail": "GA4 > Admin > Events: mark fullscreen_click (and any game_start event) as key events. Until then conversions read 0 and we can't tell which traffic is worth anything."
+    },
+    {
+     "owner": "Grok bot / team",
+     "title": "Log every post with its UTM",
+     "detail": "118 UTM sessions have no matching post (e.g. YouTube compilation-1). Unlogged posts mean we can't double down on what works."
+    },
+    {
+     "owner": "Claude (daily task)",
+     "title": "Make horror the front door",
+     "detail": "Horror games dominate (The House 2, Backrooms, Scary Doll, Poppy Playtime, FNAF). Strengthen /horror/ with a curated top-10, internal links to guides, and 'play next' links between horror games to lift pages per visit and return visits (D1 retention is 12%)."
+    },
+    {
+     "owner": "Harsh (10 min)",
+     "title": "Check Adsterra geo and formats",
+     "detail": "CPM is $0.52 across all traffic. In Adsterra, check CPM by country and turn on the higher-paying formats (Social Bar, in-page push) for Western geos only, so non-Western visitors don't get a heavier ad load."
+    }
+   ],
+   "baselineWestern": 317,
+   "targetWestern": 634,
+   "baselineRevenueUsd": 0.73,
+   "targetRevenueUsd": 1.47
+  }
+ ],
+ "days": [
+  {
+   "date": "2026-11-17",
+   "window": "7d",
+   "kpis": {
+    "users": 1036,
+    "sessions": 1139,
+    "pageviews": 2481,
+    "engagementRate": 56.9,
+    "avgEngSec": 152,
+    "bounceRate": 43.1
+   },
+   "kpiChange": {
+    "users": 182.3,
+    "sessions": 195.1,
+    "pageviews": 281.1
+   },
+   "channels": {
+    "AI Assistant": 803,
+    "Direct": 196,
+    "Organic Social": 127,
+    "Unassigned": 21,
+    "Organic Search": 11
+   },
+   "sources": {
+    "ChatGPT": 809,
+    "Direct": 199,
+    "YouTube": 103,
+    "Facebook": 18,
+    "Google/Bing": 8,
+    "Instagram": 7,
+    "Other": 20
+   },
+   "westernShare": 28.8,
+   "countries": [
+    [
+     "India",
+     171
+    ],
+    [
+     "United States",
+     126
+    ],
+    [
+     "Japan",
+     60
+    ],
+    [
+     "Türkiye",
+     44
+    ],
+    [
+     "South Korea",
+     32
+    ],
+    [
+     "Germany",
+     31
+    ]
+   ],
+   "topGames": [
+    [
+     "The House 2",
+     86
+    ],
+    [
+     "Escape From Work",
+     57
+    ],
+    [
+     "Boo Scared? Backrooms",
+     54
+    ],
+    [
+     "Among Us",
+     47
+    ],
+    [
+     "Getting Over It",
+     41
+    ],
+    [
+     "Scary Doll",
+     40
+    ]
+   ],
+   "aiLandingPages": [
+    [
+     "/horror/",
+     171
+    ],
+    [
+     "/",
+     37
+    ],
+    [
+     "/games/among-us.html",
+     17
+    ],
+    [
+     "/cooking/",
+     14
+    ],
+    [
+     "/games/brawl-stars.html",
+     12
+    ]
+   ],
+   "retention": {
+    "d1": 12,
+    "d7": 8,
+    "d14": 4,
+    "d30": 2
+   },
+   "adsterra": {
+    "impressions": 1413,
+    "clicks": 12,
+    "ctr": 0.85,
+    "cpm": 0.52
+   },
+   "posts": {
+    "logged": 58,
+    "sessions": 60,
+    "engaged": 7,
+    "youtube": 48,
+    "facebook": 8,
+    "instagram": 4,
+    "x": 0,
+    "reddit": 0
+   },
+   "summary": "Traffic nearly tripled week on week, but 69% comes from ChatGPT alone. Search and most social are near zero, retention is weak and ad earnings are tiny.",
+   "wins": [
+    "Sessions +195%, pageviews +281% vs the previous 7 days",
+    "ChatGPT now recommends the site: 809 sessions, mostly to /horror/",
+    "Engagement up: 56.9% engaged, 2m 32s average"
+   ],
+   "problems": [
+    "One-channel dependency on ChatGPT",
+    "Western share only 28.8% (317 of 1,164 sessions); India is the top country",
+    "Organic search: 11 sessions",
+    "D1 retention 12%, D30 2%",
+    "Adsterra about $0.70 for the week at $0.52 CPM",
+    "Conversions read 0: no GA4 key events"
+   ],
+   "shipped": [],
+   "learnings": [
+    "AI assistants are the fastest-growing channel for a games site; pages ChatGPT can cite (clear categories, lists) get the clicks",
+    "YouTube Shorts is the only social channel that sends players"
+   ],
+   "westernSessions": 317,
+   "revenueUsd": 0.73
+  }
+ ]
+}
