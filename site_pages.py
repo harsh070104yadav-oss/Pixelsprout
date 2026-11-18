@@ -513,6 +513,74 @@ ANSWER_FIRST = {
           'Pixelsprout.')],
  'similar': ['granny-house-escape', 'escape-from-work', 'scary-doll'],
  'date_modified': '2026-11-12'},
+
+    "boo-scared-escape-from-backrooms": {'h1': 'Play Boo Scared? Escape from Backrooms Free Online — No Download',
+ 'title_tag': 'Play Boo Scared? Escape from Backrooms Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Boo Scared? Escape from Backrooms free online on Pixelsprout. Solve riddles '
+              'and escape the labyrinth. No download.',
+ 'lead': 'Play Boo Scared? Escape from Backrooms free online in your browser on Pixelsprout — no '
+         'download and no sign-up. It is a horror escape: you are stuck in a labyrinth with a '
+         'deranged cat, and you solve riddles to get out before it catches you. Use the on-screen '
+         'controls in the game frame (mouse and keyboard). Built for mouse and keyboard; touch '
+         'play has not been tested on this page.',
+ 'faq': [('Can I play Boo Scared? Escape from Backrooms free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Boo Scared? Escape from Backrooms?',
+          'A horror escape set in a labyrinth. Solve riddles and stay ahead of a hostile cat as '
+          'you look for a way out.'),
+         ('How do you play?',
+          'Explore, solve the riddles the game presents, and keep your distance from the cat. Use '
+          'the on-screen controls in the frame.'),
+         ('What similar games can I play next?',
+          'Try The House 2, Granny House Escape and Escape From Work — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['the-house-2', 'granny-house-escape', 'escape-from-work'],
+ 'date_modified': '2026-11-13'},
+
+    "escape-from-work": {'h1': 'Play Escape From Work Free Online — No Download',
+ 'title_tag': 'Play Escape From Work Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Escape From Work free online in your browser on Pixelsprout. Sneak out of a '
+              'nightmarish office. No download.',
+ 'lead': 'Play Escape From Work free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a stealth escape set in a nightmarish office: solve puzzles, collect '
+         'items and slip past surveillance and a harsh boss. Use the on-screen controls in the '
+         'game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not been '
+         'tested on this page.',
+ 'faq': [('Can I play Escape From Work free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Escape From Work?',
+          'A stealth escape in an office maze. You collect items, solve puzzles and try to get out '
+          'without being caught.'),
+         ('How do you play?',
+          'Move through the office, pick up what you need and use stealth when someone is '
+          'watching. Follow the on-screen controls.'),
+         ('What similar games can I play next?',
+          'Try The House 2, Granny House Escape and Boo Scared? Escape from Backrooms — all free '
+          'in the browser on Pixelsprout.')],
+ 'similar': ['the-house-2', 'granny-house-escape', 'boo-scared-escape-from-backrooms'],
+ 'date_modified': '2026-11-13'},
+
+    "floppa-scary-horror": {'h1': 'Play Floppa Scary Horror Free Online — No Download',
+ 'title_tag': 'Play Floppa Scary Horror Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Floppa Scary Horror free online in your browser on Pixelsprout. Collect photos '
+              'and avoid Big Floppa. No download.',
+ 'lead': 'Play Floppa Scary Horror free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a 3D horror game in a dark forest: collect eight cat photos and avoid Big '
+         'Floppa as you explore. Use the on-screen controls in the game frame (mouse and '
+         'keyboard). Built for mouse and keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play Floppa Scary Horror free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Floppa Scary Horror?',
+          'A 3D horror game in a forest. You collect cat photos and try to stay away from Big '
+          'Floppa, including sudden scares.'),
+         ('How do you play?',
+          'Explore the forest, pick up the photos and watch for Big Floppa. Use the on-screen '
+          'controls in the game frame.'),
+         ('What similar games can I play next?',
+          "Try Don't Splash, The House 2 and Granny House Escape — all free in the browser on "
+          'Pixelsprout.')],
+ 'similar': ['dont-splash', 'the-house-2', 'granny-house-escape'],
+ 'date_modified': '2026-11-13'},
 }
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
