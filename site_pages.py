@@ -650,6 +650,74 @@ ANSWER_FIRST = {
           'Pixelsprout.')],
  'similar': ['english-checkers', 'master-checkers', 'billiards'],
  'date_modified': '2026-11-14'},
+
+    "falling-dummy": {'h1': 'Play Falling Dummy Free Online — No Download',
+ 'title_tag': 'Play Falling Dummy Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Falling Dummy free online in your browser on Pixelsprout. Drop a ragdoll dummy '
+              'and steer the fall. No download.',
+ 'lead': 'Play Falling Dummy free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a ragdoll physics game: send a dummy off a height, guide the fall and aim '
+         'for harder impacts. You can unlock skins as you play. Use the on-screen controls in the '
+         'game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not been '
+         'tested on this page.',
+ 'faq': [('Can I play Falling Dummy free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Falling Dummy?',
+          'A casual ragdoll game. You drop a dummy, steer the fall and try to make bigger '
+          'impacts.'),
+         ('How do you play?',
+          'Start the drop and adjust the dummy in the air with the on-screen controls in the game '
+          'frame.'),
+         ('What similar games can I play next?',
+          'Try Destroy the Ragdoll Sandbox, Body Drop 3D and Car Crash Test — all free in the '
+          'browser on Pixelsprout.')],
+ 'similar': ['destroy-the-ragdoll-sandbox', 'body-drop-3d', 'car-crash-test'],
+ 'date_modified': '2026-11-15'},
+
+    "slope-racing-3d": {'h1': 'Play Slope Racing 3D Free Online — No Download',
+ 'title_tag': 'Play Slope Racing 3D Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Slope Racing 3D free online in your browser on Pixelsprout. Downhill ball '
+              'racing, no download.',
+ 'lead': 'Play Slope Racing 3D free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a downhill ball racer in the same style as Slope-like games: steer a ball '
+         'down a steep, changing track, dodge obstacles and keep up as the speed rises. Use the '
+         'on-screen controls in the game frame (mouse and keyboard). Built for mouse and keyboard; '
+         'touch play has not been tested on this page.',
+ 'faq': [('Can I play Slope Racing 3D free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Slope Racing 3D?',
+          'A downhill ball racing game. You steer along a steep slope, use boost pads and try not '
+          'to fall off as the course gets faster.'),
+         ('How do you play?',
+          'Steer the ball with the on-screen controls in the game frame and look ahead of the next '
+          'obstacle.'),
+         ('What similar games can I play next?',
+          'Try Stack Ball Crash, Buba Jump and Subway Princess Run — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['stack-ball-crash', 'buba-jump', 'subway-princess-run'],
+ 'date_modified': '2026-11-15'},
+
+    "destroy-the-ragdoll-sandbox": {'h1': 'Play Destroy the Ragdoll Sandbox Free Online — No Download',
+ 'title_tag': 'Play Destroy the Ragdoll Sandbox Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Destroy the Ragdoll Sandbox free online on Pixelsprout. Ragdoll sandbox '
+              'combat, no download.',
+ 'lead': 'Play Destroy the Ragdoll Sandbox free online in your browser on Pixelsprout — no '
+         'download and no sign-up. It is a ragdoll sandbox: choose a weapon, hit the characters, '
+         'earn money for the damage and spend it on stronger gear. Use the on-screen controls in '
+         'the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not '
+         'been tested on this page.',
+ 'faq': [('Can I play Destroy the Ragdoll Sandbox free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Destroy the Ragdoll Sandbox?',
+          'A sandbox ragdoll game. You deal damage, get paid in the game, and upgrade your tools.'),
+         ('How do you play?',
+          'Pick a weapon in the game and attack as the on-screen controls show. Spend what you '
+          'earn on upgrades.'),
+         ('What similar games can I play next?',
+          'Try Falling Dummy, Body Drop 3D and Stickman Blast — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['falling-dummy', 'body-drop-3d', 'stickman-blast'],
+ 'date_modified': '2026-11-15'},
 }
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
