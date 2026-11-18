@@ -245,6 +245,8 @@ GAME_NOTICES = {
     "fireboy-and-watergirl-online": _FIREBOY_NOTICE,
 
     "moto-x3m-spooky-land": ("<strong>Not an official Moto X3M release we can verify.</strong> This is a third-party browser moto-stunt game that uses the Moto X3M name. It is not listed here as an official Madpuffers game."),
+
+    "knifehit": ("<strong>Not the official Knife Hit game.</strong> This is a third-party browser knife-throwing game. It is not made by or affiliated with Ketchapp."),
 }
 
 # Extra visible FAQ shown on the game page (static HTML). add-faq-jsonld.py appends the same pairs to the
@@ -787,6 +789,76 @@ ANSWER_FIRST = {
           'browser on Pixelsprout.')],
  'similar': ['slope-racing-3d', 'stack-ball-crash', 'stickman-that-one-level'],
  'date_modified': '2026-11-16'},
+
+    "knifehit": {'h1': 'Play KnifeHit Free Online — No Download',
+ 'title_tag': 'Play KnifeHit Free Online (Unofficial, No Download) | Pixelsprout',
+ 'meta_desc': 'Play KnifeHit free online in your browser on Pixelsprout. Unofficial knife-throwing '
+              'game, no download.',
+ 'lead': 'Play KnifeHit free online in your browser on Pixelsprout — no download and no sign-up. '
+         'It is a third-party knife-throwing game (not the official Ketchapp Knife Hit): throw '
+         'knives at a spinning disc, hit apples for rewards, and face a tougher stage leader every '
+         'five stages. Use the on-screen controls in the game frame (mouse and keyboard). Built '
+         'for mouse and keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play KnifeHit free online with no download?',
+          'Yes. The unofficial browser game loads in this tab. Nothing to install and no '
+          'Pixelsprout account required.'),
+         ('Is this an official KnifeHit game?',
+          'No. This is a third-party browser knife-throwing game. It is not made by or affiliated '
+          'with Ketchapp.'),
+         ('How do you play?',
+          'Throw knives at the spinning disc with the on-screen control. Avoid hitting a knife '
+          'that is already stuck, and go for apples when you see them.'),
+         ('What similar games can I play next?',
+          'Try Log and Knife 2D, Crazy Knife and Knife Smash — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['log-and-knife-2d', 'crazy-knife', 'knife-smash'],
+ 'date_modified': '2026-11-17'},
+
+    "stack-ball-crash": {'h1': 'Play Stack Ball Crash Free Online — No Download',
+ 'title_tag': 'Play Stack Ball Crash Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Stack Ball Crash free online in your browser on Pixelsprout. Smash through '
+              'platforms on the way down. No download.',
+ 'lead': 'Play Stack Ball Crash free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a downhill smash game: drop through spiraling platforms, break the '
+         'colored ones, and avoid the solid black platforms unless you have a power-up that lets '
+         'you smash through. Use the on-screen controls in the game frame (mouse and keyboard). '
+         'Built for mouse and keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play Stack Ball Crash free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Stack Ball Crash?',
+          'A timing and speed game. You smash through colored platforms on the way down and steer '
+          'clear of the black ones.'),
+         ('How do you play?',
+          'Steer and drop with the on-screen controls in the game frame. Hit colored platforms and '
+          'avoid the black ones.'),
+         ('What similar games can I play next?',
+          'Try Slope Racing 3D, Buba Jump and Falling Dummy — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['slope-racing-3d', 'buba-jump', 'falling-dummy'],
+ 'date_modified': '2026-11-17'},
+
+    "escape-tsunami-for-brainrots": {'h1': 'Play Escape Tsunami For Brainrots Free Online — No Download',
+ 'title_tag': 'Play Escape Tsunami For Brainrots Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Escape Tsunami For Brainrots free online on Pixelsprout. Casual browser game, '
+              'no download, no sign-up.',
+ 'lead': 'Play Escape Tsunami For Brainrots free online in your browser on Pixelsprout — no '
+         'download and no sign-up. It is a casual browser game on this page: open it in the tab '
+         'and use the on-screen controls to play. There is nothing to download or sign up for. Use '
+         'the on-screen controls in the game frame (mouse and keyboard). Built for mouse and '
+         'keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play Escape Tsunami For Brainrots free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Escape Tsunami For Brainrots?',
+          'A casual HTML5 game you can play in the browser on Pixelsprout. Follow the on-screen '
+          'prompts in the game frame for the current goal and controls.'),
+         ('How do you play?',
+          'Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse and '
+          'keyboard; touch play has not been tested on this page.'),
+         ('What similar games can I play next?',
+          "Try Tsunami Escape, Don't Splash and Boo Scared? Escape from Backrooms — all free in "
+          'the browser on Pixelsprout.')],
+ 'similar': ['tsunami-escape', 'dont-splash', 'boo-scared-escape-from-backrooms'],
+ 'date_modified': '2026-11-17'},
 }
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
