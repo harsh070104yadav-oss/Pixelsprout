@@ -243,6 +243,8 @@ GAME_NOTICES = {
     "brawl-stars-2": _BRAWL_NOTICE,
     "among-us": _AMONG_NOTICE,
     "fireboy-and-watergirl-online": _FIREBOY_NOTICE,
+
+    "moto-x3m-spooky-land": ("<strong>Not an official Moto X3M release we can verify.</strong> This is a third-party browser moto-stunt game that uses the Moto X3M name. It is not listed here as an official Madpuffers game."),
 }
 
 # Extra visible FAQ shown on the game page (static HTML). add-faq-jsonld.py appends the same pairs to the
@@ -718,6 +720,73 @@ ANSWER_FIRST = {
           'Pixelsprout.')],
  'similar': ['falling-dummy', 'body-drop-3d', 'stickman-blast'],
  'date_modified': '2026-11-15'},
+
+    "moto-x3m-spooky-land": {'h1': 'Play Moto X3M: Spooky Land Free Online — No Download',
+ 'title_tag': 'Play Moto X3M: Spooky Land Free Online (Unofficial, No Download) | Pixelsprout',
+ 'meta_desc': 'Play Moto X3M: Spooky Land free online on Pixelsprout. Third-party moto-stunt game, '
+              'no download.',
+ 'lead': 'Play Moto X3M: Spooky Land free online in your browser on Pixelsprout — no download and '
+         'no sign-up. It is a third-party moto-stunt game that uses the Moto X3M name (not listed '
+         'here as an official Madpuffers release): ride spooky tracks, clear jumps and dodge '
+         'hazards. Use the on-screen controls in the game frame (mouse and keyboard). Built for '
+         'mouse and keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play Moto X3M: Spooky Land free online with no download?',
+          'Yes. The unofficial browser game loads in this tab. Nothing to install and no '
+          'Pixelsprout account required.'),
+         ('Is this an official Moto X3M: Spooky Land game?',
+          'No. This is a third-party browser moto-stunt game that uses the Moto X3M name. We do '
+          'not list it as an official Madpuffers release.'),
+         ('How do you play?',
+          'Ride the bike with the on-screen controls, time your jumps and try to land cleanly. '
+          'Built for mouse and keyboard; touch play has not been tested on this page.'),
+         ('What similar games can I play next?',
+          'Try Stunt Rider, Moto Maniac and Faily Skater — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['stunt-rider', 'moto-maniac', 'faily-skater'],
+ 'date_modified': '2026-11-16'},
+
+    "bottle-flip-game": {'h1': 'Play Bottle Flip Game Free Online — No Download',
+ 'title_tag': 'Play Bottle Flip Game Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Bottle Flip Game free online in your browser on Pixelsprout. Time the flip and '
+              'land the bottle. No download.',
+ 'lead': 'Play Bottle Flip Game free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a timing and physics game: flip a plastic bottle and try to land it '
+         'upright on tables, ledges and other objects as you move from room to room. Use the '
+         'on-screen controls in the game frame (mouse and keyboard). Built for mouse and keyboard; '
+         'touch play has not been tested on this page.',
+ 'faq': [('Can I play Bottle Flip Game free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Bottle Flip Game?',
+          'An arcade physics game. You time a bottle flip so it lands upright, then continue '
+          'through a series of rooms.'),
+         ('How do you play?',
+          'Use the on-screen control in the game frame (usually a click or a short hold) to flip '
+          'the bottle and aim for a clean landing.'),
+         ('What similar games can I play next?',
+          'Try Bottleflip, Jump Bottle and Buba Jump — all free in the browser on Pixelsprout.')],
+ 'similar': ['bottleflip', 'jump-bottle', 'buba-jump'],
+ 'date_modified': '2026-11-16'},
+
+    "buba-jump": {'h1': 'Play Buba Jump Free Online — No Download',
+ 'title_tag': 'Play Buba Jump Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Buba Jump free online in your browser on Pixelsprout. Time your jumps from '
+              'platform to platform. No download.',
+ 'lead': 'Play Buba Jump free online in your browser on Pixelsprout — no download and no sign-up. '
+         'It is a timing jumper: tap or click to leap from platform to platform as the safe ground '
+         'shrinks, and try not to fall. Use the on-screen controls in the game frame (mouse and '
+         'keyboard). Built for mouse and keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play Buba Jump free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Buba Jump?',
+          'A reflex jumping game. You time each leap as platforms get scarcer.'),
+         ('How do you play?',
+          'Jump with the on-screen control in the game frame and land on the next platform before '
+          'it is gone.'),
+         ('What similar games can I play next?',
+          'Try Slope Racing 3D, Stack Ball Crash and Stickman That One Level — all free in the '
+          'browser on Pixelsprout.')],
+ 'similar': ['slope-racing-3d', 'stack-ball-crash', 'stickman-that-one-level'],
+ 'date_modified': '2026-11-16'},
 }
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
