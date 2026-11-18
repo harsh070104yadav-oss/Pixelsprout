@@ -2,35 +2,35 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 187
+      "views": 192
     },
     {
       "slug": "getting-over-it",
-      "views": 134
+      "views": 139
     },
     {
       "slug": "protect-my-dog",
-      "views": 98
+      "views": 107
     },
     {
       "slug": "books-tower",
-      "views": 64
+      "views": 68
+    },
+    {
+      "slug": "the-house-2",
+      "views": 54
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 47
+      "views": 48
+    },
+    {
+      "slug": "test-tubes-water-sort",
+      "views": 40
     },
     {
       "slug": "2048-cube-run",
       "views": 37
-    },
-    {
-      "slug": "test-tubes-water-sort",
-      "views": 37
-    },
-    {
-      "slug": "the-house-2",
-      "views": 33
     },
     {
       "slug": "baba-is-you",
@@ -45,11 +45,11 @@
       "views": 27
     },
     {
-      "slug": "2048-cube-merge-block",
+      "slug": "gravity-merge",
       "views": 26
     },
     {
-      "slug": "gravity-merge",
+      "slug": "2048-cube-merge-block",
       "views": 26
     },
     {
@@ -61,24 +61,24 @@
       "views": 22
     },
     {
+      "slug": "road-designer",
+      "views": 20
+    },
+    {
+      "slug": "stickman-that-one-level",
+      "views": 19
+    },
+    {
       "slug": "klondike-solitaire-paradise",
+      "views": 19
+    },
+    {
+      "slug": "billiards",
       "views": 19
     },
     {
       "slug": "100-doors-escape-puzzle",
       "views": 18
-    },
-    {
-      "slug": "slide-ball-puzzle",
-      "views": 18
-    },
-    {
-      "slug": "stickman-that-one-level",
-      "views": 17
-    },
-    {
-      "slug": "dop-in-love-story-find-part",
-      "views": 16
     }
   ]
 }
