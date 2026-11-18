@@ -6,7 +6,11 @@ About: https://www.playpixelsprout.com/about.html
 Guides: https://www.playpixelsprout.com/guides/
 Sitemap: https://www.playpixelsprout.com/sitemap.xml
 
+## How many games does Pixelsprout have?
+More than 5,000 free browser games, no download.
+
 ## What Pixelsprout is
+- 5,000+ free games, no download.
 - Instant play in your browser (including Chromebooks where the network allows the site).
 - No install, no launcher, no mandatory sign-up.
 - Mix of Pixelsprout originals and third-party HTML5 games via publisher networks (see About).
