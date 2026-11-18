@@ -247,6 +247,8 @@ GAME_NOTICES = {
     "moto-x3m-spooky-land": ("<strong>Not an official Moto X3M release we can verify.</strong> This is a third-party browser moto-stunt game that uses the Moto X3M name. It is not listed here as an official Madpuffers game."),
 
     "knifehit": ("<strong>Not the official Knife Hit game.</strong> This is a third-party browser knife-throwing game. It is not made by or affiliated with Ketchapp."),
+
+    "minicraft-bedwars": ("<strong>Not official Minecraft or Bed Wars.</strong> This is an unofficial browser game from a third-party publisher. It is not made by or affiliated with Mojang or Microsoft."),
 }
 
 # Extra visible FAQ shown on the game page (static HTML). add-faq-jsonld.py appends the same pairs to the
@@ -859,6 +861,77 @@ ANSWER_FIRST = {
           'the browser on Pixelsprout.')],
  'similar': ['tsunami-escape', 'dont-splash', 'boo-scared-escape-from-backrooms'],
  'date_modified': '2026-11-17'},
+
+    "billiards": {'h1': 'Play Billiards Free Online — No Download',
+ 'title_tag': 'Play Billiards Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Billiards free online in your browser on Pixelsprout. 3D pool and snooker by '
+              'tailuge, no download.',
+ 'lead': 'Play Billiards free online in your browser on Pixelsprout — no download and no sign-up. '
+         "It is a 3D pool, billiards and snooker game by tailuge, embedded from the creator's "
+         'site: play 8-ball, 9-ball, three-cushion carom and practice challenges in the browser. '
+         'Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse and '
+         'keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play Billiards free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Billiards?',
+          'A 3D pool and billiards game by tailuge (not a Pixelsprout original). You can play '
+          '8-ball, 9-ball, carom and practice challenges. The credit and source link are on this '
+          'page.'),
+         ('How do you play?',
+          'Aim and shoot with the mouse, following the on-screen controls. Spin and strength '
+          "depend on how the creator's game reads the shot."),
+         ('What similar games can I play next?',
+          'Try Billiard Champion, Ultimate Billiard 3D Game and Pool Mania — all free in the '
+          'browser on Pixelsprout.')],
+ 'similar': ['billiard-champion', 'ultimate-billiard-3d-game', 'pool-mania'],
+ 'date_modified': '2026-11-18'},
+
+    "minicraft-bedwars": {'h1': 'Play Minicraft Bedwars Free Online — No Download',
+ 'title_tag': 'Play Minicraft Bedwars Free Online (Unofficial, No Download) | Pixelsprout',
+ 'meta_desc': 'Play Minicraft Bedwars free online on Pixelsprout. Unofficial browser game, no '
+              'download. Not affiliated with Mojang or Microsoft.',
+ 'lead': 'Play Minicraft Bedwars free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is an unofficial browser game from a third-party publisher (not Minecraft or '
+         'Bed Wars, and not made by or affiliated with Mojang or Microsoft): pick a team, collect '
+         "gold, buy cannonballs and try to destroy the other team's bed while protecting your own. "
+         'Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse and '
+         'keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play Minicraft Bedwars free online with no download?',
+          'Yes. The unofficial browser game loads in this tab. Nothing to install and no '
+          'Pixelsprout account required.'),
+         ('Is this an official Minicraft Bedwars game?',
+          'No. This is an unofficial third-party browser game. It is not made by or affiliated '
+          'with Mojang or Microsoft, and it is not official Minecraft or Bed Wars.'),
+         ('How do you play?',
+          'Choose red or blue, collect gold, buy cannonballs and fire at the other bed while '
+          'defending yours. Use the on-screen controls in the game frame.'),
+         ('What similar games can I play next?',
+          'Try Steve Alex Spooky - 2 Player, Nooby And Obby 2 Player and 12 MiniBattles - Two '
+          'Players — all free in the browser on Pixelsprout.')],
+ 'similar': ['steve-alex-spooky-2-player', 'nooby-and-obby-2-player', '12-minibattles-two-players'],
+ 'date_modified': '2026-11-18'},
+
+    "1942-pacific-front": {'h1': 'Play 1942 Pacific Front Free Online — No Download',
+ 'title_tag': 'Play 1942 Pacific Front Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play 1942 Pacific Front free online on Pixelsprout. Turn-based Pacific strategy, no '
+              'download.',
+ 'lead': 'Play 1942 Pacific Front free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a turn-based strategy game set in the Pacific in World War II: play as '
+         'the US or Japan, command land, sea and air forces, and manage resources on a changing '
+         'map. Use the on-screen controls in the game frame (mouse and keyboard). Built for mouse '
+         'and keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play 1942 Pacific Front free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is 1942 Pacific Front?',
+          'A turn-based WWII strategy game set in the Pacific. You command land, sea and air units '
+          'and try to outmaneuver the other side.'),
+         ('How do you play?',
+          'Give orders on the map with the mouse and keyboard, then end the turn and react to what '
+          'the other side does. Follow the on-screen prompts.'),
+         ('What similar games can I play next?',
+          'Try Diep.io, Guardz IO and Archers.io — all free in the browser on Pixelsprout.')],
+ 'similar': ['diep-io', 'guardz-io', 'archers-io'],
+ 'date_modified': '2026-11-18'},
 }
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
