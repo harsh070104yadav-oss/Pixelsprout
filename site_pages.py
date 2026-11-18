@@ -581,6 +581,75 @@ ANSWER_FIRST = {
           'Pixelsprout.')],
  'similar': ['dont-splash', 'the-house-2', 'granny-house-escape'],
  'date_modified': '2026-11-13'},
+
+    "eggcavation": {'h1': 'Play Eggcavation Free Online — No Download',
+ 'title_tag': 'Play Eggcavation Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Eggcavation free online in your browser on Pixelsprout. Chip a giant egg and '
+              'buy better tools. No download.',
+ 'lead': 'Play Eggcavation free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a first-person clicker: chip a giant egg, fill your bucket, sell the '
+         'shards at a terminal and spend the money on bigger tools. Use the on-screen controls in '
+         'the game frame (mouse and keyboard). Built for mouse and keyboard; touch play has not '
+         'been tested on this page.',
+ 'faq': [('Can I play Eggcavation free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Eggcavation?',
+          'A first-person clicker. You crack a huge egg plate by plate, sell the shards and buy '
+          'tools such as a pickaxe, a jackhammer or a drill.'),
+         ('How do you play?',
+          'Click to chip the egg, empty the bucket at the terminal and buy upgrades with the cash. '
+          'Follow the on-screen prompts.'),
+         ('What similar games can I play next?',
+          'Try Candy Clicker 2, Planet Clicker and Cat Clicker — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['candy-clicker-2', 'planet-clicker', 'cat-clicker'],
+ 'date_modified': '2026-11-14'},
+
+    "scooter-touchgrind-tricks-3d": {'h1': 'Play Scooter Touchgrind Tricks 3D Free Online — No Download',
+ 'title_tag': 'Play Scooter Touchgrind Tricks 3D Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Scooter Touchgrind Tricks 3D free online on Pixelsprout. Ride obstacle courses '
+              'on a scooter. No download.',
+ 'lead': 'Play Scooter Touchgrind Tricks 3D free online in your browser on Pixelsprout — no '
+         'download and no sign-up. It is a 3D scooter driving game: ride through levels full of '
+         'obstacles, stay balanced and reach the finish without crashing. Use the on-screen '
+         'controls in the game frame (mouse and keyboard). Built for mouse and keyboard; touch '
+         'play has not been tested on this page.',
+ 'faq': [('Can I play Scooter Touchgrind Tricks 3D free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Scooter Touchgrind Tricks 3D?',
+          'A 3D scooter stunt and driving game. You clear obstacle courses and try to finish each '
+          'level in one piece.'),
+         ('How do you play?',
+          'Steer and balance the scooter with the on-screen controls (mouse and keyboard) and stay '
+          'on the track to the finish.'),
+         ('What similar games can I play next?',
+          'Try Faily Skater, Moto X3M: Spooky Land and Stunt Rider — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['faily-skater', 'moto-x3m-spooky-land', 'stunt-rider'],
+ 'date_modified': '2026-11-14'},
+
+    "turkish-draughts": {'h1': 'Play Turkish draughts Free Online — No Download',
+ 'title_tag': 'Play Turkish draughts Free Online (No Download) | Pixelsprout',
+ 'meta_desc': 'Play Turkish draughts free online in your browser on Pixelsprout. Horizontal and '
+              'vertical captures. No download.',
+ 'lead': 'Play Turkish draughts free online in your browser on Pixelsprout — no download and no '
+         'sign-up. It is a draughts (checkers) variant you can play in the browser: pieces move '
+         'and capture horizontally and vertically, not diagonally, and each side starts with 16 '
+         'pieces on a 64-square board. Use the on-screen controls in the game frame (mouse and '
+         'keyboard). Built for mouse and keyboard; touch play has not been tested on this page.',
+ 'faq': [('Can I play Turkish draughts free online with no download?',
+          'Yes. The game loads in this browser tab. Nothing to install and no account required.'),
+         ('What is Turkish draughts?',
+          'A draughts variant. Moves and captures go horizontally and vertically, not diagonally, '
+          'and the starting setup uses 16 pieces per side.'),
+         ('How do you play?',
+          'Select a piece and move it according to the rules the board shows. Use the mouse in the '
+          'game frame.'),
+         ('What similar games can I play next?',
+          'Try English Checkers, Master Checkers and Billiards — all free in the browser on '
+          'Pixelsprout.')],
+ 'similar': ['english-checkers', 'master-checkers', 'billiards'],
+ 'date_modified': '2026-11-14'},
 }
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
