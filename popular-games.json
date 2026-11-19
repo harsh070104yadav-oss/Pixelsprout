@@ -2,23 +2,23 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 192
+      "views": 197
     },
     {
       "slug": "getting-over-it",
-      "views": 139
+      "views": 145
     },
     {
       "slug": "protect-my-dog",
-      "views": 107
+      "views": 116
     },
     {
       "slug": "books-tower",
-      "views": 68
+      "views": 76
     },
     {
       "slug": "the-house-2",
-      "views": 54
+      "views": 70
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
@@ -26,7 +26,7 @@
     },
     {
       "slug": "test-tubes-water-sort",
-      "views": 40
+      "views": 41
     },
     {
       "slug": "2048-cube-run",
@@ -37,11 +37,11 @@
       "views": 28
     },
     {
-      "slug": "100-seconds-labyrinth",
+      "slug": "save-the-doge",
       "views": 27
     },
     {
-      "slug": "save-the-doge",
+      "slug": "100-seconds-labyrinth",
       "views": 27
     },
     {
@@ -53,6 +53,14 @@
       "views": 26
     },
     {
+      "slug": "boo-scared-escape-from-backrooms",
+      "views": 25
+    },
+    {
+      "slug": "brawl-stars",
+      "views": 25
+    },
+    {
       "slug": "uno-online",
       "views": 23
     },
@@ -61,24 +69,16 @@
       "views": 22
     },
     {
-      "slug": "road-designer",
+      "slug": "scary-doll",
+      "views": 22
+    },
+    {
+      "slug": "escape-from-work",
       "views": 20
     },
     {
-      "slug": "stickman-that-one-level",
-      "views": 19
-    },
-    {
-      "slug": "klondike-solitaire-paradise",
-      "views": 19
-    },
-    {
-      "slug": "billiards",
-      "views": 19
-    },
-    {
-      "slug": "100-doors-escape-puzzle",
-      "views": 18
+      "slug": "road-designer",
+      "views": 20
     }
   ]
 }
