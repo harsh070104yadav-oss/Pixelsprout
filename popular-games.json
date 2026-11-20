@@ -6,19 +6,19 @@
     },
     {
       "slug": "getting-over-it",
-      "views": 145
+      "views": 147
     },
     {
       "slug": "protect-my-dog",
-      "views": 116
-    },
-    {
-      "slug": "books-tower",
-      "views": 76
+      "views": 119
     },
     {
       "slug": "the-house-2",
-      "views": 70
+      "views": 81
+    },
+    {
+      "slug": "books-tower",
+      "views": 77
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
@@ -33,15 +33,27 @@
       "views": 37
     },
     {
+      "slug": "scary-doll",
+      "views": 34
+    },
+    {
       "slug": "baba-is-you",
+      "views": 29
+    },
+    {
+      "slug": "100-seconds-labyrinth",
       "views": 28
     },
     {
       "slug": "save-the-doge",
-      "views": 27
+      "views": 28
     },
     {
-      "slug": "100-seconds-labyrinth",
+      "slug": "brawl-stars",
+      "views": 28
+    },
+    {
+      "slug": "boo-scared-escape-from-backrooms",
       "views": 27
     },
     {
@@ -53,32 +65,20 @@
       "views": 26
     },
     {
-      "slug": "boo-scared-escape-from-backrooms",
-      "views": 25
-    },
-    {
-      "slug": "brawl-stars",
-      "views": 25
+      "slug": "escape-from-work",
+      "views": 24
     },
     {
       "slug": "uno-online",
       "views": 23
     },
     {
-      "slug": "2048",
-      "views": 22
+      "slug": "poppy-playtime-chapter-4-safe-haven",
+      "views": 23
     },
     {
-      "slug": "scary-doll",
-      "views": 22
-    },
-    {
-      "slug": "escape-from-work",
-      "views": 20
-    },
-    {
-      "slug": "road-designer",
-      "views": 20
+      "slug": "nooby-and-obby-2-player",
+      "views": 23
     }
   ]
 }
