@@ -2,7 +2,7 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 199
+      "views": 200
     },
     {
       "slug": "getting-over-it",
@@ -10,27 +10,27 @@
     },
     {
       "slug": "protect-my-dog",
-      "views": 126
+      "views": 130
     },
     {
       "slug": "the-house-2",
-      "views": 94
+      "views": 102
     },
     {
       "slug": "books-tower",
-      "views": 78
+      "views": 79
+    },
+    {
+      "slug": "scary-doll",
+      "views": 61
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
       "views": 48
     },
     {
-      "slug": "scary-doll",
-      "views": 48
-    },
-    {
       "slug": "test-tubes-water-sort",
-      "views": 41
+      "views": 44
     },
     {
       "slug": "2048-cube-run",
@@ -38,6 +38,14 @@
     },
     {
       "slug": "escape-from-work",
+      "views": 34
+    },
+    {
+      "slug": "brawl-stars",
+      "views": 32
+    },
+    {
+      "slug": "boo-scared-escape-from-backrooms",
       "views": 31
     },
     {
@@ -45,19 +53,19 @@
       "views": 30
     },
     {
-      "slug": "brawl-stars",
+      "slug": "your-dream-room",
       "views": 30
     },
     {
       "slug": "baba-is-you",
-      "views": 29
+      "views": 30
     },
     {
       "slug": "100-seconds-labyrinth",
       "views": 28
     },
     {
-      "slug": "boo-scared-escape-from-backrooms",
+      "slug": "gravity-merge",
       "views": 27
     },
     {
@@ -65,20 +73,12 @@
       "views": 27
     },
     {
-      "slug": "gravity-merge",
+      "slug": "buckshot-roulette",
       "views": 27
     },
     {
       "slug": "2048-cube-merge-block",
       "views": 26
-    },
-    {
-      "slug": "uno-online",
-      "views": 23
-    },
-    {
-      "slug": "your-dream-room",
-      "views": 23
     }
   ]
 }

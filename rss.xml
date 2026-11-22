@@ -5,6 +5,22 @@
   <link>https://www.playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Break Ice</title>
+    <link>https://www.playpixelsprout.com/games/break-ice.html</link>
+    <guid>https://www.playpixelsprout.com/games/break-ice.html</guid>
+    <description>Play Break Ice free online at Pixelsprout — no download needed.</description>
+    <pubDate>Sun, 22 Nov 2026 13:54:21 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/break-ice/cover/break-ice.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Toss Ammo</title>
+    <link>https://www.playpixelsprout.com/games/toss-ammo.html</link>
+    <guid>https://www.playpixelsprout.com/games/toss-ammo.html</guid>
+    <description>Play Toss Ammo free online at Pixelsprout — no download needed.</description>
+    <pubDate>Sun, 22 Nov 2026 13:54:21 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/toss-ammo/cover/toss-ammo.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Embermarch</title>
     <link>https://www.playpixelsprout.com/games/embermarch.html</link>
     <guid>https://www.playpixelsprout.com/games/embermarch.html</guid>
@@ -467,22 +483,6 @@
     <description>Play Buggy Blast free online at Pixelsprout — no download needed.</description>
     <pubDate>Thu, 05 Nov 2026 06:55:01 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/mhq7dkxptawlxxw3i9qt83trvlaxf65m/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Chromatic Coil</title>
-    <link>https://www.playpixelsprout.com/games/chromatic-coil.html</link>
-    <guid>https://www.playpixelsprout.com/games/chromatic-coil.html</guid>
-    <description>Play Chromatic Coil free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 04 Nov 2026 06:52:57 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/musuu83na57vuzyedsorz14t4f174z9n/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Overstuffed</title>
-    <link>https://www.playpixelsprout.com/games/overstuffed.html</link>
-    <guid>https://www.playpixelsprout.com/games/overstuffed.html</guid>
-    <description>Play Overstuffed free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 04 Nov 2026 06:52:57 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/2w11kf84qo7wcasknp4rgrboa7j7g1n3/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
