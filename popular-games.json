@@ -2,50 +2,62 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 200
+      "views": 201
     },
     {
       "slug": "getting-over-it",
-      "views": 149
+      "views": 153
     },
     {
       "slug": "protect-my-dog",
-      "views": 130
+      "views": 134
     },
     {
       "slug": "the-house-2",
-      "views": 102
+      "views": 132
     },
     {
       "slug": "books-tower",
-      "views": 79
+      "views": 81
     },
     {
       "slug": "scary-doll",
-      "views": 61
+      "views": 76
+    },
+    {
+      "slug": "boo-scared-escape-from-backrooms",
+      "views": 50
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
+      "views": 49
+    },
+    {
+      "slug": "escape-from-work",
       "views": 48
     },
     {
       "slug": "test-tubes-water-sort",
-      "views": 44
+      "views": 45
     },
     {
       "slug": "2048-cube-run",
-      "views": 37
-    },
-    {
-      "slug": "escape-from-work",
-      "views": 34
+      "views": 38
     },
     {
       "slug": "brawl-stars",
-      "views": 32
+      "views": 37
     },
     {
-      "slug": "boo-scared-escape-from-backrooms",
+      "slug": "your-dream-room",
+      "views": 35
+    },
+    {
+      "slug": "1942-pacific-front",
+      "views": 31
+    },
+    {
+      "slug": "poppy-playtime-chapter-4-safe-haven",
       "views": 31
     },
     {
@@ -53,7 +65,7 @@
       "views": 30
     },
     {
-      "slug": "your-dream-room",
+      "slug": "among-us",
       "views": 30
     },
     {
@@ -62,23 +74,11 @@
     },
     {
       "slug": "100-seconds-labyrinth",
-      "views": 28
+      "views": 29
     },
     {
       "slug": "gravity-merge",
-      "views": 27
-    },
-    {
-      "slug": "poppy-playtime-chapter-4-safe-haven",
-      "views": 27
-    },
-    {
-      "slug": "buckshot-roulette",
-      "views": 27
-    },
-    {
-      "slug": "2048-cube-merge-block",
-      "views": 26
+      "views": 28
     }
   ]
 }
