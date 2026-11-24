@@ -2,62 +2,74 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 201
-    },
-    {
-      "slug": "getting-over-it",
-      "views": 153
-    },
-    {
-      "slug": "protect-my-dog",
-      "views": 134
+      "views": 203
     },
     {
       "slug": "the-house-2",
-      "views": 132
+      "views": 171
     },
     {
-      "slug": "books-tower",
-      "views": 81
+      "slug": "getting-over-it",
+      "views": 155
+    },
+    {
+      "slug": "protect-my-dog",
+      "views": 138
     },
     {
       "slug": "scary-doll",
-      "views": 76
+      "views": 90
+    },
+    {
+      "slug": "books-tower",
+      "views": 82
+    },
+    {
+      "slug": "escape-from-work",
+      "views": 66
     },
     {
       "slug": "boo-scared-escape-from-backrooms",
-      "views": 50
+      "views": 55
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
       "views": 49
     },
     {
-      "slug": "escape-from-work",
-      "views": 48
-    },
-    {
       "slug": "test-tubes-water-sort",
-      "views": 45
-    },
-    {
-      "slug": "2048-cube-run",
-      "views": 38
+      "views": 46
     },
     {
       "slug": "brawl-stars",
-      "views": 37
+      "views": 42
     },
     {
       "slug": "your-dream-room",
-      "views": 35
-    },
-    {
-      "slug": "1942-pacific-front",
-      "views": 31
+      "views": 40
     },
     {
       "slug": "poppy-playtime-chapter-4-safe-haven",
+      "views": 40
+    },
+    {
+      "slug": "2048-cube-run",
+      "views": 39
+    },
+    {
+      "slug": "among-us",
+      "views": 37
+    },
+    {
+      "slug": "1942-pacific-front",
+      "views": 35
+    },
+    {
+      "slug": "buckshot-roulette",
+      "views": 32
+    },
+    {
+      "slug": "granny-house-escape",
       "views": 31
     },
     {
@@ -65,20 +77,8 @@
       "views": 30
     },
     {
-      "slug": "among-us",
-      "views": 30
-    },
-    {
       "slug": "baba-is-you",
       "views": 30
-    },
-    {
-      "slug": "100-seconds-labyrinth",
-      "views": 29
-    },
-    {
-      "slug": "gravity-merge",
-      "views": 28
     }
   ]
 }
