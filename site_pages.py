@@ -1503,10 +1503,9 @@ def render_guide_page(f, catalog_by_slug=None, total_games=None):
 {game_card}
 {S.ad_adsense(S.AD_SLOT_BANNER)}
 <div class="prose"><!--ps:body-->{f['body']}<!--/ps:body--></div>
-{hub_html}<div class="block">{S.ad_native()}</div>
+{hub_html}
 {siblings_html}
 {related_html}
-<div class="block">{S.ad_rect()}</div>
 </article>"""
 
     body_attrs = (
@@ -1560,8 +1559,6 @@ def render_collection_page(f, catalog_by_slug=None, total_games=None):
 </header>
 {S.ad_adsense(S.AD_SLOT_BANNER)}
 <div class="grid"><!--ps:games-->{''.join(cards)}<!--/ps:games--></div>
-<div class="block">{S.ad_native()}</div>
-<div class="block">{S.ad_rect()}</div>
 </div>"""
     return S.page(head, main, body_attrs='class="collection-page" data-page="collection"', total_games=total_games)
 
@@ -1664,9 +1661,7 @@ def render_curated_hub(hub, catalog_by_slug, total_games=None):
 {_game_card_row(main_entry, "Play " + main_entry["title"])}
 {S.ad_adsense(S.AD_SLOT_BANNER)}
 <div class="prose"><!--ps:hub-->{body}<!--/ps:hub--></div>
-<div class="block">{S.ad_native()}</div>
 <section class="block" aria-labelledby="more-from"><h2 class="block__title" id="more-from">More from Pixelsprout</h2><ul class="link-list">{more_rows}</ul></section>
-<div class="block">{S.ad_rect()}</div>
 </article>"""
     return S.page(head, main, body_attrs=f'class="collection-page" data-page="curated-hub" data-curated="1" data-game-slug="{esc(hub["game_slug"])}"',
                   total_games=total_games)
@@ -2005,10 +2000,9 @@ def render_category_page(category, games, all_categories, total_games=None, newn
 <div class="grid grid--genre" id="catalog" data-catalog data-page-size="{page_size}">{cards}</div>
 <p class="empty-state" data-catalog-empty hidden>No {esc(label.lower())} games match that. Try a shorter word, or <button class="btn btn--quiet" type="button" data-search-open>search every game</button>.</p>
 <div class="load-more"{" hidden" if count <= page_size else ""}><button class="btn btn--ghost" type="button" data-load-more>Show more games</button></div>
-{f'<div class="block">{S.ad_native(category=category)}</div>' if S.ad_native_allowed(category) else ''}
 {_faq_section_html(faq_pairs)}
 <section class="related-genres" aria-labelledby="more-genres"><h2 class="section-title" id="more-genres">More genres</h2><div class="chips">{related_html}</div></section>
-<div class="block">{S.ad_leader(mobile="rect")}</div>"""
+"""
     return S.page(head, main, body_attrs='class="category-page" data-page="category"', active=f"/{slug}/", total_games=total_games)
 
 
