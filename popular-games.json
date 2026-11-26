@@ -2,63 +2,63 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 205
+      "views": 207
     },
     {
       "slug": "the-house-2",
-      "views": 187
+      "views": 202
     },
     {
       "slug": "getting-over-it",
-      "views": 158
+      "views": 160
     },
     {
       "slug": "protect-my-dog",
-      "views": 142
+      "views": 154
     },
     {
       "slug": "scary-doll",
-      "views": 99
+      "views": 115
     },
     {
       "slug": "books-tower",
-      "views": 82
+      "views": 84
     },
     {
       "slug": "escape-from-work",
-      "views": 67
+      "views": 74
     },
     {
       "slug": "boo-scared-escape-from-backrooms",
-      "views": 57
+      "views": 67
+    },
+    {
+      "slug": "your-dream-room",
+      "views": 52
+    },
+    {
+      "slug": "granny-house-escape",
+      "views": 51
+    },
+    {
+      "slug": "brawl-stars",
+      "views": 51
+    },
+    {
+      "slug": "among-us",
+      "views": 51
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
       "views": 49
     },
     {
+      "slug": "poppy-playtime-chapter-4-safe-haven",
+      "views": 47
+    },
+    {
       "slug": "test-tubes-water-sort",
       "views": 46
-    },
-    {
-      "slug": "brawl-stars",
-      "views": 43
-    },
-    {
-      "slug": "your-dream-room",
-      "views": 43
-    },
-    {
-      "slug": "among-us",
-      "views": 43
-    },
-    {
-      "slug": "poppy-playtime-chapter-4-safe-haven",
-      "views": 41
-    },
-    {
-      "slug": "granny-house-escape",
-      "views": 41
     },
     {
       "slug": "2048-cube-run",
@@ -66,7 +66,7 @@
     },
     {
       "slug": "1942-pacific-front",
-      "views": 35
+      "views": 37
     },
     {
       "slug": "buckshot-roulette",
