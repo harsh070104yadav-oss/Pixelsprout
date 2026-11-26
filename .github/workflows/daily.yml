@@ -60,6 +60,11 @@ jobs:
         timeout-minutes: 5
         run: python auto-add-gamemonetize.py
 
+      - name: Sync Foundplay top performers
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python auto-add-foundplay-top.py
+
       - name: Refresh category pages, homepage, quality report
         continue-on-error: true
         timeout-minutes: 5
