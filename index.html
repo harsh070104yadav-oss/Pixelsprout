@@ -30,8 +30,117 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Geist:wght@400..600&family=Geist+Mono:wght@400..500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&text=PIXELSPROUT&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Geist:wght@400..600&family=Geist+Mono:wght@400..500&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&text=PIXELSPROUT&display=swap"></noscript>
-<link rel="stylesheet" href="/styles.css?v=20261110a">
-<link rel="preload" as="image" href="https://www.playpixelsprout.com/assets/thumbs/gangster-crimes-online-6-mafia-city.webp" fetchpriority="high">
+
+<!-- crit-css-2026-11-26 -->
+<style>
+/* Critical first-viewport CSS for the homepage (mobile).
+   Tokens are the winning redesign-v2 values from styles.css (later :root wins). */
+:root{--bg:#0E0B1F;--s1:#171331;--s2:#201A42;--s3:#2B2456;--line:rgba(196,184,255,.08);--line-2:rgba(196,184,255,.16);--text:#F2F0FF;--text-2:#ABA6CC;--text-3:#7A7499;--accent:#8BD46A;--accent-hover:#A3E388;--accent-ink:#0C1A06;--accent-soft:rgba(139,212,106,.14);--f-display:'Space Grotesk','Bricolage Grotesque','Geist',system-ui,sans-serif;--f-ui:'Geist',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--f-mono:'Geist Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;--f-mark:'Press Start 2P',var(--f-mono);--fs-xs:12px;--fs-sm:13px;--fs-base:15px;--fs-md:clamp(16px,0.35vw + 14.8px,18px);--fs-lg:clamp(20px,0.8vw + 16px,24px);--fs-xl:clamp(26px,1.6vw + 19px,36px);--fs-2xl:clamp(32px,3vw + 18px,56px);--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;--sp-10:40px;--sp-12:48px;--sp-16:64px;--r-sm:8px;--r-card:18px;--r-panel:20px;--r-pill:999px;--ease:cubic-bezier(.2,.7,.2,1);--t-fast:150ms;--t:200ms;--topbar-h:60px;--rail-w:232px;--rail-w-compact:72px;--gutter:clamp(16px,2.6vw,40px);--content-max:1480px;--tracking-label:.14em;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:radial-gradient(1200px 500px at 70% -10%,rgba(124,92,255,.22),transparent 60%),var(--bg);color:var(--text);font:400 var(--fs-base)/1.55 var(--f-ui);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg,video,iframe{max-width:100%}
+img{height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:600}
+p{margin:0}
+[hidden]{display:none!important}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.skip-link{position:fixed;left:12px;top:-80px;z-index:200}
+.topbar{position:sticky;top:0;z-index:60;height:var(--topbar-h);background:rgba(14,11,31,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar__inner{height:100%;display:flex;align-items:center;gap:var(--sp-3);padding:0 var(--sp-4)}
+.wordmark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);flex:none;border-radius:var(--r-sm)}
+.wordmark img{width:28px;height:28px;border-radius:7px;display:block}
+.wordmark span{font:400 12px/1 var(--f-mark);letter-spacing:.02em;padding-top:2px}
+.wordmark span b{font-weight:400;color:var(--accent)}
+@media (max-width:380px){.wordmark span{font-size:10px}}
+.search-trigger{flex:1 1 auto;max-width:560px;margin:0 auto;height:40px;display:flex;align-items:center;gap:10px;padding:0 8px 0 12px;background:var(--s1);border:1px solid var(--line);border-radius:var(--r-card);color:var(--text-3);font-size:var(--fs-sm);text-align:left;cursor:pointer}
+.search-trigger span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.search-trigger kbd,.kbd{font:500 11px/1 var(--f-mono);color:var(--text-2);padding:4px 6px;border:1px solid var(--line-2);border-bottom-width:2px;border-radius:5px;background:var(--s2)}
+@media (max-width:639px){.search-trigger{flex:0 0 auto;width:44px;height:44px;padding:0;justify-content:center;margin:0 0 0 auto;background:transparent;border-color:transparent;color:var(--text-2)}.search-trigger span,.search-trigger kbd{display:none}.topbar__actions .icon-btn[data-open-panel]{display:none}}
+.topbar__actions{display:flex;align-items:center;gap:var(--sp-1);flex:none}
+.icon-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;padding:0;margin:0;background:transparent;border:1px solid transparent;border-radius:var(--r-card);color:var(--text-2);cursor:pointer;text-decoration:none}
+.surprise-mini{font-size:18px;text-decoration:none}
+.topnav{display:none;align-items:center;gap:2px}
+.rd-genres{display:flex;gap:8px;overflow-x:auto;padding:10px var(--gutter);scrollbar-width:none;border-bottom:1px solid var(--line);background:rgba(14,11,31,.6)}
+.rd-genres::-webkit-scrollbar{display:none}
+.rd-genres a{flex:none;padding:6px 14px;border-radius:var(--r-pill);background:var(--s1);border:1px solid var(--line-2);color:var(--text-2);font-size:var(--fs-sm);text-decoration:none}
+.shell{display:block}
+.main{min-width:0;width:100%;max-width:var(--content-max);padding:var(--sp-6) var(--gutter) var(--sp-16)}
+@media (max-width:767px){.rail{position:fixed;left:0;right:0;bottom:0;z-index:90;max-height:86vh;transform:translateY(102%);visibility:hidden}}
+.scrim{position:fixed;inset:0;z-index:85;opacity:0;visibility:hidden}
+@keyframes rdReveal{to{opacity:1}}
+html:not(.rd-ready) body.home-page #main{opacity:0;animation:rdReveal .01s linear 1.2s forwards}
+h1,.h1{font-family:var(--f-display);font-weight:700;letter-spacing:-0.02em;line-height:1.08}
+.label{font:500 var(--fs-xs)/1 var(--f-mono);text-transform:uppercase;letter-spacing:var(--tracking-label);color:var(--text-2)}
+.accent-text{color:var(--accent)}
+.btn-lime{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:var(--r-pill);background:var(--accent);color:var(--accent-ink);font:600 var(--fs-sm)/1 var(--f-ui);text-decoration:none;border:0;cursor:pointer}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:var(--r-pill);border:1px solid var(--accent);color:var(--accent);background:transparent;font:600 var(--fs-sm)/1 var(--f-ui);text-decoration:none;cursor:pointer}
+@media (max-width:639px){.btn-lime,.btn-ghost{min-height:44px}}
+.rd-hero{border-radius:var(--r-panel);padding:clamp(24px,5vw,56px);margin:16px 0 28px;background:linear-gradient(135deg,#2A1F63 0%,#171331 55%,#0E0B1F 100%);border:1px solid var(--line-2);position:relative;overflow:hidden}
+.rd-hero::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(139,212,106,.35),transparent 70%);pointer-events:none}
+.rd-hero__title{font-size:var(--fs-2xl);margin:var(--sp-3) 0 var(--sp-5)}
+.rd-hero__cta{display:flex;flex-wrap:wrap;gap:var(--sp-3)}
+@media (max-width:640px){.rd-hero{padding:22px}.rd-hero__cta{display:flex;flex-direction:column;gap:8px}.rd-hero__title{font-size:34px;line-height:1.05}}
+.rd-collage{position:relative;height:210px;margin:-4px 0 18px;max-width:520px}
+.rd-collage__c{position:absolute;width:58%;aspect-ratio:8/5;border-radius:14px;overflow:hidden;border:3px solid var(--accent,#B6F23F);box-shadow:0 10px 28px rgba(0,0,0,.55),0 0 24px rgba(182,242,63,.18);background:#192019}
+.rd-collage__c img{width:100%;height:100%;object-fit:cover;display:block}
+.rd-collage__c0{left:22%;top:72px;z-index:3;transform:rotate(-2deg)}
+.rd-collage__c1{right:0;top:0;z-index:2;transform:rotate(5deg);border-color:#8b5cf6}
+.rd-collage__c2{left:0;top:14px;z-index:1;transform:rotate(-8deg)}
+.rd-collage__c3,.rd-collage__c4{display:none}
+.rd-stats{margin:var(--sp-4) 0 0;font:500 var(--fs-xs)/1.4 var(--f-mono);color:var(--text-2);letter-spacing:.04em}
+.ja{margin-top:var(--sp-5);padding:var(--sp-4);border-radius:var(--r-panel);background:var(--s1);border:1px solid var(--line-2)}
+.ja__label{display:inline-block;margin:0 0 var(--sp-2);padding:4px 10px;border-radius:var(--r-pill);background:var(--accent);color:var(--accent-ink);font:600 11px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.1em}
+.ja__title{margin:0 0 var(--sp-3);font:700 var(--fs-lg)/1.15 var(--f-display)}
+.ja__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-2)}
+.ja__item{display:flex;flex-direction:column;gap:4px;min-width:0;color:var(--text);text-decoration:none}
+.ja__media{display:block;aspect-ratio:16/10;border-radius:var(--r-sm);overflow:hidden;background:var(--s2)}
+.ja__media img{display:block;width:100%;height:100%;object-fit:cover}
+.ja__name{font-size:12px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ja__cta{margin-top:var(--sp-4);width:100%;justify-content:center;min-height:48px;font-size:var(--fs-base)}
+
+.home-intro{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--sp-3) var(--sp-8);margin-bottom:var(--sp-6)}
+.home-intro h1{font:600 var(--fs-xl)/1.05 var(--f-display);letter-spacing:-0.025em}
+.home-intro p{color:var(--text-2);font-size:var(--fs-sm);max-width:46ch;padding-bottom:4px}
+.rail{display:flex;flex-direction:column;gap:2px;background:var(--bg)}
+.rail__head{display:none}
+.rail__link{display:flex;align-items:center;gap:12px;width:100%;min-height:40px;padding:0 12px;border:0;border-radius:var(--r-sm);background:transparent;color:var(--text-2);font:500 var(--fs-sm)/1.2 var(--f-ui);text-decoration:none;text-align:left;cursor:pointer}
+.rail__text{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (min-width:768px){
+  .topbar__inner{padding:0 var(--sp-5);gap:var(--sp-4)}
+  .icon-btn.menu-btn{display:none}
+  .shell{display:grid;grid-template-columns:var(--rail-w-compact) minmax(0,1fr)}
+  .main{padding-top:var(--sp-8)}
+  .rail{position:sticky;top:var(--topbar-h);height:calc(100vh - var(--topbar-h));overflow-y:auto;padding:var(--sp-4) 10px;align-items:center;border-right:1px solid var(--line)}
+  .rail__link{justify-content:center;width:48px;min-height:44px;padding:0}
+  .rail__text,.rail__count{display:none}
+  .rail__label{height:1px;margin:var(--sp-3) 6px;width:32px;overflow:hidden;color:transparent;background:var(--line)}
+}
+@media (min-width:900px){
+  .rd-collage{float:right;width:46%;height:250px;margin:0 0 0 24px}
+  .rd-collage__c{width:52%}
+  .rd-collage__c3{display:block;right:28%;top:150px;z-index:4;transform:rotate(6deg)}
+}
+@media (min-width:1024px){
+  .topnav{display:flex}
+  .topnav a{padding:8px 12px;border-radius:var(--r-pill);color:var(--text-2);text-decoration:none;font:500 var(--fs-sm)/1 var(--f-ui)}
+  .topnav .btn-ghost{margin-left:6px;min-height:34px}
+}
+@media (min-width:1200px){
+  .shell{grid-template-columns:var(--rail-w) minmax(0,1fr)}
+  .rail{padding:var(--sp-4) var(--sp-3) var(--sp-8);align-items:stretch}
+  .rail__link{justify-content:flex-start;width:100%;min-height:40px;padding:0 12px}
+  .rail__text{display:block}
+  .rail__label{height:auto;margin:var(--sp-5) 12px var(--sp-2);width:auto;color:var(--text-3);background:transparent;font:500 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;overflow:visible}
+}
+</style>
+<!-- /crit-css-2026-11-26 -->
+<link rel="preload" as="style" href="/styles.css?v=20261110a" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="/assets/sprout/sprout.css?v=20261116a" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles.css?v=20261110a"><link rel="stylesheet" href="/assets/sprout/sprout.css?v=20261116a"></noscript>
+<link rel="preload" as="image" href="/assets/thumbs/the-boss-of-mong-kok.webp" fetchpriority="high">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://www.playpixelsprout.com/#org", "name": "Pixelsprout", "url": "https://www.playpixelsprout.com/", "logo": "https://www.playpixelsprout.com/apple-touch-icon.png", "description": "Pixelsprout is a free browser-game portal with 5,000+ HTML5 games \u2014 no download and no account needed.", "sameAs": ["https://x.com/Playpixelsprout", "https://www.instagram.com/playpixelsprout/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://www.playpixelsprout.com/#website", "name": "Pixelsprout", "alternateName": "Play Pixelsprout", "url": "https://www.playpixelsprout.com/", "description": "Pixelsprout is a free browser-game portal with 5,000+ HTML5 games \u2014 no download and no account needed.", "publisher": {"@id": "https://www.playpixelsprout.com/#org"}, "inLanguage": "en", "dateModified": "2026-11-10"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Game genres on Pixelsprout", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Puzzle games", "url": "https://www.playpixelsprout.com/puzzle/"}, {"@type": "ListItem", "position": 2, "name": "Arcade games", "url": "https://www.playpixelsprout.com/arcade/"}, {"@type": "ListItem", "position": 3, "name": "Action games", "url": "https://www.playpixelsprout.com/action/"}, {"@type": "ListItem", "position": 4, "name": "Racing games", "url": "https://www.playpixelsprout.com/racing/"}, {"@type": "ListItem", "position": 5, "name": "Sports games", "url": "https://www.playpixelsprout.com/sports/"}, {"@type": "ListItem", "position": 6, "name": "Horror games", "url": "https://www.playpixelsprout.com/horror/"}, {"@type": "ListItem", "position": 7, "name": "Multiplayer games", "url": "https://www.playpixelsprout.com/multiplayer/"}, {"@type": "ListItem", "position": 8, "name": "Two Player games", "url": "https://www.playpixelsprout.com/two-player/"}, {"@type": "ListItem", "position": 9, "name": "Clicker games", "url": "https://www.playpixelsprout.com/clicker/"}, {"@type": "ListItem", "position": 10, "name": "Strategy games", "url": "https://www.playpixelsprout.com/strategy/"}, {"@type": "ListItem", "position": 11, "name": "Kids games", "url": "https://www.playpixelsprout.com/kids/"}, {"@type": "ListItem", "position": 12, "name": "Casual games", "url": "https://www.playpixelsprout.com/casual/"}]}</script>
@@ -49,14 +158,14 @@ if ('serviceWorker' in navigator) {
 </script>
 <link rel="preconnect" href="https://img.gamepix.com">
 <link rel="preconnect" href="https://img.gamemonetize.com">
-<link rel="stylesheet" href="/assets/sprout/sprout.css?v=20261116a">
+
 </head>
 <body class="home-page" data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar__inner"><button class="icon-btn menu-btn" type="button" data-menu-open aria-controls="rail" aria-expanded="false" aria-label="Open menu"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#menu"></use></svg></button><a class="wordmark" href="/" aria-label="Pixelsprout home"><img src="/assets/logo-icon.webp" width="28" height="28" alt="" decoding="async"><span>PIXEL<b>SPROUT</b></span></a><button class="search-trigger" type="button" data-search-open aria-label="Search games"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#search"></use></svg><span>Search 5,165 games</span><kbd>/</kbd></button><nav class="topnav" aria-label="Primary"><a href="/all-games/">Browse</a><a href="/originals/">Originals</a><a href="/guides/">Guides</a><a class="btn-ghost" href="/all-games/" data-surprise>Surprise me</a></nav><div class="topbar__actions"><button class="icon-btn" type="button" data-open-panel="favorites" aria-label="Favorites"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#heart"></use></svg><span class="count-badge" data-count="favorites" hidden></span></button><button class="icon-btn" type="button" data-open-panel="recent" aria-label="Recently played"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#clock"></use></svg><span class="count-badge" data-count="recent" hidden></span></button></div></div></header>
 <div class="shell"><nav class="rail" id="rail" aria-label="Browse"><div class="rail__head"><strong>Browse</strong><button class="icon-btn" type="button" data-menu-close aria-label="Close menu"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"></use></svg></button></div><a class="rail__link" href="/" aria-label="Home" title="Home" aria-current="page"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#home"></use></svg><span class="rail__text">Home</span></a><a class="rail__link" href="/all-games/" aria-label="All games A–Z" title="All games A–Z"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#list"></use></svg><span class="rail__text">All games A–Z</span></a><button class="rail__link" type="button" data-open-panel="favorites" aria-label="Favorites" title="Favorites"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#heart"></use></svg><span class="rail__text">Favorites</span><span class="rail__count" data-count="favorites"></span></button><button class="rail__link" type="button" data-open-panel="recent" aria-label="Recently played" title="Recently played"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#clock"></use></svg><span class="rail__text">Recently played</span><span class="rail__count" data-count="recent"></span></button><div class="rail__label">Genres</div><div class="rail__genres"><a class="rail__link" href="/puzzle/" aria-label="Puzzle" title="Puzzle"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-puzzle"></use></svg><span class="rail__text">Puzzle</span></a><a class="rail__link" href="/arcade/" aria-label="Arcade" title="Arcade"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-arcade"></use></svg><span class="rail__text">Arcade</span></a><a class="rail__link" href="/action/" aria-label="Action" title="Action"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-action"></use></svg><span class="rail__text">Action</span></a><a class="rail__link" href="/adventure/" aria-label="Adventure" title="Adventure"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-adventure"></use></svg><span class="rail__text">Adventure</span></a><a class="rail__link" href="/sports/" aria-label="Sports" title="Sports"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-sports"></use></svg><span class="rail__text">Sports</span></a><a class="rail__link" href="/racing/" aria-label="Racing" title="Racing"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-racing"></use></svg><span class="rail__text">Racing</span></a><a class="rail__link" href="/kids/" aria-label="Kids" title="Kids"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-kids"></use></svg><span class="rail__text">Kids</span></a><a class="rail__link" href="/casual/" aria-label="Casual" title="Casual"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-casual"></use></svg><span class="rail__text">Casual</span></a><a class="rail__link" href="/clicker/" aria-label="Clicker" title="Clicker"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-clicker"></use></svg><span class="rail__text">Clicker</span></a><a class="rail__link" href="/shooting/" aria-label="Shooting" title="Shooting"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-shooting"></use></svg><span class="rail__text">Shooting</span></a><a class="rail__link" href="/two-player/" aria-label="Two Player" title="Two Player"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-two"></use></svg><span class="rail__text">Two Player</span></a><a class="rail__link" href="/multiplayer/" aria-label="Multiplayer" title="Multiplayer"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-multi"></use></svg><span class="rail__text">Multiplayer</span></a><a class="rail__link" href="/hypercasual/" aria-label="Hypercasual" title="Hypercasual"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-hyper"></use></svg><span class="rail__text">Hypercasual</span></a><a class="rail__link" href="/girls/" aria-label="Girls" title="Girls"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-girls"></use></svg><span class="rail__text">Girls</span></a><a class="rail__link" href="/strategy/" aria-label="Strategy" title="Strategy"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-strategy"></use></svg><span class="rail__text">Strategy</span></a><a class="rail__link" href="/platformer/" aria-label="Platformer" title="Platformer"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#g-platformer"></use></svg><span class="rail__text">Platformer</span></a></div><a class="rail__link" href="/#all-genres" aria-label="All genres" title="All genres"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#grid"></use></svg><span class="rail__text">All genres</span></a><div class="rail__label">Originals</div><a class="rail__link" href="/cold-read/" aria-label="Cold Read" title="Cold Read"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#eye"></use></svg><span class="rail__text">Cold Read</span></a><a class="rail__link" href="/gift-file/" aria-label="Guess It Box" title="Guess It Box"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#gift"></use></svg><span class="rail__text">Guess It Box</span></a><div class="rail__label">Read</div><a class="rail__link" href="/guides/" aria-label="Game guides" title="Game guides"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#book"></use></svg><span class="rail__text">Game guides</span></a></nav><div class="scrim" data-scrim></div>
 <main id="main" class="main" tabindex="-1">
-<div class="rd-collage rd-collage--ssr" aria-label="City action games"><a class="rd-collage__c rd-collage__c0" href="/games/gangster-crimes-online-6-mafia-city.html"><img src="/assets/thumbs/gangster-crimes-online-6-mafia-city.webp" alt="Gangster Crimes Online 6: Mafia City" width="400" height="250" decoding="async" fetchpriority="high"></a><a class="rd-collage__c rd-collage__c1" href="/games/gta-vi-beat-em-up.html"><img src="/assets/thumbs/gta-vi-beat-em-up.webp" alt="GTA VI: Beat Em Up" width="400" height="250" decoding="async" loading="lazy"></a><a class="rd-collage__c rd-collage__c2" href="/games/the-boss-of-mong-kok.html"><img src="/assets/thumbs/the-boss-of-mong-kok.webp" alt="The Boss of Mong Kok" width="400" height="250" decoding="async" loading="lazy"></a><a class="rd-collage__c rd-collage__c3" href="/games/grand-crime-auto-6.html"><img src="/assets/thumbs/grand-crime-auto-6.webp" alt="Grand Crime Auto 6" width="400" height="250" decoding="async" loading="lazy"></a><a class="rd-collage__c rd-collage__c4" href="/games/blocky-dude-gangster-auto-city.html"><img src="/assets/thumbs/blocky-dude-gangster-auto-city.webp" alt="Blocky Dude Gangster Auto City" width="400" height="250" decoding="async" loading="lazy"></a></div><div class="home-intro">
+<div class="rd-collage rd-collage--ssr" aria-label="City action games"><a class="rd-collage__c rd-collage__c0" href="/games/gangster-crimes-online-6-mafia-city.html"><img src="/assets/thumbs/gangster-crimes-online-6-mafia-city.webp" alt="Gangster Crimes Online 6: Mafia City" width="400" height="250" decoding="async"></a><a class="rd-collage__c rd-collage__c1" href="/games/gta-vi-beat-em-up.html"><img src="/assets/thumbs/gta-vi-beat-em-up.webp" alt="GTA VI: Beat Em Up" width="400" height="250" decoding="async" loading="lazy"></a><a class="rd-collage__c rd-collage__c2" href="/games/the-boss-of-mong-kok.html"><img src="/assets/thumbs/the-boss-of-mong-kok.webp" alt="The Boss of Mong Kok" width="400" height="250" decoding="async" fetchpriority="high" loading="eager"></a><a class="rd-collage__c rd-collage__c3" href="/games/grand-crime-auto-6.html"><img src="/assets/thumbs/grand-crime-auto-6.webp" alt="Grand Crime Auto 6" width="400" height="250" decoding="async" loading="lazy"></a><a class="rd-collage__c rd-collage__c4" href="/games/blocky-dude-gangster-auto-city.html"><img src="/assets/thumbs/blocky-dude-gangster-auto-city.webp" alt="Blocky Dude Gangster Auto City" width="400" height="250" decoding="async" loading="lazy"></a></div><div class="home-intro">
 <h1>Play Free Browser Games Online — No Download</h1>
 <p>Play free browser games online on Pixelsprout with no download and no account. 5,165 HTML5 games across 50 genres load in your tab — puzzle, arcade, action, horror, multiplayer and more. Built for mouse and keyboard; touch screens have not been tested for every title.</p>
 <p class="last-updated">Last updated: 10 Nov 2026</p>
