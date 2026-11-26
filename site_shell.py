@@ -21,7 +21,10 @@ ADSENSE_CLIENT = "ca-pub-8466016918717424"
 AD_SLOT_BANNER = "4936643192"
 AD_SLOT_RIBBON = "1457517471"
 GA_ID = "G-VTNJRV4WG8"
-# Adsterra removed site-wide (2026-11-26 P0).
+ADSTERRA_RECT_KEY = "9de242ffc7b556a74ae29033348b18bd"
+ADSTERRA_LEADER_KEY = "da5095b2daea5c6ba87d034975239610"
+ADSTERRA_NATIVE_KEY = "c3f3d41bbefde3a25a4d5d341b5582d1"
+ADSTERRA_NATIVE_SRC = f"https://pl30771855.effectivecpmnetwork.com/{ADSTERRA_NATIVE_KEY}/invoke.js"
 
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?"
@@ -343,19 +346,34 @@ def shelf(title_html, cards_html, *, more_href=None, more_label="See all", count
 # ---------------------------------------------------------------------------
 
 def ad_rect(extra_class=""):
-    return ""
+    return (
+        f'<div class="ad ad--rect {extra_class}" data-ad="banner" data-key="{ADSTERRA_RECT_KEY}" data-w="300" data-h="250">'
+        f'<span class="ad__label">Advertisement</span><div class="ad__slot"></div></div>'
+    )
 
 
 def ad_leader(mobile="skip", extra_class=""):
-    return ""
+    alt = ""
+    if mobile == "rect":
+        alt = f' data-alt-key="{ADSTERRA_RECT_KEY}" data-alt-w="300" data-alt-h="250"'
+    return (
+        f'<div class="ad ad--leader {extra_class}" data-ad="banner" data-key="{ADSTERRA_LEADER_KEY}" data-w="728" data-h="90" data-min-width="768"{alt}>'
+        f'<span class="ad__label">Advertisement</span><div class="ad__slot"></div></div>'
+    )
 
 
 def ad_native_allowed(category=None):
-    return False
+    """Native Adsterra unit is omitted on Kids pages (kids hub and Kids-category games)."""
+    return primary_category(category or "") != "Kids"
 
 
 def ad_native(extra_class="", category=None):
-    return ""
+    if not ad_native_allowed(category):
+        return ""
+    return (
+        f'<div class="ad ad--native {extra_class}" data-ad="native" data-src="{ADSTERRA_NATIVE_SRC}">'
+        f'<span class="ad__label">Sponsored</span><div id="container-{ADSTERRA_NATIVE_KEY}"></div></div>'
+    )
 
 
 def ad_adsense(slot=AD_SLOT_BANNER):

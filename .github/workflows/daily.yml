@@ -67,6 +67,7 @@ jobs:
           python generate-category-pages.py
           python add-category-pages-to-sitemap.py
           python generate-homepage.py
+          python refresh-youtube-shorts.py
           python check-catalog-quality.py
 
       - name: Publish SEO Bot pages (seo-queue branch)

@@ -1,3 +1,105 @@
+/*
+ * Sandboxed Adsterra slot loader.
+ * Every Adsterra script (native + banners) runs strictly inside a sandboxed
+ * iframe WITHOUT allow-top-navigation or allow-top-navigation-by-user-activation,
+ * so no ad creative can ever redirect or hijack the top-level page.
+ */
+(function () {
+  'use strict';
+
+  var BANNER_HOST = 'https://www.highperformanceformat.com/';
+  var EMPTY_AFTER = 12000;
+  var SANDBOX = 'allow-scripts allow-same-origin allow-popups';
+
+  function buildSandboxedFrame(html, w, h) {
+    var f = document.createElement('iframe');
+    f.setAttribute('sandbox', SANDBOX);
+    f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    f.setAttribute('loading', 'lazy');
+    f.setAttribute('scrolling', 'no');
+    f.setAttribute('frameborder', '0');
+    f.setAttribute('title', 'Advertisement');
+    f.style.cssText = 'border:0;display:block;margin:0 auto;overflow:hidden;background:transparent;' +
+      (w ? 'width:' + w + 'px;max-width:100%;' : 'width:100%;') +
+      (h ? 'height:' + h + 'px;' : 'min-height:250px;height:260px;');
+    f.srcdoc = '<!doctype html><html><head><meta charset="utf-8"><base target="_blank">' +
+      '<style>html,body{margin:0;padding:0;overflow:hidden;background:transparent;display:flex;justify-content:center;align-items:flex-start;}</style>' +
+      '</head><body>' + html + '</body></html>';
+    return f;
+  }
+
+  function pickSize(slot) {
+    var minWidth = parseInt(slot.getAttribute('data-min-width') || '0', 10);
+    if (!minWidth || window.matchMedia('(min-width: ' + minWidth + 'px)').matches) {
+      return { key: slot.getAttribute('data-key'), w: +slot.getAttribute('data-w'), h: +slot.getAttribute('data-h') };
+    }
+    var altKey = slot.getAttribute('data-alt-key');
+    if (altKey) {
+      slot.classList.add('is-alt');
+      return { key: altKey, w: +slot.getAttribute('data-alt-w'), h: +slot.getAttribute('data-alt-h') };
+    }
+    return null;
+  }
+
+  function loadBanner(slot) {
+    var size = pickSize(slot);
+    if (!size || !size.key || !/^[a-f0-9]{16,64}$/i.test(size.key)) {
+      slot.classList.add('is-skipped');
+      return;
+    }
+    var host = slot.querySelector('.ad__slot') || slot;
+    var html = '<script>window.atOptions={key:"' + size.key + '",format:"iframe",height:' + size.h + ',width:' + size.w + ',params:{}};<\/script>' +
+      '<script src="' + BANNER_HOST + size.key + '/invoke.js"><\/script>';
+    host.appendChild(buildSandboxedFrame(html, size.w, size.h));
+  }
+
+  function loadNative(slot) {
+    var src = slot.getAttribute('data-src');
+    if (!src || !/^https:\/\/[a-z0-9.-]+\.effectivecpmnetwork\.com\/[a-f0-9]+\/invoke\.js$/i.test(src)) return;
+    var container = slot.querySelector('div[id^="container-"]');
+    var cid = container ? container.id : 'container-c3f3d41bbefde3a25a4d5d341b5582d1';
+    var html = '<script async data-cfasync="false" src="' + src + '"><\/script><div id="' + cid + '"></div>';
+    var host = container || slot;
+    host.innerHTML = '';
+    host.appendChild(buildSandboxedFrame(html, 0, 260));
+  }
+
+  function activate(slot) {
+    if (slot.getAttribute('data-ad-state')) return;
+    slot.setAttribute('data-ad-state', 'loading');
+    var kind = slot.getAttribute('data-ad');
+    if (kind === 'native') {
+      loadNative(slot);
+    } else if (kind === 'banner') {
+      loadBanner(slot);
+    }
+  }
+
+  function init() {
+    var slots = Array.prototype.slice.call(document.querySelectorAll('.ad[data-ad]'));
+    if (!slots.length) return;
+    if (!('IntersectionObserver' in window)) {
+      slots.forEach(activate);
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          io.unobserve(entry.target);
+          activate(entry.target);
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+    slots.forEach(function (slot) { io.observe(slot); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
 /* Pixel Sprout Originals: shelf + menu link, driven by /assets/originals.json */
 (function () {
   function recount(section) {
