@@ -1321,7 +1321,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
 <p class="how-to"><!--ps:desc-->{description}<!--/ps:desc--></p>
 {fan_made_note}{similar_html}{last_updated_html}<div class="facts"><span class="chip">Free to play</span><span class="chip">No download</span><span class="chip">Plays in your browser</span></div>
 </section>
-{extra_faq}{_social_section(slug, title)}{S.ad_native()}
+{extra_faq}{_social_section(slug, title)}{S.ad_native(category=category)}
 {guides_html}
 {S.ad_adsense(S.AD_SLOT_BANNER)}
 {more_like}
@@ -2005,7 +2005,7 @@ def render_category_page(category, games, all_categories, total_games=None, newn
 <div class="grid grid--genre" id="catalog" data-catalog data-page-size="{page_size}">{cards}</div>
 <p class="empty-state" data-catalog-empty hidden>No {esc(label.lower())} games match that. Try a shorter word, or <button class="btn btn--quiet" type="button" data-search-open>search every game</button>.</p>
 <div class="load-more"{" hidden" if count <= page_size else ""}><button class="btn btn--ghost" type="button" data-load-more>Show more games</button></div>
-<div class="block">{S.ad_native()}</div>
+{f'<div class="block">{S.ad_native(category=category)}</div>' if S.ad_native_allowed(category) else ''}
 {_faq_section_html(faq_pairs)}
 <section class="related-genres" aria-labelledby="more-genres"><h2 class="section-title" id="more-genres">More genres</h2><div class="chips">{related_html}</div></section>
 <div class="block">{S.ad_leader(mobile="rect")}</div>"""

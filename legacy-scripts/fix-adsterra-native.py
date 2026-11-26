@@ -22,7 +22,18 @@ slots exactly as they are.
 """
 
 import glob
+import json
+import os
 import re
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def kids_slugs():
+    path = os.path.join(ROOT, "games-index.json")
+    with open(path, encoding="utf-8") as f:
+        catalog = json.load(f)
+    return {g["slug"] for g in catalog if g.get("category") == "Kids"}
 
 MARK_POP = "<!-- ADSTERRA-POPUNDER -->"
 MARK_NATIVE = "<!-- ADSTERRA-NATIVE -->"
@@ -84,7 +95,11 @@ def process(path, add_fn):
 
 
 def main():
-    game_files = sorted(glob.glob("games/*.html"))
+    skip = kids_slugs()
+    game_files = sorted(
+        p for p in glob.glob("games/*.html")
+        if os.path.splitext(os.path.basename(p))[0] not in skip
+    )
     guide_files = sorted(glob.glob("guides/*/index.html"))
     collection_files = sorted(glob.glob("games-like/*/index.html"))
 

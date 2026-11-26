@@ -362,7 +362,14 @@ def ad_leader(mobile="skip", extra_class=""):
     )
 
 
-def ad_native(extra_class=""):
+def ad_native_allowed(category=None):
+    """Native Adsterra unit is omitted on Kids pages (kids hub and Kids-category games)."""
+    return primary_category(category or "") != "Kids"
+
+
+def ad_native(extra_class="", category=None):
+    if not ad_native_allowed(category):
+        return ""
     return (
         f'<div class="ad ad--native {extra_class}" data-ad="native" data-src="{ADSTERRA_NATIVE_SRC}">'
         f'<span class="ad__label">Sponsored</span><div id="container-{ADSTERRA_NATIVE_KEY}"></div></div>'
