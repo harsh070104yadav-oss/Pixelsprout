@@ -113,10 +113,18 @@
       var cols = '<section class="rd-block"><h2>Collections</h2>' + h.collections.map(function (c) {
         return '<div class="rd-row"><div class="rd-head"><h3>' + esc(c.name) + '</h3><a class="shelf__more" href="/' + esc(c.slug) + '/">See all</a></div>' +
           '<div class="shelf__track rd-track">' + c.games.map(card).join('') + '</div></div>'; }).join('') + '</section>';
-      var wrap = document.createElement('div'); wrap.className = 'rd-home'; var hx = heroExtras(h); var existingCol = document.querySelector('.rd-collage--ssr'); var col = ''; if (existingCol) { col = existingCol.outerHTML; existingCol.remove(); } else if ((h.collage || []).length >= 3) { col = '<div class="rd-collage" aria-label="City action games">' + h.collage.slice(0, 5).map(function (g, i) { return '<a class="rd-collage__c rd-collage__c' + i + '" href="/games/' + esc(g.s) + '.html"><img src="' + esc(g.i) + '" alt="' + esc(g.t) + '" width="400" height="250" decoding="async"' + (i ? ' loading="lazy"' : ' fetchpriority="high"') + '></a>'; }).join('') + '</div>'; }
-      hero = hero.replace('<section class="rd-hero">', '<section class="rd-hero">' + col).replace('</section>', hx.stats + hx.ja + '</section>');
-      wrap.innerHTML = hero + hx.gotd + picksHTML(h.week, 'Games of the week', 'gow-title') + picksHTML(h.picks, 'Top picks') + tr + cols;
-      main.insertBefore(wrap, main.firstChild);
+      var wrap = document.createElement('div'); wrap.className = 'rd-home'; var hx = heroExtras(h);
+      var ssrHero = document.querySelector('.rd-hero--ssr');
+      if (ssrHero) {
+        if (hx.stats || hx.ja) ssrHero.insertAdjacentHTML('beforeend', hx.stats + hx.ja);
+        wrap.innerHTML = hx.gotd + picksHTML(h.week, 'Games of the week', 'gow-title') + picksHTML(h.picks, 'Top picks') + tr + cols;
+        var slot = document.getElementById('rd-home-slot'); if (slot) { slot.style.minHeight = ''; slot.replaceWith(wrap); } else { ssrHero.insertAdjacentElement('afterend', wrap); }
+      } else {
+        var existingCol = document.querySelector('.rd-collage--ssr'); var col = ''; if (existingCol) { col = existingCol.outerHTML; existingCol.remove(); } else if ((h.collage || []).length >= 3) { col = '<div class="rd-collage" aria-label="City action games">' + h.collage.slice(0, 5).map(function (g, i) { return '<a class="rd-collage__c rd-collage__c' + i + '" href="/games/' + esc(g.s) + '.html"><img src="' + esc(g.i) + '" alt="' + esc(g.t) + '" width="400" height="250" decoding="async"' + (i ? ' loading="lazy"' : ' fetchpriority="high"') + '></a>'; }).join('') + '</div>'; }
+        hero = hero.replace('<section class="rd-hero">', '<section class="rd-hero">' + col).replace('</section>', hx.stats + hx.ja + '</section>');
+        wrap.innerHTML = hero + hx.gotd + picksHTML(h.week, 'Games of the week', 'gow-title') + picksHTML(h.picks, 'Top picks') + tr + cols;
+        main.insertBefore(wrap, main.firstChild);
+      }
       var grid = wrap.querySelector('[data-rd-grid]');
       var cur = 'trending', phoneOnly = false;
       var show = function (k) { cur = k; var l = (h[k] || []).filter(function (g) { return !phoneOnly || g.m !== 0; }); grid.innerHTML = l.slice(0, 6).map(card).join('') || '<p class="rd-empty">No phone-friendly games in this list yet.</p>'; };

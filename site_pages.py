@@ -2074,8 +2074,15 @@ def render_home(catalog, featured, popular_ranked, today=None):
                     f'decoding="async"{attrs}></a>'
                 )
             ssr_collage_html = (
+                '<section class="rd-hero rd-hero--ssr">'
                 '<div class="rd-collage rd-collage--ssr" aria-label="City action games">'
-                + "".join(tiles) + "</div>"
+                + "".join(tiles) + '</div>'
+                '<p class="label">Free · No download · Plays on phone</p>'
+                '<p class="rd-hero__title h1">Pick a game.<br><span class="accent-text">Start playing.</span></p>'
+                '<div class="rd-hero__cta"><button class="btn-lime" type="button" data-surprise>🎲 Surprise me</button>'
+                '<a class="btn-ghost" href="/all-games/">Browse all games</a>'
+                '<a class="btn-ghost" href="/originals/">Pixelsprout Originals</a></div>'
+                '</section><div id="rd-home-slot" style="min-height:650px"></div>'
             )
     except (OSError, ValueError, TypeError, AttributeError, IndexError, NameError):
         preload = None
