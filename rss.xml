@@ -5,6 +5,14 @@
   <link>https://www.playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Vinyl Sort</title>
+    <link>https://www.playpixelsprout.com/games/vinyl-sort.html</link>
+    <guid>https://www.playpixelsprout.com/games/vinyl-sort.html</guid>
+    <description>Play Vinyl Sort free online at Pixelsprout — no download needed.</description>
+    <pubDate>Fri, 27 Nov 2026 15:57:38 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/vinyl-sort/cover/vinyl-sort.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Frosty Boulder</title>
     <link>https://www.playpixelsprout.com/games/frosty-boulder.html</link>
     <guid>https://www.playpixelsprout.com/games/frosty-boulder.html</guid>
@@ -475,14 +483,6 @@
     <description>Play Police Department 3D free online at Pixelsprout — no download needed.</description>
     <pubDate>Tue, 10 Nov 2026 14:07:41 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/jfquw19x7ayem6ybhl5ixivz2fkhxu31/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>HYDRO RUSH</title>
-    <link>https://www.playpixelsprout.com/games/hydro-rush.html</link>
-    <guid>https://www.playpixelsprout.com/games/hydro-rush.html</guid>
-    <description>Play HYDRO RUSH free online at Pixelsprout — no download needed.</description>
-    <pubDate>Mon, 09 Nov 2026 14:54:40 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/q7mub39j3fvwmo6g1suc5mz0x2h2h68w/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>

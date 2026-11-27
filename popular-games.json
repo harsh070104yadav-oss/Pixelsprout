@@ -1,24 +1,24 @@
 {
   "games": [
     {
-      "slug": "bubble-up-endless",
-      "views": 207
+      "slug": "the-house-2",
+      "views": 218
     },
     {
-      "slug": "the-house-2",
-      "views": 202
+      "slug": "bubble-up-endless",
+      "views": 208
     },
     {
       "slug": "getting-over-it",
-      "views": 160
+      "views": 164
     },
     {
       "slug": "protect-my-dog",
-      "views": 154
+      "views": 159
     },
     {
       "slug": "scary-doll",
-      "views": 115
+      "views": 123
     },
     {
       "slug": "books-tower",
@@ -26,39 +26,39 @@
     },
     {
       "slug": "escape-from-work",
-      "views": 74
+      "views": 82
     },
     {
       "slug": "boo-scared-escape-from-backrooms",
-      "views": 67
-    },
-    {
-      "slug": "your-dream-room",
-      "views": 52
+      "views": 72
     },
     {
       "slug": "granny-house-escape",
-      "views": 51
+      "views": 59
     },
     {
-      "slug": "brawl-stars",
-      "views": 51
+      "slug": "your-dream-room",
+      "views": 58
     },
     {
       "slug": "among-us",
-      "views": 51
+      "views": 55
+    },
+    {
+      "slug": "poppy-playtime-chapter-4-safe-haven",
+      "views": 54
+    },
+    {
+      "slug": "brawl-stars",
+      "views": 54
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
       "views": 49
     },
     {
-      "slug": "poppy-playtime-chapter-4-safe-haven",
-      "views": 47
-    },
-    {
       "slug": "test-tubes-water-sort",
-      "views": 46
+      "views": 47
     },
     {
       "slug": "2048-cube-run",
@@ -70,14 +70,14 @@
     },
     {
       "slug": "buckshot-roulette",
-      "views": 32
+      "views": 33
+    },
+    {
+      "slug": "passenger-airplane-flight-3d",
+      "views": 31
     },
     {
       "slug": "save-the-doge",
-      "views": 30
-    },
-    {
-      "slug": "baba-is-you",
       "views": 30
     }
   ]
