@@ -2,23 +2,23 @@
   "games": [
     {
       "slug": "the-house-2",
-      "views": 218
+      "views": 231
     },
     {
       "slug": "bubble-up-endless",
-      "views": 208
+      "views": 210
     },
     {
       "slug": "getting-over-it",
-      "views": 164
+      "views": 168
     },
     {
       "slug": "protect-my-dog",
-      "views": 159
+      "views": 163
     },
     {
       "slug": "scary-doll",
-      "views": 123
+      "views": 133
     },
     {
       "slug": "books-tower",
@@ -26,31 +26,31 @@
     },
     {
       "slug": "escape-from-work",
-      "views": 82
+      "views": 84
     },
     {
       "slug": "boo-scared-escape-from-backrooms",
-      "views": 72
-    },
-    {
-      "slug": "granny-house-escape",
-      "views": 59
-    },
-    {
-      "slug": "your-dream-room",
-      "views": 58
+      "views": 76
     },
     {
       "slug": "among-us",
-      "views": 55
+      "views": 62
+    },
+    {
+      "slug": "your-dream-room",
+      "views": 60
+    },
+    {
+      "slug": "granny-house-escape",
+      "views": 60
     },
     {
       "slug": "poppy-playtime-chapter-4-safe-haven",
-      "views": 54
+      "views": 60
     },
     {
       "slug": "brawl-stars",
-      "views": 54
+      "views": 58
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
@@ -69,16 +69,16 @@
       "views": 37
     },
     {
+      "slug": "slope-racing-3d",
+      "views": 36
+    },
+    {
+      "slug": "falling-dummy",
+      "views": 34
+    },
+    {
       "slug": "buckshot-roulette",
       "views": 33
-    },
-    {
-      "slug": "passenger-airplane-flight-3d",
-      "views": 31
-    },
-    {
-      "slug": "save-the-doge",
-      "views": 30
     }
   ]
 }
